@@ -1,0 +1,1635 @@
+{
+  "last_node_id": 259,
+  "last_link_id": 54,
+  "nodes": [
+    {
+      "id": 70,
+      "type": "Label (rgthree)",
+      "pos": [
+        680,
+        -2500
+      ],
+      "size": [
+        240,
+        3360
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n📸\n",
+      "properties": {
+        "fontSize": 240,
+        "fontFamily": "arial",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 74,
+      "type": "Label (rgthree)",
+      "pos": [
+        940,
+        -50
+      ],
+      "size": [
+        308.4296875,
+        888
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\nworkƒlow\n",
+      "properties": {
+        "fontSize": 74,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 77,
+      "type": "Label (rgthree)",
+      "pos": [
+        730,
+        -100
+      ],
+      "size": [
+        40,
+        720
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 40,
+        "fontFamily": "arial black",
+        "fontColor": "#fccb00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 78,
+      "type": "Label (rgthree)",
+      "pos": [
+        640,
+        -80
+      ],
+      "size": [
+        70,
+        700
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 70,
+        "fontFamily": "arial black",
+        "fontColor": "#fcaa00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 79,
+      "type": "Label (rgthree)",
+      "pos": [
+        790,
+        -80
+      ],
+      "size": [
+        20,
+        680
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 20,
+        "fontFamily": "arial black",
+        "fontColor": "#fce76d",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 80,
+      "type": "Label (rgthree)",
+      "pos": [
+        550,
+        -80
+      ],
+      "size": [
+        114,
+        798
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 114,
+        "fontFamily": "arial black",
+        "fontColor": "#fc8500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 83,
+      "type": "Label (rgthree)",
+      "pos": [
+        700,
+        460
+      ],
+      "size": [
+        1001.5546875,
+        528
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\nDossier d'images vers fichiers de decription .txt",
+      "properties": {
+        "fontSize": 48,
+        "fontFamily": "arial",
+        "fontColor": "#fc8500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 99,
+      "type": "Label (rgthree)",
+      "pos": [
+        690,
+        1860
+      ],
+      "size": [
+        251.65625,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Des trucs qui servent au workflow...",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 100,
+      "type": "Label (rgthree)",
+      "pos": [
+        700,
+        1520
+      ],
+      "size": [
+        333.984375,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Chargement des modèles",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 113,
+      "type": "Label (rgthree)",
+      "pos": [
+        660,
+        1520
+      ],
+      "size": [
+        18.205078125,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "•",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#ff8200",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 114,
+      "type": "Label (rgthree)",
+      "pos": [
+        650,
+        1830
+      ],
+      "size": [
+        18.205078125,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "•",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#990000",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 161,
+      "type": "Label (rgthree)",
+      "pos": [
+        4790,
+        -710
+      ],
+      "size": [
+        140,
+        1960
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n🦦",
+      "properties": {
+        "fontSize": 140,
+        "fontFamily": "arial",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 162,
+      "type": "Label (rgthree)",
+      "pos": [
+        4780,
+        490
+      ],
+      "size": [
+        339.890625,
+        768
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMAG's A.I. Bros",
+      "properties": {
+        "fontSize": 48,
+        "fontFamily": "arial",
+        "fontColor": "#fc8500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 163,
+      "type": "Label (rgthree)",
+      "pos": [
+        4860,
+        760
+      ],
+      "size": [
+        76.2509765625,
+        527
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYouTube :",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 164,
+      "type": "Label (rgthree)",
+      "pos": [
+        4940,
+        760
+      ],
+      "size": [
+        107.0302734375,
+        527
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@themagbros\n",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 165,
+      "type": "Label (rgthree)",
+      "pos": [
+        4810,
+        780
+      ],
+      "size": [
+        84.103515625,
+        527
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFacebook :",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 167,
+      "type": "Label (rgthree)",
+      "pos": [
+        4900,
+        780
+      ],
+      "size": [
+        204.45654296875,
+        527
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComfyUI Mag's AI - France\n",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 166,
+      "type": "Note",
+      "pos": [
+        4790,
+        1380
+      ],
+      "size": [
+        320,
+        100
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Bloc-note",
+      "properties": {},
+      "widgets_values": [
+        "\n   Quel plaisir de s'amuser avec vous !\n\n           Seb & Denis Mag's"
+      ],
+      "color": "#f4d614",
+      "bgcolor": "#e0c200"
+    },
+    {
+      "id": 33,
+      "type": "LoadImageListFromDir //Inspire",
+      "pos": [
+        650,
+        1250
+      ],
+      "size": [
+        340,
+        170
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            48
+          ],
+          "slot_index": 0,
+          "shape": 6
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 6
+        },
+        {
+          "name": "FILE PATH",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "title": "Dossier SOURCE (images)",
+      "properties": {
+        "Node name for S&R": "LoadImageListFromDir //Inspire"
+      },
+      "widgets_values": [
+        "/workspace/ComfyUI/input4CPT3",
+        0,
+        0,
+        false
+      ],
+      "color": "#148e80",
+      "bgcolor": "#007a6c"
+    },
+    {
+      "id": 37,
+      "type": "Text Concatenate",
+      "pos": [
+        650,
+        1940
+      ],
+      "size": [
+        210,
+        142
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 52,
+          "widget": {
+            "name": "text_a"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 53,
+          "widget": {
+            "name": "text_b"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_c"
+          },
+          "shape": 7
+        },
+        {
+          "name": "text_d",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_d"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            54
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        ". ",
+        "true",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "color": "#771414",
+      "bgcolor": "#630000"
+    },
+    {
+      "id": 98,
+      "type": "Label (rgthree)",
+      "pos": [
+        690,
+        1830
+      ],
+      "size": [
+        197.296875,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Modules divers",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 28,
+      "type": "DownloadAndLoadFlorence2Model",
+      "pos": [
+        650,
+        1630
+      ],
+      "size": [
+        340,
+        106
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora",
+          "type": "PEFTLORA",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "links": [
+            42
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadFlorence2Model"
+      },
+      "widgets_values": [
+        "thwri/CogFlorence-2.1-Large",
+        "fp16",
+        "sdpa"
+      ],
+      "color": "#ff9614",
+      "bgcolor": "#ff8200"
+    },
+    {
+      "id": 85,
+      "type": "Label (rgthree)",
+      "pos": [
+        650,
+        -650
+      ],
+      "size": [
+        2047.9365234375,
+        1596
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\nFLORENCE IMAGE DESCRIPTION\n",
+      "properties": {
+        "fontSize": 114,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 35,
+      "type": "ShowText|pysssss",
+      "pos": [
+        2160,
+        1380
+      ],
+      "size": [
+        2570,
+        5376
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 50,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            53
+          ],
+          "slot_index": 0,
+          "shape": 6
+        }
+      ],
+      "title": "Toutes les descriptions générées  🐍",
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "A silhouette of a medieval castle perched atop a rocky outcrop, set against a backdrop of a sunset over the ocean. The castle, with its turrets and battlements, is bathed in the warm hues of the setting sun, which casts a golden glow over the scene. The sky is painted in shades of orange, pink, and purple, with wispy clouds scattered across. The ocean below mirrors the castle's silhouette, with waves crashing against the rocks. The overall mood of the image is serene and contemplative, evoking a sense of timelessness.",
+        "A moody, atmospheric scene set in a dimly lit, rain-soaked environment. The main subject is a person with wet hair, wearing a hat and a jacket, standing in the rain. The person's face is partially obscured by the raindrops, and they appear to be looking towards the right side of the frame. The colors are predominantly dark, with shades of brown, black, and gray, punctuated by the bright yellow of their face. The background is blurred, emphasizing the rain and the person, and there's a small window or box on the wall. The style of the image is cinematic, with a focus on mood and atmosphere over detailed realism.",
+        "A dark, atmospheric scene set in a medieval or fantasy setting. The main subject is a group of individuals, possibly warriors or adventurers, gathered around a horse-drawn carriage. The visual attributes are dominated by dark, moody colors, with the carriage being the most prominent feature. The characters are dressed in period-appropriate attire, suggesting a historical or fantasy context. The surroundings are dimly lit, with a backdrop of a stone building, possibly a castle or fortress, and the ground is wet, possibly from recent rain or a recent rainfall. The overall style of the image is dramatic and evocative, capturing a moment of tension or confrontation.",
+        "A cinematic scene set in a dense forest with tall, slender trees. The main subject is a man, dressed in period-appropriate attire, riding a dark horse. He is captured in a side profile, looking off into the distance, with a determined expression on his face. The man is wearing a light-colored shirt, dark pants, and brown boots. The horse is black with a dark mane and tail, and it is adorned with a saddle and bridle. The forest floor is covered in fallen leaves, and the overall color palette is muted, dominated by earthy tones. The lighting suggests it might be either early morning or late afternoon, casting a soft glow on the scene. There are no discernible textual elements in the image.",
+        "A long-exposure photograph capturing a solitary figure riding a white horse along a dirt path. The path is flanked by lush greenery on either side, and the background reveals a lighthouse perched atop a hill overlooking the ocean. The sky is painted in hues of blue and purple, suggesting either dawn or dusk. The person is dressed in dark clothing, and their posture suggests movement and purpose. The overall mood of the image is serene and contemplative, with the play of light and shadow adding depth and drama.",
+        "A moody, atmospheric portrayal of a man seated on a stone pedestal amidst a forested area. The man is dressed in period-appropriate attire, including a wide-brimmed hat, a dark coat, and leather gloves, suggesting a historical or fantasy setting. The color palette is dominated by earthy tones, with the man's dark clothing contrasting against the lighter, forested background. The lighting is soft, casting shadows and highlighting the textures of the stone and the trees. The overall style of the image is cinematic, with a focus on mood and atmosphere over detailed realism.",
+        "A dramatic, silhouette-style photograph capturing a group of individuals in a field during what appears to be either dawn or dusk. The main subject is a man in the foreground, wearing a wide-brimmed hat adorned with a feather, holding a rifle. He is surrounded by other individuals, some of whom are also holding rifles. The background is dominated by a field of tall grasses, with a distant line of trees and a sky filled with clouds. The color palette is primarily dark, with the golden hues of the grass and trees contrasting against the muted tones of the sky and the figures' clothing. The overall mood of the image is somber and reflective, suggesting a moment of pause or reflection.",
+        "A moody, atmospheric portrayal of a man in a hat and cloak, standing in a dimly lit room. The man's face is partially obscured by the hat's brim, and he appears to be in deep thought or contemplation. The lighting is soft, with a warm, golden hue that casts a gentle glow on the man's features. The background is blurred, emphasizing the man as the main subject. The style of the image leans towards a cinematic or theatrical production, with an emphasis on dramatic lighting and shadow play.",
+        "A moody, atmospheric portrayal of a historical or period setting, possibly from the 18th or 19th century. The scene is set in a narrow, cobbled street lined with old, weathered buildings. The color palette is dominated by muted browns, grays, and muted blues, creating a somber and melancholic atmosphere. The main subject is a person on horseback, dressed in period clothing, with a cloak billowing in the wind, suggesting movement or a gust of wind. The person's back is turned slightly to the viewer, adding a sense of focus to the scene. The surrounding area is filled with people, some of whom are engaged in conversation, while others seem to be waiting or waiting for their turn. The architecture of the buildings is rustic, with large windows and worn-out walls. The overall style of the image is reminiscent of a cinematic or theatrical production, capturing the essence of a bygone era.",
+        "A sepia-toned portrayal of a bustling marketplace scene, likely from the 19th or early 20th century. The main subject is a man on horseback, dressed in period clothing, surrounded by a myriad of people, some of whom are engaged in conversation, while others seem to be waiting or conversing. The architecture is rustic, with wooden beams and stalls lining the street. The color palette is dominated by earthy tones, with shades of brown, beige, and gray dominating the scene. The overall mood is one of everyday life, commerce, and the passage of time.",
+        "A moody, atmospheric portrayal of a man in the foreground, set against a blurred urban backdrop. The man has a rugged appearance, with dark hair and a mustache, and is wearing a worn-out, brown jacket. His expression is contemplative, and he seems to be lost in thought. The color palette is dominated by earthy tones, with browns, grays, and muted blues, creating a somber and introspective mood. The background is blurred, emphasizing the man as the main subject, and there are no discernible textual elements or additional characters in the scene.",
+        "A historical reenactment scene set in an old, stone building with arched windows. The main subject is a group of soldiers, dressed in period-appropriate attire, firing their rifles amidst a cloud of smoke. The soldiers are positioned in a line, with one soldier in the foreground, facing away from the camera, wearing a long coat and hat. The color palette is muted, dominated by earthy tones, with the soldiers' dark coats and hats standing out against the pale stone building. The ground is covered in grass, and there are a few objects scattered around, including a lantern and a wooden structure. The overall mood of the image is tense and somber, suggesting a pivotal moment in a historical narrative.",
+        "A cinematic portrayal of a historical or period setting, possibly from the 18th or 19th century. The main subject is a man with long, dark hair, dressed in a brown leather jacket with intricate detailing and a fur stole draped over his shoulders. He is captured in a side profile, looking off to the side with a contemplative expression. The man's attire is complemented by a belt with a circular buckle. The background is filled with a group of people, some of whom are dressed in period clothing, suggesting a scene from a bygone era. The architecture of the buildings is European, with large windows and arches. The color palette is muted, dominated by earthy tones, with the brown of the man's jacket standing out against the more subdued colors of the surroundings. The overall mood of the image is somber and introspective, with a touch of nostalgia.",
+        "A moody, atmospheric portrayal of a group of individuals in a grand, sunlit corridor with high arches and large windows. The setting is reminiscent of a historical or fantasy setting, possibly from the 18th or 19th century. The main subjects are dressed in period clothing, with some wearing hats and others in more formal attire. The color palette is dominated by warm, earthy tones, with the sunlight casting long shadows and highlighting the textures of the clothing and the architectural elements. The overall mood is one of mystery and anticipation, as if the group is on a journey or preparing for an event.",
+        "A dramatic, atmospheric portrayal of two men in a dimly lit, historical setting. The man on the left, with dark hair, is dressed in a long, brown robe with intricate detailing, and he appears to be in a state of deep thought or concern. He is holding a white object, possibly a book or a piece of paper, in his hands. On the right, another man, possibly older, is engaged in a conversation, wearing a dark suit with a white shirt and tie. The setting is an old, stone building with large windows, and the background is filled with other figures, suggesting a gathering or event. The color palette is dominated by earthy tones, with the brown of the robes and the gray of the stone, contrasted by the white of the man's shirt and the black of his suit. The overall mood of the image is somber and reflective, with a sense of urgency and tension.",
+        "A still from a period drama, capturing two men in a dimly lit, gothic-style setting. The man on the left, with dark hair and a rugged appearance, is dressed in a long, brown coat with intricate detailing, holding a small object in his hands. He appears to be in a state of deep thought or concern, with his gaze directed towards the right man, who is holding a white object, possibly a card or a piece of paper. He is wearing a dark coat with a high collar, and his posture suggests he is engaged in a serious conversation. The background is blurred, but we can discern other figures, possibly soldiers or civilians, in the distance. The color palette is dominated by earthy tones, with the brown of the man's coat standing out against the muted browns and grays of the surroundings. The overall mood of the image is tense and somber, suggesting a pivotal moment in a narrative.",
+        "A still from a film or television show, capturing a tense moment between two characters. The setting appears to be an old, dimly lit room with a rustic ambiance. The main subjects are two men, one with dark hair and the other with lighter skin, both dressed in period-appropriate attire. The man with the dark hair is looking intently at the other man, who is slightly away from the camera, suggesting a close bond or confrontation. The lighting is moody, with a soft, golden hue that casts shadows and highlights the characters' features. The background is blurred, emphasizing the subjects, and the overall color palette is dominated by earthy tones, with the warm light adding contrast.",
+        "A silhouette-style photograph capturing a group of individuals in a historical setting. The main subjects are three men and one woman, all dressed in period clothing, including hats and long coats. They are walking on a cobblestone street, with the man on the left carrying a bag and the woman on the right carrying a basket. The background features a large stone building with multiple windows, and the sky is overcast. The color palette is dominated by muted tones of brown, beige, and gray, with occasional pops of blue from the sky. The overall mood of the image is somber and contemplative, evoking a sense of nostalgia or history.",
+        "A moody, atmospheric portrayal of a man with long, unkempt hair and a beard, dressed in a dark, textured coat with intricate patterns. He appears to be in a dimly lit, possibly underground setting, with a group of people in the background, some of whom are wearing hats and cloaks, suggesting a historical or period setting. The man's expression is contemplative, and he seems to be gesturing with his hand, possibly indicating a point of interest or a conversation. The color palette is dominated by muted, earthy tones, with the man's coat standing out against the darker surroundings.",
+        "A moody, atmospheric portrayal of a grand hall, likely from a historical or period setting. The main subject is a person, viewed from behind, dressed in a dark robe with a high collar, standing with their back to the viewer. The person's hair is styled in an updo, and they are adorned with dangling earrings. The hall is illuminated by numerous ornate chandeliers, casting a warm, golden glow throughout the space. The walls are decorated with intricate carvings and frescoes, and the floor is made of marble. The overall color palette is dominated by golds, browns, and deep blacks, creating a sense of opulence and grandeur.",
+        "A dramatic, moody scene set in an opulent room with classical architectural elements. The main subject is a man in a red robe, standing prominently in the foreground, looking off to the side with a contemplative expression. He is surrounded by other individuals, suggesting a formal or ceremonial occasion. The room is adorned with ornate gold detailing, a large window that allows a soft light to filter in, casting a warm glow on the scene. The color palette is dominated by rich reds, golds, and muted browns, creating a sense of grandeur and significance. The overall style of the image is cinematic, with a focus on dramatic lighting and shadow play.",
+        "A moody, atmospheric portrayal of a man with long, wavy hair and a mustache, captured in a side profile. He is dressed in a dark, possibly black, outfit with a high collar, suggesting a formal or historical setting. The man's gaze is directed off to the side, and his expression is contemplative. The background is dimly lit, with a warm, golden hue, possibly from candlelight, which adds to the ambiance of the scene. The overall color palette is dominated by dark, muted tones, with the man's hair and mustache standing out against the darker surroundings.",
+        "A still from a period drama, capturing a moment in a dimly lit room. The main subject is a man with long, wavy hair, wearing a dark coat, looking off to the side with a contemplative expression. He is positioned in the foreground, with a woman to his left, whose face is not visible. The woman's attire includes a fur-lined cloak, and she appears to be in a state of deep thought or reflection. In the background, there are several men dressed in period clothing, suggesting a formal or ceremonial setting. The room has ornate decorations, including a column with intricate carvings and a chandelier hanging from the ceiling. The color palette is dominated by dark tones, with the man's coat being the most prominent color. The overall mood of the image is somber and introspective.",
+        "A still from a period drama, capturing a moment of tension and anticipation. The main subject is a woman, prominently positioned in the foreground, adorned in a delicate, off-white dress with intricate lace detailing and a gold necklace. Her dark hair is styled in an updo, and she gazes intently to the side, her expression solemn and contemplative. Surrounding her are other individuals, dressed in period-appropriate attire, suggesting a formal or ceremonial setting. The background is dimly lit, with a warm, golden hue emanating from candles, casting a soft glow on the scene. The setting appears to be an opulent room, possibly a ballroom or a grand hall, with ornate furnishings and drapery. The overall color palette is dominated by earthy tones, with the woman's dress standing out against the darker surroundings.",
+        "A cinematic still from a period drama, capturing a tense moment within a grand hall. The main subject is a man with a rugged appearance, wearing a dark coat and a fur-lined scarf, with a focused expression on his face. He is positioned in the foreground, with his arms outstretched, suggesting movement or urgency. The hall is filled with people, some of whom are dressed in period-appropriate attire, including hats and cloaks. The color palette is dominated by muted tones of browns, grays, and blacks, with occasional pops of color from the clothing. The lighting is soft, casting shadows and highlighting the textures of the man's clothing and the hall's architecture. The overall mood of the image is somber and intense, indicative of a pivotal moment in a narrative.",
+        "A moody, atmospheric portrayal of a solitary figure walking through a forest during what appears to be either dawn or dusk. The scene is bathed in a warm, golden light that filters through the tall, slender trees, casting long shadows on the ground. The person is dressed in a long coat, suggesting a cooler climate, and is captured mid-stride, walking away from the viewer. The forest floor is strewn with fallen leaves and small rocks, and a pile of firewood is visible to the left. The background is filled with a dense canopy of trees, their leaves a mix of green and yellow, indicating the transition between seasons. The overall color palette is dominated by earthy browns, golds, and muted greens, creating a serene and contemplative mood.",
+        "A vivid portrayal of a man in a forest setting, bathed in a warm, golden light. He is dressed in a rugged, historical-style outfit, complete with a wide-brimmed hat, a long coat, and a lanyard around his neck. The man's expression is contemplative, and he appears to be looking off into the distance. The forest is dense with tall trees, their leaves a mix of green and yellow, suggesting a transition between seasons. In the background, a white horse can be seen grazing peacefully. The overall color palette is dominated by earthy tones, with the golden sunlight adding a touch of warmth to the scene.",
+        "A moody, atmospheric portrayal of a man in a forest setting, exuding a sense of mystery and contemplation. He is dressed in a rugged, historical style, wearing a wide-brimmed hat, a dark coat, and a patterned shirt underneath. His attire is complemented by a necklace with a cross pendant. The man's posture is upright, suggesting readiness or alertness. In the background, a white horse with a saddle can be seen grazing amidst the tall trees, bathed in a soft, golden light that filters through the canopy. The forest floor is covered in tall grasses, and the overall color palette is dominated by earthy tones, with the man's dark clothing contrasting against the lighter background.",
+        "A dramatic, close-up shot of a man, likely in his late 30s or early 40s, wearing a wide-brimmed hat and a rugged coat. He appears to be in a dimly lit, rustic setting, possibly a barn or a similar enclosed space. The man's expression is one of contemplation or concern, with his gaze directed off to the side. The lighting casts shadows, emphasizing the contours of his face and the texture of his coat. The overall color palette is muted, with earthy tones dominating the scene. The style of the image leans towards cinematic, with a focus on mood and atmosphere.",
+        "A sepia-toned photograph capturing a historical scene, likely from the 18th or 19th century. The main subject is a horse-drawn carriage, with a man seated in the carriage, dressed in period clothing. The carriage is pulled by two dark horses, and the scene is bustling with people, some of whom are engaged in conversation, while others are walking or conversing. The architecture of the buildings is European, with stone facades, large windows, and ornate details. The color palette is muted, with earthy tones dominating the scene. The overall style of the image is reminiscent of historical reenactments or period dramas.",
+        "A dark, atmospheric scene set in a grand, ornate room with gothic architectural details. The main subject is a woman dressed in a black, studded dress and a tall, pointed hat, holding a sword. She stands in the foreground, facing away from the viewer, with her back to the camera. The room is illuminated by a chandelier and candles, casting a warm, golden glow. The woman's attire is detailed with silver studs and a corset-like bodice. The background reveals a room with intricate carvings, a globe, and other decorative items. The overall color palette is dominated by dark shades of black, gold, and brown, creating a sense of mystery and intrigue.",
+        "A moody, atmospheric portrayal of a maritime scene. The main subject is a group of individuals in a small boat, paddling through turbulent waters. The boat is equipped with oars, and the individuals are dressed in period-appropriate attire, including hats and cloaks. The person in the front is wearing a wide-brimmed hat and a long coat, suggesting a historical or period setting. The background features a large ship with multiple masts and sails, anchored in the vast expanse of the ocean under a cloudy sky. The color palette is dominated by cool blues and grays, with the occasional warm brown from the oars. The overall style of the image is cinematic, with a focus on mood and atmosphere over detailed realism.",
+        "A moody, atmospheric portrayal of two men standing on a beach, bathed in a soft, muted light. The man on the left is adorned in a wide-brimmed hat with a feather, a dark cloak with intricate patterns, and a white shirt underneath. He has a beard and mustache, and his attire suggests a historical or fantasy setting. The woman on the right, with glasses and a beard, is dressed in a dark coat, and she appears to be laughing or smiling. In the background, there are other figures, possibly fishermen, and the sea stretches out to the horizon. The overall color palette is dominated by cool tones, with the men's dark clothing contrasting against the lighter, muted colors of the beach and sky.",
+        "A moody, atmospheric portrayal of a man in a rugged, outdoor setting. He is dressed in a dark, leather jacket and a wide-brimmed hat, suggesting a historical or period costume. The man's expression is contemplative, and he holds a small object in his hand, possibly a tool or a device. The background is blurred, emphasizing the man as the main subject, and features a hilly landscape with sparse vegetation. The color palette is dominated by dark, muted tones, with the man's attire and hat standing out against the greenery. The overall style of the image is cinematic, with a focus on mood and atmosphere over detailed realism.",
+        "A still from a film or television show, capturing a tense moment between two characters. The main subject is a woman with dark hair, wearing a wide-brimmed hat, and a dark, studded dress. She appears to be in a state of alertness or surprise, with her eyes wide open and her mouth slightly agape. The man beside her is partially visible, with his face turned towards the woman. The setting is dimly lit, with a warm, amber glow emanating from the background, suggesting an indoor environment, possibly a bar or restaurant. The color palette is dominated by dark tones, with the woman's dress and hat standing out against the darker surroundings. The overall mood of the image is intense and suspenseful.",
+        "A still from a period drama, capturing a moment between two women in an opulent room. The setting is richly decorated with ornate wooden panels, intricate carvings, and a grand chandelier. The room is bathed in a warm, golden light, highlighting the rich textures of the wood and drapery. The woman on the left, dressed in a cream-colored dress with a white collar, appears to be in a state of contemplation or concern. She is seated at a wooden table, her posture relaxed yet poised, with her hands clasped together. The man on the right, wearing a dark green cloak, stands attentively, his gaze directed away from the camera, lost in thought. The overall color palette is dominated by earthy tones, with the green of the cloak standing out against the browns and golds of the room.",
+        "A still from a period drama, capturing a moment between two individuals in an opulent room. The setting is richly decorated with intricate architectural details, including ornate moldings and a grand chandelier. The main subjects are a man and a woman dressed in period clothing, suggesting a historical or period setting. The man, dressed in a dark cloak with a high collar, holds a small object, possibly a book or a piece of paper, while the woman wears a long, dark dress adorned with pearls and a matching hat. The color palette is dominated by deep browns, golds, and muted reds, creating a somber and regal atmosphere. The lighting is soft, casting gentle shadows and highlighting the textures of the clothing and the room's decor. The overall style of the image is cinematic, with a focus on dramatic lighting and shadow play.",
+        "A moody, atmospheric portrayal of a dimly lit, ornate room, possibly a study or a library. The main subject is a man, dressed in dark robes, engrossed in reading a book. He is positioned in the foreground, with his back to the viewer, revealing a focused expression. The room is adorned with intricate frescoes on the walls, a candelabra with lit candles, and a globe on a table. The color palette is dominated by dark, muted tones, with the warm glow of the candles adding contrast. The overall style of the image is reminiscent of historical or period dramas, with a sense of mystery and reverence.",
+        "A still from a period drama, capturing a solemn moment within a grand hall. The main subjects are a man and a woman, both dressed in regal attire, suggesting a royal setting. The man is adorned in a red robe with a white sash and a star-shaped pendant, while the woman wears a white gown with intricate detailing and a veil. They are seated on ornate wooden chairs, with the man looking off to the side. The hall is bathed in a warm, golden light, highlighting the architectural details of the walls and columns. The background is filled with other individuals, hinting at a larger gathering or event. The overall mood of the image is one of solemnity and importance.",
+        "A moody, atmospheric portrait of a person, captured in a side profile. The subject is bathed in a soft, golden light that filters through a window, creating a play of light and shadow. The person's hair is long and wavy, cascading down their back. They are dressed in a dark jacket, and their pose suggests contemplation or introspection. The background is blurred, emphasizing the subject, and features other individuals, possibly attendees or staff, in the distance. The color palette is dominated by warm, earthy tones, with the light source casting a gentle glow on the subject's face and hair. The overall style of the image is evocative and evocative, with a focus on mood and atmosphere over detail.",
+        "A side profile of a person, captured in a dimly lit setting. The person appears to be in a contemplative or introspective state, with their gaze directed upwards. The lighting casts a soft, ethereal glow on the subject, highlighting their wavy hair and the texture of their clothing. The background is blurred, emphasizing the subject's features, and the overall color palette is dominated by muted, earthy tones. The style of the image is moody and evocative, with a focus on the interplay of light and shadow.",
+        "A dramatic, atmospheric portrayal of a grand hall or chamber, bathed in a warm, golden light. The main subject is a group of people, dressed in period-appropriate robes and cloaks, gathered in a semi-circle, with some standing and others seated. The hall is adorned with tall, ornate chandeliers, candles, and intricate architectural details. The color palette is dominated by earthy tones, with the golden light adding a touch of elegance. The scene is devoid of any textual elements, focusing solely on the interplay of light and shadow. The overall mood is solemn and reverent, suggesting a significant event or ceremony.",
+        "A moody, atmospheric scene set in what appears to be a dimly lit, possibly historical or fantasy setting. The main subject is a man with long, wavy hair, dressed in dark clothing, walking away from the camera with a contemplative expression. He is holding a small object in his hand, possibly a staff or a weapon. The man's attire is dark, with a long coat and boots. The surroundings are minimalistic, with shadows cast on the ground, suggesting movement or activity. The background features a patterned floor with a similar design, and there are other individuals in the vicinity, though they are not clearly visible. The color palette is dominated by dark tones, with the man's dark clothing contrasting against the lighter surroundings. The overall style of the image is dramatic and evocative, capturing a moment of tension or anticipation.",
+        "A sepia-toned photograph capturing a scene from what appears to be a historical or period drama. The main subject is a woman in a flowing white dress, standing with her back to the viewer, facing away from the camera. She is surrounded by a group of people, some of whom are seated or standing, while others are engaged in conversation. The setting is an indoor space with a stone floor, and the background is dimly lit, emphasizing the subjects. The color palette is dominated by earthy tones, with the white of the dress standing out against the darker surroundings. The overall mood of the image is solemn and contemplative.",
+        "A sepia-toned photograph capturing a scene from what appears to be a historical or fantasy setting. The main subject is a group of individuals, possibly actors or crew members, dressed in period-appropriate attire. They are positioned in a semi-circular formation, with some standing and others seated. The lighting casts shadows, emphasizing the contours of their faces and clothing. The color palette is dominated by muted browns, grays, and soft whites, creating a somber and intimate atmosphere. The style of the image suggests it could be from a period drama or a historical reenactment.",
+        "A moody, atmospheric portrayal of a solemn scene, likely from a historical or period drama. The main subject is a group of individuals, possibly clergy or officiant, gathered in a dimly lit room with a patterned carpet. The lighting casts long shadows, emphasizing the contours of their faces and clothing. The color palette is dominated by muted, earthy tones, with the carpet featuring a subtle fleur-de-lis design. The individuals are dressed in period-appropriate attire, with some wearing long, flowing robes and others in more formal wear. The overall mood is somber and reflective, with a sense of reverence and solemnity.",
+        "A detailed, atmospheric portrayal of a grand cathedral interior, likely from a historical or fantasy setting. The main subject is a gathering of people, dressed in period clothing, gathered in a semi-circular formation. The color palette is dominated by earthy tones, with the light from the candles casting a warm glow on the scene. The architecture is characterized by tall, slender columns, intricate carvings on the walls, and a large stained glass window that allows natural light to filter in. The overall mood is solemn and reverent, suggesting a significant event or gathering.",
+        "A close-up portrait of a man, captured in a moody, dimly lit setting. The man's face is illuminated by a soft light source from the left, casting a gentle glow on his skin. His eyes are slightly squinted, and his expression is contemplative. The texture of his skin is visible, with visible pores and a beard. The background is dark, which accentuates the subject's features and adds to the overall somber mood of the image.",
+        "A moody, atmospheric photograph that captures a close-up shot of a long, slender object emitting a bright, radiant beam of light. The object is dark, possibly made of metal or a similar material, with a smooth, matte finish. The light source is the primary source of illumination, casting a warm, golden hue across the scene. The background is blurred, emphasizing the object and creating a sense of depth and distance. The overall color palette is dominated by earthy tones, with the light source serving as a stark contrast against the darker surroundings. The image evokes feelings of mystery, intrigue, and perhaps a touch of melancholy.",
+        "A moody, atmospheric photograph capturing a close-up of a long, slender object, possibly a part of a vehicle or machinery, suspended in mid-air. The object is illuminated by a soft, ethereal light source, casting a gentle glow on its surface. The background is blurred, emphasizing the object's details and creating a sense of depth. The color palette is dominated by warm, muted tones, with the light source creating a stark contrast against the darker surroundings. The overall style of the image is dramatic and evocative, with a focus on the interplay of light and shadow.",
+        "A still from a period drama, capturing a woman in a dimly lit room. She wears a wide-brimmed hat and a dark, studded dress, holding a smoking pipe. The room is adorned with ornate wooden paneling and a candelabra with three lit candles. The color palette is dominated by warm, amber tones, with the woman's dark attire contrasting against the lighter background. The overall mood of the image is somber and introspective, evoking a sense of mystery and drama.",
+        "A sepia-toned photograph capturing a group of individuals dressed in period clothing, possibly from the 18th or 19th century. The setting appears to be an old courtyard with classical architecture, featuring large arched windows and a stone facade. The group is engaged in a conversation, with some individuals looking towards the camera, while others are looking directly at the viewer. The clothing consists of long coats, hats, and other period-appropriate attire. The ground is paved with cobblestones, and the overall mood of the image is solemn and reflective.",
+        "A detailed portrayal of a historical or period setting, possibly from the 18th or 19th century. The main subject is a group of men, dressed in period clothing, including long coats, hats, and boots, engaged in a conversation. The color palette is dominated by earthy tones, with the men's clothing in shades of brown, beige, and black, and the ground in a reddish-brown hue. The background features a grand stone building with large arched windows, and there's a lantern hanging from the building. The overall mood of the image is solemn and communal, suggesting a moment of discussion or gathering.",
+        "A close-up shot of a man, likely from a historical or fantasy setting, captured in a side profile. He has a beard and is wearing a red garment with intricate detailing. The man's expression is serious, and he appears to be looking off to the side. The background is dimly lit, with a window allowing a soft light to illuminate the scene. The color palette is dominated by warm tones, with the red of the man's attire standing out against the darker surroundings. The overall mood of the image is somber and introspective.",
+        "A detailed portrayal of a historical or period scene, likely from the 18th or 19th century. The main subject is a group of individuals, possibly soldiers or cowboys, dressed in period clothing, including wide-brimmed hats and coats. They are engaged in combat, with some mounted on horses and others holding spears or swords. The color palette is dominated by earthy tones, with browns, blacks, and grays being prominent. The setting appears to be an old stone building with a door and windows, and the ground is paved with cobblestones. The overall mood of the image is tense and action-packed, suggesting a pivotal moment in a narrative.",
+        "A moody, atmospheric portrayal of a group of riders on a beach. The style is cinematic, with a focus on shadows and contrasts. The main subject is the group of horses, which are captured mid-gallop across the sandy shore. The visual attributes are dominated by dark, moody tones, with the horses and riders rendered in muted shades of black and white. The riders are dressed in dark clothing, with some wearing hats, adding to the dramatic effect. The background is a vast expanse of the ocean, with waves crashing against the shore, and the sky is overcast, creating a sense of depth and vastness. The overall mood of the image is one of solitude, adventure, and perhaps a touch of melancholy.",
+        "A moody, atmospheric portrayal of a group of men on horseback, set against a backdrop of a forested area. The style is reminiscent of a cinematic or theatrical production, with a focus on dramatic lighting and shadow play. The main subject is a man in the center, distinguished by his dark attire and wide-brimmed hat, who appears to be leading the pack. He is flanked by two white horses, one of which is slightly ahead of him. The men are dressed in period-appropriate attire, including long coats and hats, suggesting a historical or period setting. The surrounding environment is dense with trees, their leaves a mix of green and yellow, indicating a transition between seasons. The background is blurred, emphasizing the subjects, and the overall coloration is muted, with earthy tones dominating the scene.",
+        "A dramatic portrayal of three cowboys on horseback, set against a backdrop of a dusty, autumnal landscape. The central figure, an elderly man, is prominently featured, wearing a brown leather jacket, a wide-brimmed hat, and a confident expression. To his left, a black horse with a mane and tail is slightly blurred, suggesting motion. On the right, another white horse is captured mid-gallop, its mane flowing with the wind. The cowboys are dressed in dark, earth-toned clothing, with hats obscuring their faces. The scene is bathed in a warm, golden light, possibly from the setting or rising sun, which casts a soft glow over the scene. The overall color palette is dominated by earthy browns, stark whites, and muted yellows, creating a sense of nostalgia and adventure.",
+        "A moody, atmospheric portrayal of a dense forest with tall, slender trees. The forest floor is covered in a mix of grass and shrubs, and the trees have a textured bark with visible bark patterns. The color palette is dominated by earthy tones, with shades of brown, green, and gray, creating a sense of depth and mystery. The main subject is a group of individuals, possibly villagers or travelers, walking through the forest. They are dressed in dark, flowing robes or robes that contrast with the lighter, more muted colors of the surroundings. The individuals are positioned in various directions, suggesting movement or exploration. The overall style of the image is evocative, with a focus on mood and atmosphere over detailed realism.",
+        "A moody, atmospheric scene set in a forested area, possibly during the late 19th or early 20th century. The main subject is a man dressed in period clothing, including a wide-brimmed hat, a long coat, and a necklace, holding a sword. He stands prominently in the center, looking off to the side with a contemplative expression. To his left, a man with a beard is seen, and to his right, another man in a dark coat appears to be observing the scene. The surrounding environment is dense with trees, their leaves a mix of green and yellow, suggesting a transition between seasons. The color palette is dominated by earthy tones, with the man's dark clothing contrasting against the lighter background. The overall style of the image is cinematic, with a focus on mood and atmosphere over detailed realism.",
+        "A still from a film or television show, capturing a tense moment in a forested area. The main subject is a man with a beard and curly hair, wearing a dark jacket and a scarf, looking intently to the side. He has a gun slung over his shoulder, suggesting he might be a rebel or a scavenger. The man's expression is one of determination or concern. In the background, there is another man, slightly obscured by a hat, who appears to be observing the scene. The forest is dense with tall trees, and the overall color palette is muted, dominated by earthy tones. The style of the image is cinematic, with a focus on dramatic lighting and shadow play.",
+        "A still from a film or television show, capturing a tense moment between two characters. The main subject is a rugged man with long, dark hair and a beard, wearing a worn-out, brown leather vest. He appears to be in a state of distress or concern, with his eyes wide open and his mouth slightly agape. The character on the right is partially visible, but their features are not discernible due to the lighting. The background is blurred, emphasizing the characters, and the color palette is muted, with earthy tones dominating the scene. The overall mood of the image is somber and intense, suggesting a pivotal moment in a narrative.",
+        "A cinematic portrayal of four men in a forest setting, likely from a historical or fantasy film. The scene is bathed in a warm, sepia-toned color palette, with the trees and foliage in the background showcasing autumnal hues of yellow and orange. The men are dressed in period-appropriate attire, with one man in the center wearing a hat and a dark cloak, another to his right in a leather jacket, and the third to his left in a dark coat. Their expressions range from contemplative to alert, suggesting a moment of tension or anticipation. The overall mood of the image is somber and intense, with a touch of nostalgia due to the historical setting.",
+        "A dramatic, atmospheric portrayal of a beach scene with a castle in the background. The main subject is a group of three riders, each mounted on a horse, galloping along the sandy shore. The riders are dressed in dark clothing, with one in the lead and the others following closely. The beach is wet, reflecting the sky and the castle, and the sand is a light beige color. The castle, with its dark stone walls and spires, stands tall against a backdrop of a partly cloudy sky. The overall color palette is dominated by shades of gray, black, and white, creating a moody and evocative atmosphere. The style of the image is cinematic, with a focus on capturing the raw emotion and movement of the moment.",
+        "A moody, atmospheric portrait of a person draped in a hooded cloak, set against a dimly lit, atmospheric backdrop. The subject's face is partially obscured by the hood, with only their eyes and lips visible. The cloak is dark, possibly black or deep gray, with a hint of gold detailing on the neckline and sleeves. The person's earrings are long and gold, adding a touch of elegance to the overall look. The background is blurred, emphasizing the subject, and the overall color palette is dominated by dark blues, blacks, and golds, creating a sense of mystery and introspection.",
+        "A moody, atmospheric scene set in a dimly lit, rustic setting. The main subject is a woman dressed in a dark, hooded cloak, standing in the foreground with a contemplative expression. She is positioned to the right of the frame, with a horse to her left, its mane and tail flowing in the wind. The horse is harnessed to a carriage, and its hooves are visible, suggesting it might be in motion. The background is filled with a sense of mystery and solitude, with wooden structures and a hanging lantern adding to the ambiance. The color palette is dominated by dark, muted tones, with the woman's cloak and the lantern providing a stark contrast. The overall style of the image is reminiscent of a period drama or historical film, capturing a moment of quiet introspection.",
+        "A moody, atmospheric portrayal of a woman and a man in a forest setting. The woman, the main subject, is adorned in a dark, hooded cloak with intricate patterns, and her gaze is directed towards the man, who is partially visible on the right side of the frame. The man, wearing a hat, appears to be observing the woman's expression. The background is blurred, emphasizing the subjects, and the color palette is dominated by cool tones of blue and gray, creating a sense of solitude and introspection. The style of the image leans towards cinematic, with a focus on mood and atmosphere over detailed realism.",
+        "A still from a film or television show, capturing a moment between two characters in an urban setting. The main subjects are a man and a woman, both dressed in period clothing. The man, on the left, has long, dark hair and a beard, wearing a brown coat, and is looking off to the side with a contemplative expression. The woman, to the right, is partially visible, with her eyes closed and a gentle smile on her face. She is draped in a dark cloak or shawl, which contrasts with the lighter tones of the surroundings. The background reveals a cityscape with buildings, and the overall color palette is warm, dominated by browns, grays, and soft blues. The lighting suggests it's either early morning or late afternoon, casting a soft glow on the characters and creating a serene atmosphere.",
+        "A silhouette of a castle perched atop a rocky outcrop, set against a backdrop of a gradient sky transitioning from a deep orange to a muted brown. The castle, with its flag fluttering atop, is the central focus, drawing attention to its silhouette. The sky is adorned with wispy clouds, and the overall mood of the image is serene and contemplative.",
+        "A silhouette-style photograph capturing a serene sunset over a misty landscape. The main subject is a group of people riding horses, silhouetted against the golden hues of the setting sun. The sky is painted with a gradient of warm colors, transitioning from a deep orange near the horizon to a lighter shade as it ascends. The sun itself is a brilliant orb, casting a radiant glow over the scene. The foreground is dominated by the rolling hills, which are partially obscured by the mist, creating a sense of depth and distance. On the left side of the image, there's a structure with a flag, possibly a building or monument, standing tall against the sky. The overall mood of the photograph is tranquil and contemplative, evoking feelings of solitude and reflection.",
+        "A silhouette-style photograph capturing a group of cowboys on horseback against a backdrop of a sunset. The sky is painted in warm hues of orange and yellow, with the sun casting a golden glow over the scene. The cowboys are positioned in a staggered formation, with one prominently in the foreground and others in the background. They are dressed in traditional cowboy attire, including hats and boots. The ground is covered in a layer of mist or fog, adding a mysterious and ethereal quality to the photograph. The overall mood of the image is serene and contemplative, evoking a sense of solitude and connection with nature.",
+        "A dramatic, historical-style photograph capturing a scene set within an opulent room with classical architectural elements. The main subject is a man draped in a rich red cloak, standing with his back to the viewer, casting a shadow over his face. He is positioned in the center of the frame, with a woman to his left and a man to his right. The woman is dressed in a long, flowing dress with a high neckline, while the man is in a military-style uniform. The room is adorned with intricate carvings on the walls, a grand chandelier hanging from the ceiling, and ornate wooden furniture. The color palette is dominated by deep reds, golds, and muted browns, creating a sense of grandeur and mystery. The lighting is soft, casting gentle shadows and highlighting the textures of the room and the characters' clothing. The overall mood of the image is one of tension and anticipation, suggesting a pivotal moment in a narrative.",
+        "A moody, atmospheric portrait of a man with long, wavy hair and a mustache, set against a dimly lit, vintage backdrop. He is dressed in a dark, ornate vest with intricate patterns and buttons, and a white shirt underneath. The man's gaze is directed off to the side, and his expression is contemplative. The color palette is dominated by warm, muted tones, with the man's dark attire contrasting against the lighter, hazy background. The style of the image suggests it could be from a period drama or a historical reenactment.",
+        "A moody, atmospheric portrayal of a man with long, wavy hair and a mustache, dressed in a richly detailed, dark coat with intricate patterns. He stands in a dimly lit, ornate room with a chandelier hanging from the ceiling, casting a soft glow on the scene. The man's gaze is directed off to the side, and his posture suggests contemplation or deep thought. The color palette is dominated by deep browns, blacks, and muted golds, creating a sense of mystery and intrigue. The overall style of the image leans towards a cinematic or theatrical production, with a focus on dramatic lighting and shadow play.",
+        "A dramatic, atmospheric portrayal of three figures mounted on horses, set against a misty forest backdrop. The scene is dominated by a warm, golden hue, with the sun casting a radiant light through the trees, creating a play of light and shadow. The figures are dressed in period-appropriate attire, suggesting a historical or fantasy setting. The horses are galloping, their manes and tails flowing with the movement, adding to the sense of motion. The forest is dense with tall, leafless trees, their branches creating a sense of depth and isolation. The overall color palette is muted, with shades of brown, gold, and gray dominating the scene. The style of the image leans towards a blend of realism and fantasy, with a touch of romanticism.",
+        "A moody, atmospheric portrayal of two figures on horseback, set against a desolate beach backdrop. The scene is captured in a monochromatic palette, dominated by shades of blue and gray, which evoke a sense of solitude and introspection. The main subjects are dressed in period-appropriate attire, including wide-brimmed hats and cloaks, suggesting a historical or period setting. The horses, one white and one black, are galloping along the beach, their manes and tails flowing in the wind. The waves crash against the shore, and the sky overhead is overcast, adding to the dramatic effect. The overall style of the image leans towards a cinematic or theatrical representation, with a focus on mood and atmosphere over detailed realism.",
+        "A moody, atmospheric portrayal of a man in a dimly lit, gothic-style interior. The man, the main subject, is the focal point, captured in a side profile with a focused expression. He is dressed in a dark, possibly leather jacket, and his attire suggests a sense of age or weariness. The background is filled with shadows, hinting at a mysterious or otherworldly setting. The architecture is reminiscent of Gothic or Renaissance styles, with pointed arches and stone walls. The color palette is dominated by dark, muted tones, with the man's face and clothing standing out against the lighter surroundings. The overall style of the image is cinematic, with a cinematic quality that evokes feelings of suspense and intrigue.",
+        "A cinematic portrayal of a man in a rugged, historical setting. He is adorned in a black cowboy hat, a brown leather jacket, and a dark scarf wrapped around his neck. His facial hair is wild and unkempt, and he appears to be looking off to the side with a contemplative expression. The background features a vast, barren landscape with a castle-like structure in the distance, suggesting a location of historical significance. The color palette is dominated by earthy tones, with the man's dark attire contrasting against the lighter, muted colors of the surroundings. The overall mood of the image is somber and introspective, evoking a sense of mystery and adventure.",
+        "A dramatic, moody scene featuring a man in the foreground, poised with a gun, set against a dimly lit, industrial backdrop. The man's intense gaze is directed forward, and his posture suggests readiness or determination. He is dressed in a long-sleeved, dark coat, which contrasts with the lighter, shadowy surroundings. The background is filled with machinery and equipment, hinting at a manufacturing or industrial setting. The color palette is dominated by dark, muted tones, with the man's coat being the most prominent feature. The overall style of the image is cinematic, with a focus on dramatic lighting and shadow play.",
+        "A dramatic portrayal of three men in a dimly lit, rustic setting. The central figure, donning a wide-brimmed hat and a dark coat, is poised with a sword, ready for combat. To his left, a man with a beard and mustache is clad in a dark outfit, holding a round object, possibly a weapon or a shield, while to his right, another man with long hair and a beard is seen wielding a similar weapon. The background is a stone wall, and the overall color palette is dominated by dark browns, blacks, and muted yellows, creating a somber and intense atmosphere. The style of the image leans towards a cinematic or theatrical representation, possibly from a film or series.",
+        "A detailed, atmospheric portrayal of a grand, gothic-style cathedral or church. The main subject is the altar area, which is adorned with numerous candles and draped in golden drapery. The altar is surrounded by rows of pews, each filled with worshippers. The worshippers are dressed in period-appropriate attire, with robes, tunics, and cloaks, suggesting a religious or ceremonial significance. The color palette is dominated by warm, golden hues, with occasional pops of white and red from the draped garments. The lighting is soft, casting a serene ambiance over the scene, and the overall mood is one of solemnity and reverence.",
+        "A dramatic scene set in an opulent room with classical architecture. The main subject is a man in a long coat, holding a pistol, poised in a defensive stance. He is dressed in dark clothing with a red sash, and his posture suggests readiness or alertness. The room is dimly lit, with a few other individuals in the background, some of whom are observing the scene. The floor is covered with a white cloth, and there are ornate chairs and tables scattered around. The color palette is dominated by muted browns, grays, and the stark contrast of the man's dark attire against the lighter surroundings.",
+        "A dramatic, atmospheric portrayal of a scene set within a grand, possibly historical, cathedral. The main subjects are two individuals, one male and one female, dressed in period-appropriate attire. The male figure wears a wide-brimmed hat adorned with feathers, while the female is draped in a flowing white cloak. Their expressions are intense, suggesting a moment of tension or confrontation. The cathedral's architecture is grand, with tall columns and stained glass windows that bathe the scene in a warm, golden light. The color palette is dominated by earthy tones, with the white of the woman's cloak standing out against the darker surroundings. The overall mood of the image is one of drama and solemnity.",
+        "A dramatic, aerial photograph capturing a vast, verdant landscape. The main subject is a group of people, possibly soldiers or camels, marching in unison across a grassy field. The visual attributes include the rich green of the grass, the brown of the trees, and the grayish hue of the sky. The people are dressed in period-appropriate attire, with some wearing helmets and others carrying weapons. The poses of the people are dynamic, suggesting movement and purpose. The background features a line of trees and a distant horizon, adding depth to the scene. The style of the image is cinematic, with a focus on capturing the mood and atmosphere of the moment rather than detailed realism.",
+        "A moody, atmospheric portrayal of a man standing amidst a backdrop of rooftops. The man is the central figure, donning a wide-brimmed hat and a dark coat, suggesting a historical or period setting. His expression is one of contemplation or surprise, with his mouth slightly open and eyes wide. The rooftops behind him are made of stone or concrete, with varying shades of gray and brown. The sky overhead is overcast, adding to the somber mood of the scene. The overall color palette is muted, dominated by earthy tones, with the man's dark attire contrasting against the lighter surroundings.",
+        "A moody, dimly lit scene featuring three men engaged in a jovial conversation. The man on the left has long, wavy hair and is wearing a textured, earth-toned shirt. The central figure, with a beard, is laughing heartily, his face illuminated by the warm glow of a candle. To his right, another man with curly hair and a beard is seen laughing, his mouth open in a joyful expression. The setting appears to be a rustic tavern or bar, with wooden walls and a lit candle in the background. The overall color palette is dominated by warm, earthy tones, with the characters' clothing and the candle adding contrast.",
+        "A dark, atmospheric scene set in a dimly lit, rustic warehouse or workshop. The main subject is a group of soldiers, dressed in dark uniforms, engaged in combat. They are armed with rifles and are positioned in various stances, suggesting movement and action. The environment is filled with wooden crates, barrels, and machinery, indicating a marketplace or storage area. The color palette is dominated by dark browns, blacks, and muted yellows, creating a somber and tense atmosphere. The style of the image is reminiscent of a video game or cinematic production, with a focus on realism and detail.",
+        "A dramatic, moody portrayal of a group of individuals on a beach, captured in a monochromatic palette of blues and blacks. The scene is dominated by the interplay of light and shadow, creating a sense of depth and movement. The individuals are dressed in dark clothing, which contrasts sharply against the lighter surroundings. They appear to be engaged in some form of activity, possibly fishing or searching for something in the water. Their poses suggest movement and urgency, with some individuals actively pulling or pulling a small boat or vessel. The beach is wet, reflecting the light, and the waves crash against the rocks in the background. The overall style of the image is cinematic, with a focus on capturing the mood and atmosphere of the moment rather than detailed realism.",
+        "A moody, atmospheric scene featuring two men in a dimly lit, rustic setting. The man on the left, with a long beard and a dark cloak, appears to be in a state of deep thought or contemplation. He is turned slightly to the right, looking intently at the other man, who is dressed in a worn-out, textured shirt. The background is shadowy, with vertical lines and a muted color palette dominated by browns and blacks. The overall style of the image is reminiscent of a period drama or cinematic still, emphasizing emotion and tension.",
+        "A close-up portrait of a man, captured in a moody, dimly lit setting. The man has long, unkempt hair and a beard, and his face is illuminated by a soft light source, highlighting the contours of his face. His expression is contemplative, and he is wearing a simple, light-colored shirt. The background is dark and blurred, emphasizing the subject's features. The overall color palette is dominated by earthy tones, with the man's skin and hair illuminated in a warm, golden hue.",
+        "A detailed portrayal of a historical or period setting, possibly from the Middle East or North Africa. The scene is set outdoors during what appears to be the golden hour, with the sun casting a warm, golden hue over the landscape. The main subject is a group of people, possibly soldiers or civilians, gathered around tents and makeshift structures. They are dressed in period-appropriate attire, with some wearing helmets and cloaks. The tents are of varying sizes and colors, with one prominently being a beige one. The ground is covered in grass, and there are wooden benches and tables scattered around. The background features a stone wall, and the sky is clear with a gradient of colors, transitioning from a deep blue at the top to a soft orange near the horizon. The overall style of the image is realistic, with a focus on capturing the intricate details and textures of the environment.",
+        "A moody, atmospheric portrayal of a historical or fantasy setting, possibly from a period drama or historical reenactment. The main subject is a group of individuals, possibly attendees of a gathering or event, dressed in period-appropriate attire, with some wearing feathered headdresses and others adorned with cloaks or cloaks. They are engaged in a conversation, with one person prominently holding a large, cloud-like object that emits a soft, ethereal light. The color palette is dominated by warm, golden hues, with the fire contrasting against the cooler, muted tones of the surrounding environment. The scene is set in a dimly lit, medieval-style venue with wooden structures, possibly buildings or stalls, visible in the background. The overall style of the image is cinematic, with a focus on dramatic lighting and shadow play, creating a sense of depth and atmosphere.",
+        "A moody, atmospheric portrayal of a masquerade ball or carnival. The main subject is a person wearing a ornate mask adorned with feathers and jewels, which is the focal point of the image. The mask is dark, almost black, with gold accents, and the person's face is partially obscured by the mask. The person is dressed in a richly patterned, dark-colored outfit with gold detailing. The background is dimly lit, with a bokeh effect that adds depth and drama to the scene. The color palette is dominated by dark, muted tones with bursts of gold and other colors, creating a sense of opulence and celebration.",
+        "A moody, atmospheric portrayal of a large sailing ship anchored in calm waters under a overcast sky. The ship, with its three masts and billowing white sails, stands out against the deep blue of the ocean. The sky is a mix of dark blues and purples, suggesting either dawn or dusk. The water is still, reflecting the ship and the sky, creating a mirror image of the ship. The overall style of the image is cinematic, with a focus on the interplay of light and shadow to evoke a sense of depth and mystery.",
+        "A moody, atmospheric portrayal of a man on a ship, captured in a side profile. The style is cinematic, with a focus on dramatic lighting and shadow play. The main subject is a man with tousled hair, dressed in a long coat, who appears to be in deep thought or contemplation. He is positioned against a backdrop of ropes and rigging, suggesting a maritime setting. The color palette is dominated by cool tones, with shades of blue and gray, creating a sense of solitude and introspection. The man's attire is dark, which contrasts with the lighter background, emphasizing his features. The overall mood of the image is somber and contemplative.",
+        "A dramatic portrayal of a man in a forest setting, captured in a moment of intense emotion. He is dressed in a dark, historical-style coat with intricate detailing, and his face is marked by a beard and mustache. The man is holding a long, slender object in his right hand, which appears to be a weapon or weapon of some form. His left hand is extended outward, possibly in a gesture of command or readiness. The background is a dense forest with tall trees, their trunks fading into the misty haze. The color palette is dominated by earthy tones, with the man's dark clothing contrasting against the lighter forest backdrop. The overall style of the image is cinematic, with a focus on capturing the raw emotion and intensity of the moment.",
+        "A dramatic portrayal of a woman in a medieval or renaissance setting, engulfed in flames. She is seated on the ground, holding a weapon, possibly a sword or a dagger, with a focused expression on her face. The woman is dressed in a long, flowing dress with intricate detailing, suggesting a historical or period influence. The surrounding environment is dimly lit, with the flames casting a warm, golden hue over the scene. In the background, there are barrels stacked and a wooden structure, adding to the rustic ambiance. The overall color palette is dominated by warm yellows, oranges, and browns, creating a sense of warmth and intensity.",
+        "A dramatic portrayal of a person in a dynamic pose amidst a backdrop of fiery flames. The person is dressed in dark clothing, with a long coat and boots, and is captured mid-motion, possibly in the midst of a battle or ritual. The flames, with their bright orange and yellow hues, billow around the person, creating a sense of movement and intensity. The setting appears to be indoors, possibly within a tent or a similar structure, with wooden walls and a concrete floor. The overall mood of the image is intense and intense, emphasized by the contrast between the fiery elements and the dark silhouette of the person.",
+        "A moody, atmospheric scene featuring a man in the foreground, captured in a close-up shot. He is dressed in a dark, leather jacket and a bandana wrapped around his head, suggesting a rugged or possibly historical setting. The man's intense gaze is directed off to the side, and his hands are gripping a metallic object, possibly a weapon or tool. The background is dimly lit, with a warm, amber glow illuminating the scene, creating a sense of urgency and tension. The overall color palette is dominated by dark, muted tones, with the man's skin and clothing standing out against the darker surroundings.",
+        "A detailed, atmospheric portrayal of a grand, opulent room, likely from a historical or fantasy setting. The room is adorned with intricate gold detailing, ornate chandeliers, and a high ceiling. The main subject is a man in a long, flowing red cloak, standing in the center of the room, facing away from the viewer, with a contemplative expression. To his right, a group of men in period clothing stand, observing the scene. The color palette is dominated by rich golds, deep reds, and muted browns, creating a sense of grandeur and mystery. The lighting is soft, casting gentle shadows and highlighting the textures of the wood and the fabric of the clothing. The overall mood of the image is solemn and introspective, suggesting a moment of pause or reflection.",
+        "A dramatic portrayal of two men in a rustic setting, likely from a historical or period drama. The man on the left, with a beard, is dressed in a dark, worn-out outfit, holding a sword, and appears to be in a defensive or confrontational stance. He is seated on the ground, leaning forward with his legs crossed, while the other man, on the right, is leaning back with a stern expression, wearing a dark jacket, leather pants, and boots. The background features a stone building with a wooden door and windows, and there are barrels stacked nearby. The color palette is dominated by earthy tones, with browns, grays, and blacks being prominent. The overall mood of the image is tense and intense, suggesting a moment of confrontation or confrontation.",
+        "A cinematic scene featuring a man in the foreground, poised with a pistol, ready for action. He is dressed in a dark jacket, suggesting a rugged or historical setting. The man's intense gaze and the motion blur of the background evoke a sense of urgency and determination. The setting appears to be outdoors, with a backdrop of a mountainous landscape and a cloudy sky. The color palette is dominated by earthy tones, with the man's dark attire contrasting against the lighter, muted colors of the environment. The overall style of the image is dramatic and evocative, capturing a moment of suspense and anticipation.",
+        "A cinematic-style photograph capturing a scene from a video game or film. The main subject is a person in a red jacket, standing on a cobblestone street, looking down towards the ground. The person is positioned in the foreground, with their back to the camera, and they appear to be in motion. The surroundings are characterized by a narrow alleyway with stone walls on either side, and there are other people in the background, suggesting a bustling urban environment. The color palette is dominated by earthy tones, with the red jacket of the person standing out prominently. The lighting is dramatic, casting shadows and highlighting the textures of the cobblestones and the roughness of the alley. The overall mood of the image is tense and suspenseful, with a sense of anticipation.",
+        "A cinematic portrayal of a man in a rugged, medieval setting. He is captured in a dynamic pose, running through a narrow stone alleyway. The man is dressed in a brown leather jacket with a black shirt underneath, and his hair is tousled by the wind. The alley is flanked by weathered stone walls, and the sky overhead is overcast, adding to the atmosphere of the scene. The color palette is dominated by earthy tones, with the man's brown jacket standing out against the muted grays and browns of the surroundings.",
+        "A moody, atmospheric photograph of a grand, classical-style building, possibly a castle or mansion, set amidst a serene landscape. The scene is dominated by a series of tall, leafy trees that frame the building, creating a canopy overhead. The building itself is a pale, off-white color, with large arched windows and a symmetrical facade. In the foreground, a calm body of water reflects the building and the trees, adding depth to the image. Two figures are seen walking along the path, dressed in period-appropriate attire, suggesting a historical or period setting. The overall color palette is muted, with the green of the trees and the pale hue of the building standing out against the subdued background. The image evokes a sense of tranquility and timelessness.",
+        "A moody, atmospheric portrayal of two individuals in a close embrace, set against a dimly lit, rustic backdrop. The style is cinematic, with a focus on dramatic lighting and shadow play. The main subjects are a man and a woman, both dressed in period-appropriate attire, suggesting a historical or fantasy setting. The man, with dark hair, is seen from the back, while the woman, with long, flowing hair, wears a sleeveless dress. The color palette is dominated by warm, golden hues, with the woman's dress standing out against the darker surroundings. The background is blurred, emphasizing the subjects, and the overall mood of the image is intimate and evocative.",
+        "A moody, atmospheric portrayal of a medieval or renaissance setting. The main subject is a person with long hair, viewed from behind, wearing a dark, textured coat. The person is positioned in the foreground, with their back to the viewer, creating a sense of depth and perspective. The surroundings are dimly lit, with a focus on the cobblestone street, where a horse-drawn carriage is faintly visible. The background is filled with wooden crates and barrels, suggesting a marketplace or storage area. The color palette is dominated by earthy tones, with the coat of the person standing out against the muted browns and grays of the surroundings. The overall style of the image is reminiscent of a period drama or historical reenactment."
+      ]
+    },
+    {
+      "id": 116,
+      "type": "Label (rgthree)",
+      "pos": [
+        650,
+        1140
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "1",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#007a6c",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 110,
+      "type": "Label (rgthree)",
+      "pos": [
+        1130,
+        1140
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "2",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#c98c45",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 112,
+      "type": "Label (rgthree)",
+      "pos": [
+        1580,
+        1140
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "3\n",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#006c7a",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#4ea69c",
+      "bgcolor": "#3a9288"
+    },
+    {
+      "id": 118,
+      "type": "Label (rgthree)",
+      "pos": [
+        2160,
+        1140
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "4",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#525252",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 92,
+      "type": "Label (rgthree)",
+      "pos": [
+        2200,
+        1140
+      ],
+      "size": [
+        206.8359375,
+        24
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Les fichiers .txt",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 93,
+      "type": "Label (rgthree)",
+      "pos": [
+        2200,
+        1170
+      ],
+      "size": [
+        221.8359375,
+        16
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Création d'un fichier par image.",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 94,
+      "type": "Label (rgthree)",
+      "pos": [
+        1620,
+        1140
+      ],
+      "size": [
+        270.57421875,
+        24
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Réglages de l'export",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 95,
+      "type": "Label (rgthree)",
+      "pos": [
+        1620,
+        1170
+      ],
+      "size": [
+        279.265625,
+        16
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Les réglages des fichiers .txt à générer.",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 111,
+      "type": "Label (rgthree)",
+      "pos": [
+        1170,
+        1140
+      ],
+      "size": [
+        173.3203125,
+        24
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Dossier Cible",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 89,
+      "type": "Label (rgthree)",
+      "pos": [
+        1170,
+        1170
+      ],
+      "size": [
+        232.109375,
+        16
+      ],
+      "flags": {
+        "allow_interaction": false,
+        "pinned": true
+      },
+      "order": 31,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Dossier de dépôt des fichiers .txt",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 87,
+      "type": "Label (rgthree)",
+      "pos": [
+        690,
+        1140
+      ],
+      "size": [
+        199.078125,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Dossier Source",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 88,
+      "type": "Label (rgthree)",
+      "pos": [
+        690,
+        1170
+      ],
+      "size": [
+        200.1015625,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Dossier des photo à décrire.",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 101,
+      "type": "Label (rgthree)",
+      "pos": [
+        700,
+        1550
+      ],
+      "size": [
+        269.5,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Réglages du modèle caption Florence",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 86,
+      "type": "Note",
+      "pos": [
+        260,
+        1290
+      ],
+      "size": [
+        380,
+        220
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "\n PROBLEME RENCONTRE :  -------------------------›\n\n Une fois le QUEUE PROMPT lancé, si ce n'est pas correct et que vous devez apportez des modifs à votre workflow pour le relancer, il va falloir créer un nouveau dossier contenant les images.\n\nSi le nom du dossier est le même que lors du précédent QUEUE PROMPT ca va bueuguer.\n\n Va savoir pourquoi. Je pense au cache... ?"
+      ],
+      "color": "#f4d614",
+      "bgcolor": "#e0c200"
+    },
+    {
+      "id": 36,
+      "type": "Text Input [Dream]",
+      "pos": [
+        2160,
+        1250
+      ],
+      "size": [
+        1075.199951171875,
+        81
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            52
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "PREFIXE ✍ Le texte qui se placera devant la description de l'image. Idéal pour placer les mots-clé à rappeller dans les prompts.",
+      "properties": {
+        "Node name for S&R": "Text Input [Dream]"
+      },
+      "widgets_values": [
+        "A photo inspired from the movie \"LES 3 MOUSQUETAIRES\". XVI century.",
+        [
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "id": 34,
+      "type": "Save Text File",
+      "pos": [
+        1130,
+        1250
+      ],
+      "size": [
+        315,
+        226
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 54,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [],
+      "title": "Dossier CIBLE pour dépôt des .txt",
+      "properties": {
+        "Node name for S&R": "Save Text File"
+      },
+      "widgets_values": [
+        "",
+        "/workspace/ComfyUI/input4CPT3",
+        "Les3Mousquetaires",
+        "_",
+        3,
+        ".txt",
+        "utf-8",
+        ""
+      ],
+      "color": "#e6a059",
+      "bgcolor": "#d28c45"
+    },
+    {
+      "id": 26,
+      "type": "Florence2Run",
+      "pos": [
+        1580,
+        1250
+      ],
+      "size": [
+        430,
+        357
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 48,
+          "slot_index": 0
+        },
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "link": 42,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "links": [
+            50
+          ],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Florence2Run"
+      },
+      "widgets_values": [
+        "",
+        "more_detailed_caption",
+        true,
+        false,
+        1024,
+        3,
+        true,
+        "",
+        791185675529877,
+        "randomize",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#14808e",
+      "bgcolor": "#006c7a"
+    }
+  ],
+  "links": [
+    [
+      42,
+      28,
+      0,
+      26,
+      1,
+      "FL2MODEL"
+    ],
+    [
+      48,
+      33,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      26,
+      2,
+      35,
+      0,
+      "STRING"
+    ],
+    [
+      52,
+      36,
+      0,
+      37,
+      0,
+      "STRING"
+    ],
+    [
+      53,
+      35,
+      0,
+      37,
+      1,
+      "STRING"
+    ],
+    [
+      54,
+      37,
+      0,
+      34,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.25937424601000175,
+      "offset": [
+        653.2900625651565,
+        -62.18723956738851
+      ]
+    },
+    "ue_links": []
+  },
+  "version": 0.4
+}
