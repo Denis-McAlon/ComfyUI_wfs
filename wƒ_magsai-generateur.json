@@ -1,0 +1,10992 @@
+{
+  "last_node_id": 1225,
+  "last_link_id": 1931,
+  "nodes": [
+    {
+      "id": 109,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": [
+        6300,
+        -9020
+      ],
+      "size": [
+        400,
+        190
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 315,
+          "dir": 3
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 152,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            430
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "dir": 4
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            431,
+            967
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "dir": 4
+        }
+      ],
+      "title": "•   L o R A ' S - Flux Dev",
+      "properties": {
+        "Show Strengths": "Single Strength"
+      },
+      "widgets_values": [
+        null,
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": true,
+          "lora": "Perso - MAG Denis.sft",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        {
+          "on": false,
+          "lora": "None",
+          "strength": 1,
+          "strengthTwo": null
+        },
+        null,
+        ""
+      ],
+      "color": "#1492b2",
+      "bgcolor": "#007e9e",
+      "shape": 1
+    },
+    {
+      "id": 345,
+      "type": "easy float",
+      "pos": [
+        7640,
+        -8560
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "float",
+          "type": "FLOAT",
+          "links": [
+            1717
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Denoise",
+      "properties": {
+        "Node name for S&R": "easy float"
+      },
+      "widgets_values": [
+        0.92
+      ],
+      "color": "#14808e",
+      "bgcolor": "#006c7a",
+      "shape": 1
+    },
+    {
+      "id": 402,
+      "type": "SaveImage",
+      "pos": [
+        8390,
+        -9020
+      ],
+      "size": [
+        610,
+        790
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1579
+        }
+      ],
+      "outputs": [],
+      "title": "E N R E G I S T R E M E N T   D E   L ' I M A G E",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "Denis-%date:yyyy-MM-dd%/MAGsAI • %date:yyyyMMdd% • Gen"
+      ],
+      "color": "#146614",
+      "bgcolor": "#005200",
+      "shape": 1
+    },
+    {
+      "id": 407,
+      "type": "CR Overlay Text",
+      "pos": [
+        9680,
+        -9020
+      ],
+      "size": [
+        260,
+        430
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1582
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1611
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Texte   -   En bas à  Droite",
+      "properties": {
+        "Node name for S&R": "CR Overlay Text"
+      },
+      "widgets_values": [
+        "",
+        "HelveticaNeue-CondensedRegular.ttf",
+        12,
+        "lightgray",
+        "bottom",
+        "right",
+        5,
+        0,
+        0,
+        2,
+        0,
+        "text center",
+        "",
+        true
+      ],
+      "color": "#a814b2",
+      "bgcolor": "#94009e"
+    },
+    {
+      "id": 410,
+      "type": "LoadImage",
+      "pos": [
+        9070,
+        -9020
+      ],
+      "size": [
+        320,
+        470
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1614
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            1607
+          ],
+          "slot_index": 1
+        }
+      ],
+      "title": "Logo Watermark",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "- VIERGE.png",
+        "image"
+      ],
+      "color": "#a814b2",
+      "bgcolor": "#94009e"
+    },
+    {
+      "id": 415,
+      "type": "LayerStyle: ColorOverlay V2",
+      "pos": [
+        9430,
+        -8550
+      ],
+      "size": [
+        270,
+        280
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "background_image",
+          "type": "IMAGE",
+          "link": 1611
+        },
+        {
+          "name": "layer_image",
+          "type": "IMAGE",
+          "link": 1614
+        },
+        {
+          "name": "layer_mask",
+          "type": "MASK",
+          "link": 1607,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            1579
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LayerStyle: ColorOverlay V2"
+      },
+      "widgets_values": [
+        true,
+        "screen",
+        0,
+        "#123456"
+      ],
+      "color": "#a814b2",
+      "bgcolor": "#94009e"
+    },
+    {
+      "id": 618,
+      "type": "Label (rgthree)",
+      "pos": [
+        5870,
+        -9130
+      ],
+      "size": [
+        250.5234375,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Dimensions > Cible",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 619,
+      "type": "Label (rgthree)",
+      "pos": [
+        5870,
+        -9100
+      ],
+      "size": [
+        215.625,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Les format de l'image générée",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 621,
+      "type": "Label (rgthree)",
+      "pos": [
+        6340,
+        -9130
+      ],
+      "size": [
+        288.375,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Personnages & Styles",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 622,
+      "type": "Label (rgthree)",
+      "pos": [
+        6340,
+        -9100
+      ],
+      "size": [
+        318.3203125,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Les têtes qu'on veut, dans le style qu'on veut",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 623,
+      "type": "Label (rgthree)",
+      "pos": [
+        6300,
+        -9130
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "2",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#158bb2",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 624,
+      "type": "Label (rgthree)",
+      "pos": [
+        6810,
+        -9130
+      ],
+      "size": [
+        135.05859375,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Le Prompt",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 625,
+      "type": "Label (rgthree)",
+      "pos": [
+        6810,
+        -9100
+      ],
+      "size": [
+        212.9453125,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Description de l'image voulue.",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 626,
+      "type": "Label (rgthree)",
+      "pos": [
+        6770,
+        -9130
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "3",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#8c8c8c",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 627,
+      "type": "Label (rgthree)",
+      "pos": [
+        7490,
+        -9130
+      ],
+      "size": [
+        110.35546875,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Affinage",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 628,
+      "type": "Label (rgthree)",
+      "pos": [
+        7490,
+        -9100
+      ],
+      "size": [
+        231.65625,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Les réglages de l'image générée",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 629,
+      "type": "Label (rgthree)",
+      "pos": [
+        7450,
+        -9130
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "4\n",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#006c7a",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#4ea69c",
+      "bgcolor": "#3a9288"
+    },
+    {
+      "id": 630,
+      "type": "Label (rgthree)",
+      "pos": [
+        7960,
+        -9130
+      ],
+      "size": [
+        148.01953125,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Le Sampler",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 631,
+      "type": "Label (rgthree)",
+      "pos": [
+        7960,
+        -9100
+      ],
+      "size": [
+        313.0234375,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "L'image source + la dernière image générée",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 634,
+      "type": "Label (rgthree)",
+      "pos": [
+        5870,
+        -7930
+      ],
+      "size": [
+        251.65625,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Des trucs qui servent au workflow...",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 698,
+      "type": "Label (rgthree)",
+      "pos": [
+        8420,
+        -9130
+      ],
+      "size": [
+        348.4453125,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Enregistrement de l'Image",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 699,
+      "type": "Label (rgthree)",
+      "pos": [
+        8420,
+        -9100
+      ],
+      "size": [
+        300.078125,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Nom et chemin d'enregistrement du fichier",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 702,
+      "type": "Label (rgthree)",
+      "pos": [
+        9110,
+        -9130
+      ],
+      "size": [
+        348.4453125,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Enregistrement de l'Image",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 703,
+      "type": "Label (rgthree)",
+      "pos": [
+        9110,
+        -9100
+      ],
+      "size": [
+        300.078125,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Nom et chemin d'enregistrement du fichier",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 704,
+      "type": "Label (rgthree)",
+      "pos": [
+        9070,
+        -9130
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "7",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#94009e",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 674,
+      "type": "Label (rgthree)",
+      "pos": [
+        5840,
+        -8680
+      ],
+      "size": [
+        18.205078125,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "•",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#ff8200",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 672,
+      "type": "Label (rgthree)",
+      "pos": [
+        5880,
+        -8680
+      ],
+      "size": [
+        333.984375,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Chargement des modèles",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        5830,
+        -7390
+      ],
+      "size": [
+        160,
+        50
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 24
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 1713
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1716
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": [],
+      "color": "#771414",
+      "bgcolor": "#630000"
+    },
+    {
+      "id": 22,
+      "type": "BasicGuider",
+      "pos": [
+        5830,
+        -7480
+      ],
+      "size": [
+        161.1999969482422,
+        50
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1707,
+          "slot_index": 0
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": null,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            1708
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      },
+      "widgets_values": [],
+      "color": "#771414",
+      "bgcolor": "#630000"
+    },
+    {
+      "id": 37,
+      "type": "ModelSamplingFlux",
+      "pos": [
+        5830,
+        -7640
+      ],
+      "size": [
+        210,
+        122
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 1703,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 1704,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            51,
+            1707
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingFlux"
+      },
+      "widgets_values": [
+        1.15,
+        0.5,
+        1024,
+        1024
+      ],
+      "color": "#771414",
+      "bgcolor": "#630000"
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        5830,
+        -7740
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 967
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 1718,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            41
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Photography portrait in Steve McCurry style of a Somali woman with striking  green eyes, cultural portrait, emotive humane photography, rich colors, analog film, film grain, kodachrome, intricate details, insanely detailed, natural lighting, 8k, hdr, masterpiece, award winning photography, Fine art photography style, film photography style",
+        true
+      ],
+      "color": "#771414",
+      "bgcolor": "#630000"
+    },
+    {
+      "id": 318,
+      "type": "Anything Everywhere",
+      "pos": [
+        5980,
+        -7850
+      ],
+      "size": [
+        140,
+        30
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "*",
+          "link": 505,
+          "color_on": "#FFA931",
+          "shape": 7
+        }
+      ],
+      "outputs": [],
+      "title": "WiFi node 2",
+      "properties": {
+        "Node name for S&R": "Anything Everywhere",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [],
+      "color": "#771414",
+      "bgcolor": "#630000"
+    },
+    {
+      "id": 282,
+      "type": "Anything Everywhere3",
+      "pos": [
+        5830,
+        -7850
+      ],
+      "size": [
+        140,
+        70
+      ],
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "*",
+          "link": 430,
+          "color_on": "#B39DDB",
+          "shape": 7
+        },
+        {
+          "name": "CLIP",
+          "type": "*",
+          "link": 431,
+          "color_on": "#FFD500",
+          "shape": 7
+        },
+        {
+          "name": "anything",
+          "type": "*",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [],
+      "title": "WiFi node 1",
+      "properties": {
+        "Node name for S&R": "Anything Everywhere3",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [],
+      "color": "#771414",
+      "bgcolor": "#630000"
+    },
+    {
+      "id": 869,
+      "type": "Label (rgthree)",
+      "pos": [
+        5870,
+        -12760
+      ],
+      "size": [
+        240,
+        3360
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n📸\n",
+      "properties": {
+        "fontSize": 240,
+        "fontFamily": "arial",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 923,
+      "type": "Label (rgthree)",
+      "pos": [
+        5920,
+        -10360
+      ],
+      "size": [
+        40,
+        720
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 40,
+        "fontFamily": "arial black",
+        "fontColor": "#fccb00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 924,
+      "type": "Label (rgthree)",
+      "pos": [
+        5830,
+        -10340
+      ],
+      "size": [
+        70,
+        700
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 70,
+        "fontFamily": "arial black",
+        "fontColor": "#fcaa00",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 925,
+      "type": "Label (rgthree)",
+      "pos": [
+        5980,
+        -10340
+      ],
+      "size": [
+        20,
+        680
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 20,
+        "fontFamily": "arial black",
+        "fontColor": "#fce76d",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 966,
+      "type": "Label (rgthree)",
+      "pos": [
+        5740,
+        -10340
+      ],
+      "size": [
+        114,
+        798
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n★",
+      "properties": {
+        "fontSize": 114,
+        "fontFamily": "arial black",
+        "fontColor": "#fc8500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 967,
+      "type": "Label (rgthree)",
+      "pos": [
+        10130,
+        -10610
+      ],
+      "size": [
+        140,
+        1960
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n🦦",
+      "properties": {
+        "fontSize": 140,
+        "fontFamily": "arial",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 968,
+      "type": "Label (rgthree)",
+      "pos": [
+        10120,
+        -9410
+      ],
+      "size": [
+        339.890625,
+        768
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMAG's A.I. Bros",
+      "properties": {
+        "fontSize": 48,
+        "fontFamily": "arial",
+        "fontColor": "#fc8500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 874,
+      "type": "Label (rgthree)",
+      "pos": [
+        6130,
+        -10310
+      ],
+      "size": [
+        308.4296875,
+        888
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\nworkƒlow\n",
+      "properties": {
+        "fontSize": 74,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 635,
+      "type": "Label (rgthree)",
+      "pos": [
+        5830,
+        -7960
+      ],
+      "size": [
+        18.205078125,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 31,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "•",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#990000",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 673,
+      "type": "Label (rgthree)",
+      "pos": [
+        5880,
+        -8650
+      ],
+      "size": [
+        162.765625,
+        16
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Réglages des modèles",
+      "properties": {
+        "fontSize": 16,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 633,
+      "type": "Label (rgthree)",
+      "pos": [
+        5870,
+        -7960
+      ],
+      "size": [
+        197.296875,
+        24
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Modules divers",
+      "properties": {
+        "fontSize": 24,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 965,
+      "type": "Label (rgthree)",
+      "pos": [
+        5890,
+        -9800
+      ],
+      "size": [
+        530.6953125,
+        528
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\nTexte ››› Image + LoRA's",
+      "properties": {
+        "fontSize": 48,
+        "fontFamily": "arial",
+        "fontColor": "#fc8500",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 870,
+      "type": "Label (rgthree)",
+      "pos": [
+        5820,
+        -10910
+      ],
+      "size": [
+        872.3671875,
+        1596
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\nGENERATEUR\n",
+      "properties": {
+        "fontSize": 114,
+        "fontFamily": "arial black",
+        "fontColor": "#cdcdcd",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 191,
+      "type": "SDXLEmptyLatentSizePicker+",
+      "pos": [
+        5830,
+        -9020
+      ],
+      "size": [
+        400,
+        170
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            1706
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            1703
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            1704
+          ],
+          "slot_index": 2,
+          "shape": 3
+        }
+      ],
+      "title": "Basic Image size",
+      "properties": {
+        "Node name for S&R": "SDXLEmptyLatentSizePicker+"
+      },
+      "widgets_values": [
+        "1024x1024 (1.0)",
+        1,
+        1352,
+        848
+      ],
+      "color": "#e6a059",
+      "bgcolor": "#d28c45",
+      "shape": 1
+    },
+    {
+      "id": 620,
+      "type": "Label (rgthree)",
+      "pos": [
+        5830,
+        -9130
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "1",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#c98c45",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 13,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        7920,
+        -9020
+      ],
+      "size": [
+        400,
+        570
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 37,
+          "slot_index": 0
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 1708,
+          "slot_index": 1
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 19,
+          "slot_index": 2
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 20,
+          "slot_index": 3
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 1706,
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            24
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "SAMPLER • SamplerCustomAdvanced",
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      },
+      "widgets_values": [],
+      "color": "#9f71c5",
+      "bgcolor": "#8b5db1",
+      "shape": 1
+    },
+    {
+      "id": 723,
+      "type": "Label (rgthree)",
+      "pos": [
+        7920,
+        -9130
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "5\n",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#8b5db1",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#4ea69c",
+      "bgcolor": "#3a9288"
+    },
+    {
+      "id": 700,
+      "type": "Label (rgthree)",
+      "pos": [
+        8380,
+        -9130
+      ],
+      "size": [
+        28.919921875,
+        52
+      ],
+      "flags": {
+        "pinned": true,
+        "allow_interaction": false
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "6",
+      "properties": {
+        "fontSize": 52,
+        "fontFamily": "arial",
+        "fontColor": "#005200",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 401,
+      "type": "ShowText|pysssss",
+      "pos": [
+        6770,
+        -8370
+      ],
+      "size": [
+        610,
+        210
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 959,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1718
+          ],
+          "slot_index": 0,
+          "shape": 6
+        }
+      ],
+      "title": "🐍  P R O M P T   G E N E R E  🐍",
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        [
+          "A 50 years old bald man with shaved head and a short grayish beard. (DENISMAG) , muscular, holding a White cardboard with the message \"BIENVENUE !\"\n\nThe man wears a black baseball hat and a dark grey anthracite t-shirt with the 3-letters word \"MAG\" written on it in a fancy way in yellow canari.\n\nThe man is lit by color neons, with a different color on each side of his face.\n\n\nThe man in standing in San Francisco in front of the Golden Gate Bridge on a bright night."
+        ],
+        "A 50 years old bald man with shaved head and a short grayish beard. (DENISMAG) , muscular, holding a White cardboard with the message \"BIENVENUE !\"\n\nThe man wears a black baseball hat and a dark grey anthracite t-shirt with the 3-letters word \"MAG\" written on it in a fancy way in yellow canari.\n\nThe man is lit by color neons, with a different color on each side of his face.\n\n\nThe man in standing in San Francisco in front of the Golden Gate Bridge on a bright night."
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159",
+      "shape": 1
+    },
+    {
+      "id": 10,
+      "type": "VAELoader",
+      "pos": [
+        5840,
+        -8100
+      ],
+      "size": [
+        400,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            1713
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ae.safetensors"
+      ],
+      "color": "#ff9c14",
+      "bgcolor": "#ff8800",
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "DualCLIPLoader",
+      "pos": [
+        5840,
+        -8250
+      ],
+      "size": [
+        400,
+        110
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 41,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            152
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DualCLIPLoader"
+      },
+      "widgets_values": [
+        "clip_l.safetensors",
+        "t5xxl_fp16.safetensors",
+        "flux"
+      ],
+      "color": "#ff9c14",
+      "bgcolor": "#ff8800",
+      "shape": 1
+    },
+    {
+      "id": 223,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        5840,
+        -8350
+      ],
+      "size": [
+        400,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            834
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "FLUX GGUF Model (switch = false)",
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF"
+      },
+      "widgets_values": [
+        "flux1-schnell-Q8_0.gguf"
+      ],
+      "color": "#ff9c14",
+      "bgcolor": "#ff8800",
+      "shape": 1
+    },
+    {
+      "id": 224,
+      "type": "Switch any [Crystools]",
+      "pos": [
+        5840,
+        -8470
+      ],
+      "size": [
+        400,
+        80
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_true",
+          "type": "*",
+          "link": 1213
+        },
+        {
+          "name": "on_false",
+          "type": "*",
+          "link": 834
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            315
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Model Switch (false = GGUF)",
+      "properties": {
+        "Node name for S&R": "Switch any [Crystools]"
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#a86314",
+      "bgcolor": "#944f00",
+      "shape": 1
+    },
+    {
+      "id": 405,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        5840,
+        -8570
+      ],
+      "size": [
+        400,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1213
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF"
+      },
+      "widgets_values": [
+        "FLUX1/flux1-dev-F16.gguf"
+      ],
+      "color": "#ff9c14",
+      "bgcolor": "#ff8800",
+      "shape": 1
+    },
+    {
+      "id": 17,
+      "type": "BasicScheduler",
+      "pos": [
+        7450,
+        -8700
+      ],
+      "size": [
+        400,
+        102
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 51,
+          "slot_index": 0
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 1717,
+          "widget": {
+            "name": "denoise"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            20
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "Scheduler selection and Steps",
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "beta",
+        20,
+        1
+      ],
+      "color": "#14808e",
+      "bgcolor": "#006c7a",
+      "shape": 1
+    },
+    {
+      "id": 16,
+      "type": "KSamplerSelect",
+      "pos": [
+        7450,
+        -8800
+      ],
+      "size": [
+        400,
+        60
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            19
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Sampler selection",
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "color": "#14808e",
+      "bgcolor": "#006c7a",
+      "shape": 1
+    },
+    {
+      "id": 25,
+      "type": "RandomNoise",
+      "pos": [
+        7450,
+        -8920
+      ],
+      "size": [
+        400,
+        82
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 45,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            37
+          ],
+          "shape": 3
+        }
+      ],
+      "title": "Seed and seed-switch",
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        136713977847958,
+        "randomize"
+      ],
+      "color": "#14808e",
+      "bgcolor": "#006c7a",
+      "shape": 1
+    },
+    {
+      "id": 26,
+      "type": "FluxGuidance",
+      "pos": [
+        7450,
+        -9020
+      ],
+      "size": [
+        400,
+        60
+      ],
+      "flags": {
+        "collapsed": false,
+        "pinned": true
+      },
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            505
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxGuidance"
+      },
+      "widgets_values": [
+        3.5
+      ],
+      "color": "#14808e",
+      "bgcolor": "#006c7a",
+      "shape": 1
+    },
+    {
+      "id": 159,
+      "type": "CR Overlay Text",
+      "pos": [
+        9400,
+        -9020
+      ],
+      "size": [
+        270,
+        430
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1716
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            1582
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Texte   -   En bas à  Gauche",
+      "properties": {
+        "Node name for S&R": "CR Overlay Text"
+      },
+      "widgets_values": [
+        "",
+        "Helvetica Neue Condensed Bold.ttf",
+        12,
+        "darkgray",
+        "bottom",
+        "left",
+        5,
+        0,
+        0,
+        0,
+        0,
+        "text center",
+        "",
+        true
+      ],
+      "color": "#a814b2",
+      "bgcolor": "#94009e"
+    },
+    {
+      "id": 400,
+      "type": "Wildcard Processor",
+      "pos": [
+        6770,
+        -9020
+      ],
+      "size": [
+        610,
+        580
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            959
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "V O T R E   P R O M P T",
+      "properties": {
+        "Node name for S&R": "Wildcard Processor"
+      },
+      "widgets_values": [
+        "A 50 years old bald man with shaved head and a short grayish beard. (DENISMAG), muscular, holding a White cardboard with the message \"BIENVENUE !\"\n\nThe man wears a black baseball hat and a dark grey anthracite t-shirt with the 3-letters word \"MAG\" written on it in a fancy way in yellow canari.\n\nThe man is lit by color neons, with a different color on each side of his face.\n\n\nThe man in standing in San Francisco in front of the Golden Gate Bridge on a bright night.",
+        791206066543686,
+        "randomize",
+        true
+      ],
+      "shape": 1
+    },
+    {
+      "id": 871,
+      "type": "Label (rgthree)",
+      "pos": [
+        10200,
+        -9140
+      ],
+      "size": [
+        76.2509765625,
+        527
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYouTube :",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 872,
+      "type": "Label (rgthree)",
+      "pos": [
+        10280,
+        -9140
+      ],
+      "size": [
+        107.0302734375,
+        527
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 48,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n@themagbros\n",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 873,
+      "type": "Label (rgthree)",
+      "pos": [
+        10240,
+        -9120
+      ],
+      "size": [
+        204.45654296875,
+        527
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComfyUI Mag's AI - France\n",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#ffffff",
+        "textAlign": "left",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 875,
+      "type": "Label (rgthree)",
+      "pos": [
+        10150,
+        -9120
+      ],
+      "size": [
+        84.103515625,
+        527
+      ],
+      "flags": {
+        "allow_interaction": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFacebook :",
+      "properties": {
+        "fontSize": 17,
+        "fontFamily": "arial",
+        "fontColor": "#9c9c9c",
+        "textAlign": "right",
+        "backgroundColor": "transparent",
+        "padding": 0,
+        "borderRadius": 0
+      },
+      "color": "#fff0",
+      "bgcolor": "#fff0"
+    },
+    {
+      "id": 1109,
+      "type": "Note",
+      "pos": [
+        10140,
+        -8520
+      ],
+      "size": [
+        320,
+        100
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 51,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Bloc-note",
+      "properties": {},
+      "widgets_values": [
+        "\n   Quel plaisir de s'amuser avec vous !\n\n           Seb & Denis Mag's"
+      ],
+      "color": "#f4d614",
+      "bgcolor": "#e0c200"
+    }
+  ],
+  "links": [
+    [
+      19,
+      16,
+      0,
+      13,
+      2,
+      "SAMPLER"
+    ],
+    [
+      20,
+      17,
+      0,
+      13,
+      3,
+      "SIGMAS"
+    ],
+    [
+      24,
+      13,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      37,
+      25,
+      0,
+      13,
+      0,
+      "NOISE"
+    ],
+    [
+      41,
+      6,
+      0,
+      26,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      51,
+      37,
+      0,
+      17,
+      0,
+      "MODEL"
+    ],
+    [
+      152,
+      11,
+      0,
+      109,
+      1,
+      "CLIP"
+    ],
+    [
+      315,
+      224,
+      0,
+      109,
+      0,
+      "MODEL"
+    ],
+    [
+      430,
+      109,
+      0,
+      282,
+      0,
+      "MODEL"
+    ],
+    [
+      431,
+      109,
+      1,
+      282,
+      1,
+      "CLIP"
+    ],
+    [
+      468,
+      109,
+      0,
+      271,
+      0,
+      "MODEL"
+    ],
+    [
+      469,
+      109,
+      0,
+      272,
+      0,
+      "MODEL"
+    ],
+    [
+      470,
+      109,
+      0,
+      270,
+      1,
+      "MODEL"
+    ],
+    [
+      471,
+      109,
+      1,
+      270,
+      2,
+      "CLIP"
+    ],
+    [
+      472,
+      10,
+      0,
+      270,
+      3,
+      "VAE"
+    ],
+    [
+      473,
+      109,
+      1,
+      249,
+      2,
+      "CLIP"
+    ],
+    [
+      474,
+      10,
+      0,
+      249,
+      3,
+      "VAE"
+    ],
+    [
+      475,
+      109,
+      1,
+      236,
+      2,
+      "CLIP"
+    ],
+    [
+      476,
+      10,
+      0,
+      236,
+      3,
+      "VAE"
+    ],
+    [
+      477,
+      109,
+      0,
+      269,
+      1,
+      "MODEL"
+    ],
+    [
+      478,
+      109,
+      1,
+      269,
+      2,
+      "CLIP"
+    ],
+    [
+      479,
+      10,
+      0,
+      269,
+      3,
+      "VAE"
+    ],
+    [
+      498,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      499,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      500,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      501,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      502,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      505,
+      26,
+      0,
+      318,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      511,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      512,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      513,
+      10,
+      0,
+      47,
+      4,
+      "VAE"
+    ],
+    [
+      514,
+      109,
+      1,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      515,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      516,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      517,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      518,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      526,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      527,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      528,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      529,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      530,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      531,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      532,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      533,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      534,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      535,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      536,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      537,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      538,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      539,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      563,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      564,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      565,
+      109,
+      0,
+      272,
+      0,
+      "MODEL"
+    ],
+    [
+      566,
+      109,
+      0,
+      270,
+      1,
+      "MODEL"
+    ],
+    [
+      567,
+      109,
+      1,
+      270,
+      2,
+      "CLIP"
+    ],
+    [
+      568,
+      10,
+      0,
+      270,
+      3,
+      "VAE"
+    ],
+    [
+      569,
+      109,
+      1,
+      236,
+      2,
+      "CLIP"
+    ],
+    [
+      570,
+      10,
+      0,
+      236,
+      3,
+      "VAE"
+    ],
+    [
+      571,
+      26,
+      0,
+      236,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      572,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      573,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      574,
+      109,
+      1,
+      249,
+      2,
+      "CLIP"
+    ],
+    [
+      575,
+      10,
+      0,
+      249,
+      3,
+      "VAE"
+    ],
+    [
+      576,
+      26,
+      0,
+      249,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      577,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      578,
+      10,
+      0,
+      330,
+      1,
+      "VAE"
+    ],
+    [
+      579,
+      26,
+      0,
+      246,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      580,
+      109,
+      0,
+      271,
+      0,
+      "MODEL"
+    ],
+    [
+      581,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      582,
+      109,
+      0,
+      338,
+      1,
+      "MODEL"
+    ],
+    [
+      583,
+      109,
+      1,
+      338,
+      2,
+      "CLIP"
+    ],
+    [
+      584,
+      10,
+      0,
+      338,
+      3,
+      "VAE"
+    ],
+    [
+      585,
+      26,
+      0,
+      338,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      586,
+      26,
+      0,
+      338,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      587,
+      109,
+      0,
+      340,
+      1,
+      "MODEL"
+    ],
+    [
+      588,
+      109,
+      1,
+      340,
+      2,
+      "CLIP"
+    ],
+    [
+      589,
+      10,
+      0,
+      340,
+      3,
+      "VAE"
+    ],
+    [
+      590,
+      26,
+      0,
+      340,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      591,
+      26,
+      0,
+      340,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      592,
+      109,
+      0,
+      269,
+      1,
+      "MODEL"
+    ],
+    [
+      593,
+      109,
+      1,
+      269,
+      2,
+      "CLIP"
+    ],
+    [
+      594,
+      10,
+      0,
+      269,
+      3,
+      "VAE"
+    ],
+    [
+      595,
+      109,
+      0,
+      335,
+      1,
+      "MODEL"
+    ],
+    [
+      596,
+      109,
+      1,
+      335,
+      2,
+      "CLIP"
+    ],
+    [
+      597,
+      10,
+      0,
+      335,
+      3,
+      "VAE"
+    ],
+    [
+      598,
+      26,
+      0,
+      335,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      599,
+      26,
+      0,
+      335,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      629,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      630,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      631,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      632,
+      10,
+      0,
+      330,
+      1,
+      "VAE"
+    ],
+    [
+      633,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      634,
+      109,
+      0,
+      335,
+      1,
+      "MODEL"
+    ],
+    [
+      635,
+      109,
+      1,
+      335,
+      2,
+      "CLIP"
+    ],
+    [
+      636,
+      10,
+      0,
+      335,
+      3,
+      "VAE"
+    ],
+    [
+      637,
+      26,
+      0,
+      335,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      638,
+      26,
+      0,
+      335,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      639,
+      109,
+      0,
+      338,
+      1,
+      "MODEL"
+    ],
+    [
+      640,
+      109,
+      1,
+      338,
+      2,
+      "CLIP"
+    ],
+    [
+      641,
+      10,
+      0,
+      338,
+      3,
+      "VAE"
+    ],
+    [
+      642,
+      26,
+      0,
+      338,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      643,
+      26,
+      0,
+      338,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      644,
+      109,
+      0,
+      340,
+      1,
+      "MODEL"
+    ],
+    [
+      645,
+      109,
+      1,
+      340,
+      2,
+      "CLIP"
+    ],
+    [
+      646,
+      10,
+      0,
+      340,
+      3,
+      "VAE"
+    ],
+    [
+      647,
+      26,
+      0,
+      340,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      648,
+      26,
+      0,
+      340,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      649,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      650,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      654,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      655,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      656,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      657,
+      10,
+      0,
+      330,
+      1,
+      "VAE"
+    ],
+    [
+      658,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      664,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      665,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      666,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      667,
+      109,
+      0,
+      335,
+      1,
+      "MODEL"
+    ],
+    [
+      668,
+      109,
+      1,
+      335,
+      2,
+      "CLIP"
+    ],
+    [
+      669,
+      10,
+      0,
+      335,
+      3,
+      "VAE"
+    ],
+    [
+      670,
+      26,
+      0,
+      335,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      671,
+      26,
+      0,
+      335,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      672,
+      109,
+      0,
+      338,
+      1,
+      "MODEL"
+    ],
+    [
+      673,
+      109,
+      1,
+      338,
+      2,
+      "CLIP"
+    ],
+    [
+      674,
+      10,
+      0,
+      338,
+      3,
+      "VAE"
+    ],
+    [
+      675,
+      26,
+      0,
+      338,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      676,
+      26,
+      0,
+      338,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      677,
+      109,
+      0,
+      340,
+      1,
+      "MODEL"
+    ],
+    [
+      678,
+      109,
+      1,
+      340,
+      2,
+      "CLIP"
+    ],
+    [
+      679,
+      10,
+      0,
+      340,
+      3,
+      "VAE"
+    ],
+    [
+      680,
+      26,
+      0,
+      340,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      681,
+      26,
+      0,
+      340,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      682,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      683,
+      10,
+      0,
+      330,
+      1,
+      "VAE"
+    ],
+    [
+      684,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      685,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      686,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      687,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      688,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      689,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      690,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      691,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      692,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      693,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      697,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      698,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      699,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      700,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      701,
+      26,
+      0,
+      363,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      702,
+      26,
+      0,
+      363,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      703,
+      10,
+      0,
+      363,
+      2,
+      "VAE"
+    ],
+    [
+      704,
+      109,
+      0,
+      362,
+      0,
+      "MODEL"
+    ],
+    [
+      715,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      716,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      717,
+      109,
+      0,
+      362,
+      0,
+      "MODEL"
+    ],
+    [
+      718,
+      26,
+      0,
+      363,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      719,
+      26,
+      0,
+      363,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      720,
+      10,
+      0,
+      363,
+      2,
+      "VAE"
+    ],
+    [
+      721,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      722,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      723,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      724,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      725,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      726,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      727,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      728,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      729,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      730,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      731,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      732,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      733,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      734,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      735,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      736,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      737,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      738,
+      26,
+      0,
+      363,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      739,
+      26,
+      0,
+      363,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      740,
+      10,
+      0,
+      363,
+      2,
+      "VAE"
+    ],
+    [
+      741,
+      109,
+      0,
+      362,
+      0,
+      "MODEL"
+    ],
+    [
+      742,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      743,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      744,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      745,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      746,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      747,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      748,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      749,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      750,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      751,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      752,
+      26,
+      0,
+      363,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      753,
+      26,
+      0,
+      363,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      754,
+      10,
+      0,
+      363,
+      2,
+      "VAE"
+    ],
+    [
+      755,
+      109,
+      0,
+      362,
+      0,
+      "MODEL"
+    ],
+    [
+      756,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      757,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      758,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      759,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      760,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      761,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      762,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      763,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      764,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      765,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      766,
+      26,
+      0,
+      363,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      767,
+      26,
+      0,
+      363,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      768,
+      10,
+      0,
+      363,
+      2,
+      "VAE"
+    ],
+    [
+      769,
+      109,
+      0,
+      362,
+      0,
+      "MODEL"
+    ],
+    [
+      770,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      785,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      786,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      787,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      788,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      789,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      790,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      791,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      792,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      793,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      794,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      795,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      796,
+      109,
+      0,
+      335,
+      1,
+      "MODEL"
+    ],
+    [
+      797,
+      109,
+      1,
+      335,
+      2,
+      "CLIP"
+    ],
+    [
+      798,
+      10,
+      0,
+      335,
+      3,
+      "VAE"
+    ],
+    [
+      799,
+      26,
+      0,
+      335,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      800,
+      26,
+      0,
+      335,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      801,
+      109,
+      0,
+      338,
+      1,
+      "MODEL"
+    ],
+    [
+      802,
+      109,
+      1,
+      338,
+      2,
+      "CLIP"
+    ],
+    [
+      803,
+      10,
+      0,
+      338,
+      3,
+      "VAE"
+    ],
+    [
+      804,
+      26,
+      0,
+      338,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      805,
+      26,
+      0,
+      338,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      806,
+      109,
+      0,
+      340,
+      1,
+      "MODEL"
+    ],
+    [
+      807,
+      109,
+      1,
+      340,
+      2,
+      "CLIP"
+    ],
+    [
+      808,
+      10,
+      0,
+      340,
+      3,
+      "VAE"
+    ],
+    [
+      809,
+      26,
+      0,
+      340,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      810,
+      26,
+      0,
+      340,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      811,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      834,
+      223,
+      0,
+      224,
+      1,
+      "*"
+    ],
+    [
+      836,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      837,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      838,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      839,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      840,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      841,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      842,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      843,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      844,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      845,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      846,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      847,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      848,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      849,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      850,
+      109,
+      0,
+      335,
+      1,
+      "MODEL"
+    ],
+    [
+      851,
+      109,
+      1,
+      335,
+      2,
+      "CLIP"
+    ],
+    [
+      852,
+      10,
+      0,
+      335,
+      3,
+      "VAE"
+    ],
+    [
+      853,
+      26,
+      0,
+      335,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      854,
+      26,
+      0,
+      335,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      855,
+      109,
+      0,
+      338,
+      1,
+      "MODEL"
+    ],
+    [
+      856,
+      109,
+      1,
+      338,
+      2,
+      "CLIP"
+    ],
+    [
+      857,
+      10,
+      0,
+      338,
+      3,
+      "VAE"
+    ],
+    [
+      858,
+      26,
+      0,
+      338,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      859,
+      26,
+      0,
+      338,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      860,
+      109,
+      0,
+      340,
+      1,
+      "MODEL"
+    ],
+    [
+      861,
+      109,
+      1,
+      340,
+      2,
+      "CLIP"
+    ],
+    [
+      862,
+      10,
+      0,
+      340,
+      3,
+      "VAE"
+    ],
+    [
+      863,
+      26,
+      0,
+      340,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      864,
+      26,
+      0,
+      340,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      865,
+      10,
+      0,
+      330,
+      1,
+      "VAE"
+    ],
+    [
+      866,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      867,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      868,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      869,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      870,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      871,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      872,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      873,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      874,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      875,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      876,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      877,
+      109,
+      0,
+      335,
+      1,
+      "MODEL"
+    ],
+    [
+      878,
+      109,
+      1,
+      335,
+      2,
+      "CLIP"
+    ],
+    [
+      879,
+      10,
+      0,
+      335,
+      3,
+      "VAE"
+    ],
+    [
+      880,
+      26,
+      0,
+      335,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      881,
+      26,
+      0,
+      335,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      882,
+      109,
+      0,
+      340,
+      1,
+      "MODEL"
+    ],
+    [
+      883,
+      109,
+      1,
+      340,
+      2,
+      "CLIP"
+    ],
+    [
+      884,
+      10,
+      0,
+      340,
+      3,
+      "VAE"
+    ],
+    [
+      885,
+      26,
+      0,
+      340,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      886,
+      26,
+      0,
+      340,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      887,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      888,
+      109,
+      0,
+      338,
+      1,
+      "MODEL"
+    ],
+    [
+      889,
+      109,
+      1,
+      338,
+      2,
+      "CLIP"
+    ],
+    [
+      890,
+      10,
+      0,
+      338,
+      3,
+      "VAE"
+    ],
+    [
+      891,
+      26,
+      0,
+      338,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      892,
+      26,
+      0,
+      338,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      893,
+      109,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      894,
+      10,
+      0,
+      197,
+      1,
+      "VAE"
+    ],
+    [
+      905,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      906,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      907,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      908,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      909,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      910,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      911,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      912,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      913,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      914,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      915,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      916,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      917,
+      109,
+      0,
+      340,
+      1,
+      "MODEL"
+    ],
+    [
+      918,
+      109,
+      1,
+      340,
+      2,
+      "CLIP"
+    ],
+    [
+      919,
+      10,
+      0,
+      340,
+      3,
+      "VAE"
+    ],
+    [
+      920,
+      26,
+      0,
+      340,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      921,
+      26,
+      0,
+      340,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      922,
+      109,
+      0,
+      338,
+      1,
+      "MODEL"
+    ],
+    [
+      923,
+      109,
+      1,
+      338,
+      2,
+      "CLIP"
+    ],
+    [
+      924,
+      10,
+      0,
+      338,
+      3,
+      "VAE"
+    ],
+    [
+      925,
+      26,
+      0,
+      338,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      926,
+      26,
+      0,
+      338,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      927,
+      109,
+      0,
+      335,
+      1,
+      "MODEL"
+    ],
+    [
+      928,
+      109,
+      1,
+      335,
+      2,
+      "CLIP"
+    ],
+    [
+      929,
+      10,
+      0,
+      335,
+      3,
+      "VAE"
+    ],
+    [
+      930,
+      26,
+      0,
+      335,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      931,
+      26,
+      0,
+      335,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      932,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      933,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      934,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      935,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      936,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      937,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      938,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      939,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      940,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      941,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      942,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      943,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      946,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      947,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      948,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      949,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      950,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      951,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      952,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      953,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      954,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      955,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      956,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      957,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      959,
+      400,
+      0,
+      401,
+      0,
+      "STRING"
+    ],
+    [
+      967,
+      109,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      969,
+      10,
+      0,
+      47,
+      4,
+      "VAE"
+    ],
+    [
+      970,
+      109,
+      1,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      971,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      972,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      973,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      974,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      975,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      976,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      977,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      978,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      979,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      980,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      981,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      982,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      983,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      984,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      985,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      986,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      987,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      988,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      989,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      990,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      991,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      992,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      993,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      994,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      995,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      996,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      997,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      998,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      999,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1000,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1001,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1002,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1003,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1004,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1005,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1006,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1007,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1008,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1009,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1010,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1011,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1012,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1013,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1014,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1015,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1016,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1017,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1018,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1019,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1020,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1021,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1022,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1023,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1024,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1025,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1026,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1027,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1028,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1029,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1030,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1031,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1032,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1033,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1034,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1035,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1036,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1037,
+      10,
+      0,
+      47,
+      4,
+      "VAE"
+    ],
+    [
+      1038,
+      109,
+      1,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      1039,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1040,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1041,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1042,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1043,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1044,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1045,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1046,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1047,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1048,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1049,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1050,
+      109,
+      1,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      1051,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1052,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1053,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1054,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1055,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1056,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1057,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1058,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1059,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1060,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1061,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1062,
+      10,
+      0,
+      47,
+      4,
+      "VAE"
+    ],
+    [
+      1064,
+      109,
+      1,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      1065,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1066,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1067,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1068,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1069,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1070,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1071,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1072,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1073,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1074,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1075,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1076,
+      10,
+      0,
+      47,
+      4,
+      "VAE"
+    ],
+    [
+      1077,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1078,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1079,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1080,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1081,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1082,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1083,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1084,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1085,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1086,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1087,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1088,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1089,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1090,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1091,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1092,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1093,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1094,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1095,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1096,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1097,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1098,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1099,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1100,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1101,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1102,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1103,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1104,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1105,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1106,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1107,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1108,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1109,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1110,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1111,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1112,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1113,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1114,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1115,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1116,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1117,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1118,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1119,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1120,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1121,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1122,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1123,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1124,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1125,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1126,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1127,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1128,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1129,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1130,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1131,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1132,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1133,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1134,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1135,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1136,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1137,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1138,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1139,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1140,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1141,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1142,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1143,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1144,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1145,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1146,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1147,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1148,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1149,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1150,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1151,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1152,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1153,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1154,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1155,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1156,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1157,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1158,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1159,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1160,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1161,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1162,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1163,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1164,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1165,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1166,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1167,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1168,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1169,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1170,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1171,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1172,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1173,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1174,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1175,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1176,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1177,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1178,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1179,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1180,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1181,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1182,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1183,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1184,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1185,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1186,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1187,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1188,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1189,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1190,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1191,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1192,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1193,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1194,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1195,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1196,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1197,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1202,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1203,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1204,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1205,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1206,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1207,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1208,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1209,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1210,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1211,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1212,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1213,
+      405,
+      0,
+      224,
+      0,
+      "*"
+    ],
+    [
+      1215,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1216,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1217,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1218,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1219,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1220,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1221,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1222,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1223,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1224,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1225,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1226,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1227,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1228,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1229,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1230,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1231,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1232,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1233,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1234,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1235,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1236,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1237,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1238,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1239,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1240,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1241,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1242,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1243,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1244,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1245,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1246,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1247,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1249,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1250,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1251,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1252,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1253,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1254,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1255,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1256,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1257,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1258,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1259,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1260,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1261,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1262,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1263,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1264,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1265,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1266,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1267,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1268,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1269,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1270,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1273,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1274,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1275,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1276,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1277,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1278,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1279,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1280,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1281,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1282,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1283,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1288,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1289,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1290,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1291,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1292,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1293,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1294,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1295,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1296,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1297,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1298,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1306,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1307,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1308,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1309,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1310,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1311,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1312,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1313,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1314,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1315,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1316,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1340,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1341,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1342,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1343,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1344,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1345,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1346,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1347,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1348,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1349,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1350,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1351,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1352,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1353,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1354,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1355,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1356,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1357,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1358,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1359,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1360,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1361,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1362,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1363,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1364,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1365,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1366,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1367,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1368,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1369,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1370,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1371,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1372,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1373,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1374,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1375,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1376,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1377,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1378,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1379,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1380,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1381,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1382,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1383,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1384,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1385,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1386,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1387,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1388,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1389,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1390,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1391,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1392,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1393,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1394,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1395,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1396,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1397,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1398,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1399,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1400,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1401,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1402,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1403,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1404,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1405,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1406,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1407,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1408,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1409,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1410,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1411,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1412,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1413,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1414,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1415,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1416,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1417,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1418,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1419,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1420,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1421,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1422,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1423,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1424,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1425,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1426,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1427,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1434,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1435,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1436,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1437,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1438,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1439,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1440,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1441,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1442,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1443,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1444,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1445,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1446,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1447,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1448,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1449,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1450,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1451,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1452,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1453,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1454,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1455,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1456,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1457,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1458,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1459,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1460,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1461,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1462,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1463,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1464,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1465,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1466,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1467,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1468,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1469,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1470,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1471,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1472,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1473,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1474,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1475,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1476,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1477,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1478,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1479,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1480,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1481,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1482,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1483,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1484,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1485,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1486,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1487,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1488,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1489,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1490,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1491,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1492,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1493,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1494,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1495,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1496,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1497,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1498,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1499,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1500,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1501,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1502,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1503,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1504,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1505,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1506,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1507,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1508,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1509,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1510,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1511,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1512,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1513,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1514,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1515,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1516,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1517,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1518,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1519,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1520,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1521,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1522,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1523,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1524,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1525,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1526,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1527,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1528,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1529,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1530,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1531,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1532,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1533,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1534,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1535,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1536,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1537,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1538,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1539,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1540,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1541,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1542,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1543,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1544,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1545,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1546,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1547,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1548,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1549,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1550,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1551,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1552,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1553,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1554,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1555,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1556,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1557,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1558,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1559,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1560,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1561,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1562,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1563,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1564,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1565,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1566,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1567,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1568,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1569,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1570,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1571,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1572,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1573,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1574,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1575,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1576,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1579,
+      415,
+      0,
+      402,
+      0,
+      "IMAGE"
+    ],
+    [
+      1582,
+      159,
+      0,
+      407,
+      0,
+      "IMAGE"
+    ],
+    [
+      1607,
+      410,
+      1,
+      415,
+      2,
+      "MASK"
+    ],
+    [
+      1611,
+      407,
+      0,
+      415,
+      0,
+      "IMAGE"
+    ],
+    [
+      1614,
+      410,
+      0,
+      415,
+      1,
+      "IMAGE"
+    ],
+    [
+      1617,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1618,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1619,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1620,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1621,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1622,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1623,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1624,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1625,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1626,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1627,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1628,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1629,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1630,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1631,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1632,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1633,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1634,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1635,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1636,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1637,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1638,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1639,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1640,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1641,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1642,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1643,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1644,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1645,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1646,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1647,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1648,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1649,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1653,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1654,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1655,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1656,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1657,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1658,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1659,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1660,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1661,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1662,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1663,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1664,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1665,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1666,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1667,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1668,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1669,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1670,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1671,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1672,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1673,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1674,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1676,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1677,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1678,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1679,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1680,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1681,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1682,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1683,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1684,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1685,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1686,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1692,
+      109,
+      0,
+      366,
+      0,
+      "MODEL"
+    ],
+    [
+      1693,
+      109,
+      0,
+      366,
+      2,
+      "MODEL"
+    ],
+    [
+      1694,
+      109,
+      0,
+      366,
+      3,
+      "MODEL"
+    ],
+    [
+      1695,
+      109,
+      0,
+      366,
+      4,
+      "MODEL"
+    ],
+    [
+      1696,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1697,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1698,
+      26,
+      0,
+      367,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      1699,
+      26,
+      0,
+      367,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1700,
+      26,
+      0,
+      367,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      1701,
+      26,
+      0,
+      367,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      1702,
+      26,
+      0,
+      367,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      1703,
+      191,
+      1,
+      37,
+      1,
+      "INT"
+    ],
+    [
+      1704,
+      191,
+      2,
+      37,
+      2,
+      "INT"
+    ],
+    [
+      1706,
+      191,
+      0,
+      13,
+      4,
+      "LATENT"
+    ],
+    [
+      1707,
+      37,
+      0,
+      22,
+      0,
+      "MODEL"
+    ],
+    [
+      1708,
+      22,
+      0,
+      13,
+      1,
+      "GUIDER"
+    ],
+    [
+      1709,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1710,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1711,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1713,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      1714,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1715,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1716,
+      8,
+      0,
+      159,
+      0,
+      "IMAGE"
+    ],
+    [
+      1717,
+      345,
+      0,
+      17,
+      1,
+      "FLOAT"
+    ],
+    [
+      1718,
+      401,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      1719,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1720,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1721,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1722,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1723,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1724,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1725,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1726,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1727,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1728,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1729,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1730,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1731,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1732,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1733,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1734,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1735,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1736,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1737,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1738,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1739,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1740,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1741,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1742,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1827,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1828,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1829,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1830,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1831,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1832,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1925,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1926,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ],
+    [
+      1927,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      1928,
+      109,
+      0,
+      37,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 21,
+      "title": "• workflow   • 1 •   G E N E R A T E U R",
+      "bounding": [
+        810,
+        -13310,
+        15009.775390625,
+        10387.205078125
+      ],
+      "color": "#010101",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 24,
+      "title": "Group",
+      "bounding": [
+        810,
+        -13310,
+        15008.3935546875,
+        10390.4140625
+      ],
+      "color": "#010101",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.25401326852419986,
+      "offset": [
+        -4640.533119064536,
+        10278.55207570855
+      ]
+    },
+    "ue_links": [
+      {
+        "downstream": 22,
+        "downstream_slot": 1,
+        "upstream": "26",
+        "upstream_slot": 0,
+        "controller": 318,
+        "type": "CONDITIONING"
+      },
+      {
+        "downstream": 37,
+        "downstream_slot": 0,
+        "upstream": "109",
+        "upstream_slot": 0,
+        "controller": 282,
+        "type": "MODEL"
+      }
+    ]
+  },
+  "version": 0.4
+}
