@@ -180,16 +180,23 @@ charge (pickups) ──► targetScale ──(critically-damped spring)──►
 The look is *dark room, few intensely saturated crimson sources*. Faces are lit
 from below/behind; bloom turns emissive neon into light.
 
-**Render → composer passes:**
+**Render → composer passes.** pmndrs merges effects within a pass, but forbids a
+UV-transforming effect (our crimson CRT barrel) sharing a pass with a CONVOLUTION
+effect. In this build `ChromaticAberration` is convolution, so it gets its own
+pass; everything convolution-free merges:
 
 1. `RenderPass` into an **HDR (HalfFloat)** buffer (essential — bloom needs
    over-bright values).
-2. **Main grade** `EffectPass`: `BloomEffect` (mipmap) → `ChromaticAberrationEffect`
-   (radial) → **`CrimsonGradeEffect`** (custom GLSL: grade toward crimson with
-   highlight protection + CRT barrel + strobe uniform) → `ToneMappingEffect` (ACES).
-3. **Boss distortion** `EffectPass`: a pool of `ShockWaveEffect` (soundwaves) +
-   `GlitchEffect` (toggled).
-4. **CRT overlay** `EffectPass`: `ScanlineEffect` + `VignetteEffect` + `NoiseEffect`.
+2. **Main grade** `EffectPass`: `BloomEffect` (mipmap) → **`CrimsonGradeEffect`**
+   (custom GLSL: grade toward crimson with highlight protection + CRT barrel +
+   strobe uniform) → `ToneMappingEffect` (ACES).
+3. **Chromatic aberration** `EffectPass` (isolated — it's a convolution effect).
+4. **Boss distortion** `EffectPass`: a pool of `ShockWaveEffect` (soundwaves) +
+   `GlitchEffect` (toggled) — both UV-transform, no convolution, so they merge.
+5. **CRT overlay** `EffectPass`: `ScanlineEffect` + `VignetteEffect` + `NoiseEffect`.
+
+> This constraint is exactly the kind of thing a compile-time check misses — it
+> surfaced only in the headless runtime smoke test (boot → the composer threw).
 
 Transient **pulses** (a hit cranks bloom + aberration briefly) decay in
 `PostFX.render`. The boss **strobe** flashes the crimson invert as a square wave
