@@ -205,15 +205,24 @@ export const PICKUP = {
  */
 export const BOSS = {
   BPM: 128,                  // club-standard four-on-the-floor
-  MAX_HEALTH: 100,
+  MAX_HEALTH: 150,           // tuned w/ boss-measure.mjs for a ~25-70s TTK band
 
+  /**
+   * Each phase is a repeating CYCLE of `cycleBeats`: it ATTACKS for the first
+   * `attackBeats`, then DROPS ITS JAW and is EXPOSED for the remainder — that
+   * remainder is the only window you can damage it. Keeping the exposed window a
+   * constant 2 beats across phases means the punish rhythm stays learnable while
+   * the danger escalates (faster waves, denser vinyls, more strobes).
+   */
   PHASES: {
-    // Phase 1: soundwave shockwaves on the downbeat. Learnable, fair.
-    ONE: { hpThreshold: 1.00, shockwaveEveryBeats: 2, shockwaveSpeed: 11, telegraphBeats: 1 },
+    // Phase 1: soundwave shockwaves only. Learnable, fair. 4 attack + 2 exposed.
+    ONE: { hpThreshold: 1.00, cycleBeats: 6, attackBeats: 4, shockwaveEveryBeats: 2, shockwaveSpeed: 11 },
     // Phase 2: adds falling vinyls + first strobe blinds.
-    TWO: { hpThreshold: 0.66, vinylEveryBeats: 1, vinylFallSpeed: 14, strobeEveryBeats: 8 },
-    // Phase 3: enraged — double shockwaves, dense vinyls, long strobes.
-    THREE: { hpThreshold: 0.33, shockwaveEveryBeats: 1, vinylEveryBeats: 0.5, strobeEveryBeats: 4 },
+    TWO: { hpThreshold: 0.66, cycleBeats: 6, attackBeats: 4, shockwaveEveryBeats: 2, shockwaveSpeed: 12,
+      vinylEveryBeats: 2, vinylFallSpeed: 14, strobeEveryBeats: 6 },
+    // Phase 3: enraged — faster waves, a vinyl every beat, frequent strobes.
+    THREE: { hpThreshold: 0.33, cycleBeats: 6, attackBeats: 4, shockwaveEveryBeats: 2, shockwaveSpeed: 13,
+      vinylEveryBeats: 1, vinylFallSpeed: 16, strobeEveryBeats: 4 },
   },
 
   /** Strobe blind: screen floods and contrast inverts for this long; player
@@ -221,8 +230,8 @@ export const BOSS = {
   STROBE_DURATION: 1.1,
   STROBE_FLASH_HZ: 12,
 
-  /** The vulnerable window: after a shockwave volley the skull's jaw drops and
-   *  the chili glows white — the only time damage lands. */
+  /** Exposed window length (beats) = cycleBeats − attackBeats. Kept here for the
+   *  HUD / telemetry; the boss derives it from the phase cycle. */
   VULNERABLE_BEATS: 2,
   CONTACT_DAMAGE: 2,
 };

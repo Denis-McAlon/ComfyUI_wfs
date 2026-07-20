@@ -42,6 +42,7 @@ export class DjSkullBoss extends Entity {
     this.harmable = true;
     this.beat = 0;
     this._introBeats = 4;
+    this._phaseStartBeat = 0;     // beat at which the current phase's cycle began
     this._strobeOffAt = 0;        // sim-seconds to lower the strobe
     this._jawOpen = 0;            // 0..1 animated jaw
     this._jawTarget = 0;
@@ -153,28 +154,36 @@ export class DjSkullBoss extends Entity {
     if (this.phase === PHASE.DEAD) return;
 
     const cfg = this._phaseCfg();
+    // Position within the phase's attack→expose cycle.
+    const cycle = cfg.cycleBeats ?? 6;
+    const attackBeats = cfg.attackBeats ?? 4;
+    const pos = (((this.beat - this._phaseStartBeat) % cycle) + cycle) % cycle;
 
-    // Shockwave rhythm: telegraph the beat before, fire on the beat, else EXPOSE.
-    const every = cfg.shockwaveEveryBeats ?? 2;
-    if (this.beat % every === 0) {
-      this._fireShockwave();
-      this._setExposed(false);
-      this._jawTarget = 0.15;
-    } else if ((this.beat + 1) % every === 0) {
-      this._jawTarget = 0.35;               // wind-up, eyes flare
-    } else {
-      this._setExposed(true);               // the punish window
+    if (pos >= attackBeats) {
+      // EXPOSED — jaw drops, chili glows, the only window damage lands.
+      this._setExposed(true);
+      return;
     }
 
-    // Phase 2+: falling vinyls.
+    // ATTACK portion.
+    this._setExposed(false);
+    const every = cfg.shockwaveEveryBeats ?? 2;
+    if (pos % every === 0) {
+      this._fireShockwave();                 // fire on the beat
+      this._jawTarget = 0.15;
+    } else if ((pos + 1) % every === 0 && pos + 1 < attackBeats) {
+      this._jawTarget = 0.35;                // telegraph the beat before a fire
+    }
+
+    // Phase 2+: falling vinyls (during the attack portion only).
     if (cfg.vinylEveryBeats != null) {
       const v = cfg.vinylEveryBeats;
-      const count = v < 1 ? Math.max(1, Math.round(1 / v)) : (this.beat % v === 0 ? 1 : 0);
+      const count = v < 1 ? Math.max(1, Math.round(1 / v)) : (pos % v === 0 ? 1 : 0);
       for (let i = 0; i < count; i++) this._dropVinyl(i, count);
     }
 
-    // Strobe blinds on cadence.
-    if (cfg.strobeEveryBeats != null && this.beat % cfg.strobeEveryBeats === 0) {
+    // Strobe blinds on cadence (kept out of the exposed window so you can see to punish).
+    if (cfg.strobeEveryBeats != null && pos % cfg.strobeEveryBeats === 0) {
       this._strobe();
     }
   }
@@ -209,6 +218,7 @@ export class DjSkullBoss extends Entity {
 
   _enterPhase(p) {
     this.phase = p;
+    this._phaseStartBeat = this.beat;   // restart the attack→expose cycle cleanly
     const rage = p === PHASE.THREE ? 1 : p === PHASE.TWO ? 0.5 : 0.15;
     this.eyeMat.rage = rage;
     this.ctx.bus.emit(EVENT.BOSS_PHASE, { phase: p === PHASE.THREE ? 3 : p === PHASE.TWO ? 2 : 1 });

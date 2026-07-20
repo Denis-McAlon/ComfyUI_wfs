@@ -174,7 +174,7 @@ export class Player extends Entity {
       hw: reach * 0.5, hh: this.motor.hy * 0.9,
       facing: this.facing,
       knockback: this._stats.knockback,
-      damage: 1 + this.tier, // bigger hits harder
+      damage: 2 + this.tier, // bigger hits harder (2..7 across growth tiers)
     });
   }
 
