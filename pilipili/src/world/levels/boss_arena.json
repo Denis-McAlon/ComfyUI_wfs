@@ -1,0 +1,22 @@
+{
+  "name": "La Cabine du Skull",
+  "spawn": { "x": -8, "y": 2 },
+  "bossArenaX": null,
+  "width": 36,
+  "height": 18,
+  "platforms": [
+    { "x": 0, "y": -0.8, "w": 32, "h": 2 },
+    { "x": -16, "y": 6, "w": 2, "h": 16 },
+    { "x": 16, "y": 6, "w": 2, "h": 16 },
+    { "x": -6, "y": 2.0, "w": 3, "h": 0.4 },
+    { "x": 6, "y": 2.0, "w": 3, "h": 0.4 },
+    { "x": -3.5, "y": 3.6, "w": 2.5, "h": 0.4, "oneWay": true },
+    { "x": 3.5, "y": 3.6, "w": 2.5, "h": 0.4, "oneWay": true }
+  ],
+  "enemies": [],
+  "pickups": [
+    { "kind": "cocktail", "x": -6, "y": 2.9 },
+    { "kind": "cocktail", "x": 6, "y": 2.9 }
+  ],
+  "hazards": []
+}
