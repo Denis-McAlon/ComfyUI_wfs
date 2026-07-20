@@ -51,6 +51,7 @@ export class DebugOverlay {
       `last jump: apex ${f2(p.lastJumpApex)}u  air ${f2(p.lastJumpAir)}s\n` +
       `size     : x${f2(p.scale)}  tier ${p.tier}\n` +
       `weightT  : ${f2(p.weightT)}  traction ${f2(p.tractionMultiplier)}\n` +
+      `maxSpeed : ${f2(p.stats?.maxSpeed)}  reach ${f2(p.stats?.attackRange * p.scale)}\n` +
       `health   : ${p.health}   facing ${p.facing > 0 ? '→' : '←'}\n` +
       `pos      : ${f2(p.x)}, ${f2(p.y)}`;
   }

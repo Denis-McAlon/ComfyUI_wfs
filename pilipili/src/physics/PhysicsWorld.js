@@ -127,9 +127,14 @@ export class PhysicsWorld {
    * expand the body into a ceiling — the Mario-mushroom rule.
    * @returns {boolean} true if blocked.
    */
-  isBlocked(x, y, hx, hy, exclude = null) {
+  isBlocked(x, y, hx, hy, exclude = null, skin = 0.03) {
     const R = this.RAPIER;
-    const shape = new R.Cuboid(hx, hy);
+    // Inset by a skin so a surface the box merely TOUCHES (e.g. the floor the
+    // actor stands on during a feet-anchored grow) isn't counted as a blocker —
+    // Rapier treats boundary contact as an intersection. Only real penetration
+    // (deeper than `skin`) blocks. Without this the growth engine can never
+    // expand: the grown box's base is always flush with the ground.
+    const shape = new R.Cuboid(Math.max(0.01, hx - skin), Math.max(0.01, hy - skin));
     const hit = this.world.intersectionWithShape(
       { x, y }, 0, shape,
       undefined,                       // filterFlags

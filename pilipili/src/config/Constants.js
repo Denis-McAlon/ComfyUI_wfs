@@ -121,13 +121,18 @@ export const GROWTH = {
 
   /** How base stats bend from light (t=0) to heavy (t=1), t = normalized weight.
    *  Each is a multiplier applied to the MOVE/JUMP base value. */
+  // Tuned on tools/growth-measure.mjs. Philosophy: lean INTO the fun cost
+  // (momentum — a heavy body is a wrecking ball that's hard to stop/turn) and
+  // AWAY from the frustrating cost (a jump so weak the giant is locked out of
+  // platforms the level requires). Measured giant: top speed 84%, ~2× stopping
+  // slide, apex ~2.9u (still clears the level's 2.85u step-ups).
   MAXSPEED_AT_HEAVY: 0.84,       // big is only a little slower on top speed…
-  ACCEL_AT_HEAVY: 0.60,          // …but noticeably slower to *get there* (inertia)
-  DECEL_AT_HEAVY: 0.55,          // …and much slower to stop (momentum / sliding)
-  TURN_ASSIST_AT_HEAVY: 0.5,     // heavy bodies resist direction changes
-  AIR_CONTROL_AT_HEAVY: 0.65,    // less steering authority mid-air when massive
-  JUMP_VELOCITY_AT_HEAVY: 0.90,  // jumps a bit less high…
-  FALL_GRAVITY_AT_HEAVY: 1.28,   // …and drops harder. Reads as "heavy".
+  ACCEL_AT_HEAVY: 0.52,          // …noticeably slower to *get there* (inertia)…
+  DECEL_AT_HEAVY: 0.38,          // …and slides much further before stopping (momentum)
+  TURN_ASSIST_AT_HEAVY: 0.35,    // heavy bodies really resist a direction change
+  AIR_CONTROL_AT_HEAVY: 0.6,     // less steering authority mid-air when massive
+  JUMP_VELOCITY_AT_HEAVY: 0.95,  // jumps only a little less high…
+  FALL_GRAVITY_AT_HEAVY: 1.15,   // …and drops a bit harder. Reads as "heavy" but fair.
 
   /** The reward: melee reach scales with body size (slightly super-linear so the
    *  giant form feels genuinely commanding). */

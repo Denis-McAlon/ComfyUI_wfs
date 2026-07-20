@@ -386,6 +386,9 @@ export class Player extends Entity {
 
   get isDead() { return this.state === S.DEAD; }
 
+  /** Current growth-derived locomotion stats (read-only; for the debug overlay). */
+  get stats() { return this._stats; }
+
   /** Reset to a spawn point. Keeps accumulated growth (you stay big). */
   respawn(x, y) {
     this.motor.teleport(x, y);
