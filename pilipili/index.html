@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Le PiliPili — Neon Club Platformer</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #05010a; }
+      #game { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; }
+      /* UI overlay: non-interactive by default; interactive children re-enable it. */
+      #ui { position: fixed; inset: 0; pointer-events: none; font-family: system-ui, sans-serif; }
+      #ui > * { pointer-events: auto; }
+      .loading {
+        position: fixed; inset: 0; display: grid; place-items: center;
+        color: #ff2b48; letter-spacing: 0.3em; text-transform: uppercase;
+        font: 600 14px/1 system-ui, sans-serif; text-shadow: 0 0 18px #ff1030;
+        background: radial-gradient(60% 60% at 50% 40%, #1a0208, #05010a);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <div id="ui"></div>
+    <div id="boot" class="loading">Chargement…&nbsp; Le PiliPili</div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
