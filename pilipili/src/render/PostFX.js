@@ -52,7 +52,12 @@ export class PostFX {
     this.crimson = new CrimsonGradeEffect(FX.CRIMSON_GRADE);
     this.tonemap = new ToneMappingEffect({ mode: ToneMappingMode.ACES_FILMIC });
 
-    this.composer.addPass(new EffectPass(camera, this.bloom, this.chroma, this.crimson, this.tonemap));
+    // pmndrs merges effects per EffectPass, but forbids a UV-transforming effect
+    // (our crimson barrel) sharing a pass with a CONVOLUTION effect. In this lib
+    // ChromaticAberration IS convolution, so it must live in its OWN pass; bloom,
+    // the crimson grade (UV) and tone-mapping are convolution-free and merge fine.
+    this.composer.addPass(new EffectPass(camera, this.bloom, this.crimson, this.tonemap));
+    this.composer.addPass(new EffectPass(camera, this.chroma));
 
     // ── Boss distortion pass (shockwaves + glitch) ──────────────────
     this._shockwaves = [];
