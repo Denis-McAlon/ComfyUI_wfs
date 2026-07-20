@@ -55,7 +55,11 @@ export const MOVE = {
  *   g_dn  = g_up · FALL_MULT
  */
 export const JUMP = {
-  APEX_HEIGHT: 3.2,          // units. ~1.9 body-heights: readable, generous.
+  APEX_HEIGHT: 3.35,         // units. Authored 3.35 → MEASURED effective apex ≈3.24
+                             //   after discrete-step integration + apex-hang (the
+                             //   analytic parabola slightly under-delivers). Tuned
+                             //   with tools/jump-measure.mjs so the level's step-ups
+                             //   keep their designed clearance. ~1.9 body-heights.
   TIME_TO_APEX: 0.36,        // s. Under 0.4s keeps it responsive.
   FALL_MULTIPLIER: 1.85,     // fall gravity ÷ rise gravity. The "tight jump" number.
 
@@ -63,8 +67,12 @@ export const JUMP = {
    *  Fixes ~80% of "the game ate my input" complaints. 6 frames = 100ms. */
   COYOTE_FRAMES: 6,
   /** Jump buffer: frames before landing during which a jump press is remembered
-   *  and auto-fired on touchdown. Pairs with coyote to feel telepathic. */
-  BUFFER_FRAMES: 6,
+   *  and auto-fired on touchdown. Pairs with coyote to feel telepathic.
+   *  NOTE: the buffered jump is honoured on the frame AFTER touchdown (grounded is
+   *  resolved at end-of-step, the jump check is start-of-step), so the effective
+   *  window is one less than this constant. 7 here → a true ~6 frames. Verified in
+   *  tools/jump-measure.mjs. */
+  BUFFER_FRAMES: 7,
 
   /** Variable height: on early button release while rising, cut upward velocity
    *  to this fraction. Tap = hop, hold = full jump. */

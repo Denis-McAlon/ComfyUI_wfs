@@ -83,6 +83,11 @@ export class Player extends Entity {
     // Cosmetic squash-and-stretch (render-space, non-uniform).
     this.squashX = 1; this.squashY = 1;
 
+    // Jump-arc telemetry (measured in the fixed sim → render-rate-independent).
+    // Read by the F1 DebugOverlay for tuning by feel. Cheap; a few numbers.
+    this.lastJumpApex = 0; this.lastJumpAir = 0;
+    this._jumpPeak = 0; this._airFrames = 0; this._launchFeet = 0;
+
     this.state = S.IDLE;
     this._stats = null;
     this._recomputeStats();
@@ -341,9 +346,18 @@ export class Player extends Entity {
       }
       this._coyote = JUMP.COYOTE_FRAMES;
       this._airJumps = JUMP.MAX_AIR_JUMPS;
-    } else if (this._coyote > 0) {
-      this._coyote--; // decremented in FIXED steps → COYOTE_FRAMES == frames
+    } else if (wasAir && this._coyote > 0) {
+      // Only start counting DOWN once we've been airborne for a full step. If we
+      // decremented on the very frame we left the ledge, the constant would lie
+      // by one frame (COYOTE_FRAMES=6 would grant only 5). This makes 6 mean 6.
+      this._coyote--;
     }
+
+    // Jump-arc telemetry, measured against the surface we left from.
+    if (!wasAir && !res.grounded) { this._launchFeet = this.motor.feetY; this._jumpPeak = 0; this._airFrames = 0; }
+    if (!res.grounded) { this._airFrames++; this._jumpPeak = Math.max(this._jumpPeak, this.motor.feetY - this._launchFeet); }
+    if (wasAir && res.grounded) { this.lastJumpApex = this._jumpPeak; this.lastJumpAir = this._airFrames * dt; }
+
     this.grounded = res.grounded;
   }
 

@@ -32,9 +32,18 @@ Requires Node 18+ and a WebGL2 browser.
 | Attack | X / J / L | X |
 | Dash (reserved) | Shift / C | RB / RT |
 | Pause | Esc / P | Start |
+| **Debug/feel overlay** | **F1** | — |
 
 *Tap jump = hop, hold = full jump. The jump honours coyote-time and input
 buffering — it's meant to feel like it reads your mind.*
+
+**Tuning the jump (P0).** Press **F1** in-game for a live readout — state,
+velocity, and the last jump's *measured* apex & air-time (measured in the fixed
+sim, so it's identical on any display refresh rate). For headless numbers, run
+`node tools/jump-measure.mjs` — it drives the real Player/physics over a flat
+floor at an exact 1/60 step and prints the full arc (apex, time-to-apex, tap↔hold
+range, coyote & buffer windows). Current tuned arc: apex ≈3.2u, coyote 6f,
+buffer 6f. Change a value in `Constants.js`, re-run the bench, feel it with F1.
 
 Dev console hook: `window.__game` is exposed — e.g. `__game.ctx.player.addGrowth(20)`
 to test the giant form instantly.
