@@ -197,7 +197,10 @@ export class GameplayScene {
   _handleDeath(dt) {
     this._deadTimer -= dt;
     if (this._deadTimer > 0) return;
-    if (--this.lives <= 0) { this.ctx.goto('select'); return; }
+    if (--this.lives <= 0) {
+      this.ctx.goto('end', { outcome: 'lose', tier: this.player?.tier ?? 0 });
+      return;
+    }
     this.player.respawn(this.data.spawn.x, this.data.spawn.y);
   }
 

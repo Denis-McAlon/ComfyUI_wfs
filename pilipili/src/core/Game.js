@@ -12,6 +12,7 @@ import { BootState } from './states/BootState.js';
 import { CharacterSelectState } from './states/CharacterSelectState.js';
 import { PlayState } from './states/PlayState.js';
 import { BossState } from './states/BossState.js';
+import { EndState } from './states/EndState.js';
 
 /**
  * Game.js — the conductor.
@@ -73,7 +74,8 @@ export class Game {
       .add('boot', new BootState(this.ctx))
       .add('select', new CharacterSelectState(this.ctx))
       .add('play', new PlayState(this.ctx))
-      .add('boss', new BossState(this.ctx));
+      .add('boss', new BossState(this.ctx))
+      .add('end', new EndState(this.ctx));
 
     this.fsm.start('boot');
   }

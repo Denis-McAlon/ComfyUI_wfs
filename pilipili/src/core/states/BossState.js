@@ -43,7 +43,10 @@ export class BossState extends GameplayScene {
     if (this._won > 0) {
       this._won -= dt;
       this.ctx.clock.timeScale = Math.max(0.15, this._won / 3.0); // slow-mo victory
-      if (this._won <= 0) { this.ctx.clock.timeScale = 1; this.ctx.goto('select'); }
+      if (this._won <= 0) {
+        this.ctx.clock.timeScale = 1;
+        this.ctx.goto('end', { outcome: 'win', tier: this.player?.tier ?? 0 });
+      }
     }
     super.fixedUpdate(dt);
   }
