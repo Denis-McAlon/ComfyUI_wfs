@@ -10,6 +10,7 @@ import { Renderer } from '../render/Renderer.js';
 import { AudioEngine } from '../audio/AudioEngine.js';
 
 import { BootState } from './states/BootState.js';
+import { TitleState } from './states/TitleState.js';
 import { CharacterSelectState } from './states/CharacterSelectState.js';
 import { PlayState } from './states/PlayState.js';
 import { BossState } from './states/BossState.js';
@@ -23,7 +24,7 @@ import { EndState } from './states/EndState.js';
  * enforces the fixed/render split; per-screen logic lives in the state objects,
  * which receive a shared `ctx` so they never construct systems themselves.
  *
- *   Boot → CharacterSelect → Play → Boss → (win|GameOver) → CharacterSelect
+ *   Boot → Title → CharacterSelect → Play → Boss → (win|GameOver) → CharacterSelect
  */
 export class Game {
   constructor(canvas) {
@@ -83,6 +84,7 @@ export class Game {
 
     this.fsm
       .add('boot', new BootState(this.ctx))
+      .add('title', new TitleState(this.ctx))
       .add('select', new CharacterSelectState(this.ctx))
       .add('play', new PlayState(this.ctx))
       .add('boss', new BossState(this.ctx))

@@ -44,6 +44,9 @@ export class CharacterSelectUI {
     this.index = 0;
     this._navLock = 0;
     this._confirmed = false;
+    // Forwarded-input confirm is gated until a fresh press: a CONFIRM edge left
+    // latched by the previous screen (title → select) must not skip this menu.
+    this._confirmArmed = false;
 
     // Theme colours (fallback-first).
     this.crimson = toCss(PALETTE?.crimson, '#ff2b48');
@@ -162,9 +165,11 @@ export class CharacterSelectUI {
     if (!input) return;
     if (input.pressed?.(ACTIONS.LEFT)) this._move(-1);
     else if (input.pressed?.(ACTIONS.RIGHT)) this._move(1);
-    if (input.pressed?.(ACTIONS.CONFIRM) || input.pressed?.(ACTIONS.JUMP) || input.pressed?.(ACTIONS.ATTACK)) {
-      this._confirm();
-    }
+    const confirm = input.pressed?.(ACTIONS.CONFIRM) || input.pressed?.(ACTIONS.JUMP) || input.pressed?.(ACTIONS.ATTACK);
+    // Arm on the first frame that reports NO confirm pressed, so a press inherited
+    // from the title card can't validate a hero the instant this menu appears.
+    if (!confirm) this._confirmArmed = true;
+    else if (this._confirmArmed) this._confirm();
   }
 
   _move(dir) {
