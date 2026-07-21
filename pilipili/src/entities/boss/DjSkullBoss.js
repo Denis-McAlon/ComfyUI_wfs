@@ -233,7 +233,7 @@ export class DjSkullBoss extends Entity {
   takeDamage(dmg) {
     if (!this.vulnerable || this.phase === PHASE.DEAD) return false;
     this.health = Math.max(0, this.health - dmg);
-    this.ctx.bus.emit(EVENT.BOSS_HURT, { health: this.health });
+    this.ctx.bus.emit(EVENT.BOSS_HURT, { health: this.health, x: this.x, y: this.y });
     this._hurtFlash = 0.12;
 
     const f = this.health / BOSS.MAX_HEALTH;

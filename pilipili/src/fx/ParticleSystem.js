@@ -221,6 +221,20 @@ export class ParticleSystem {
       this.burst(x, y, { count: 8, speed: 3.5, spread: Math.PI * 2, color: COLOR.CRIMSON, size: 0.13, life: 0.5, gravity: 14, drag: 1.4 });
     });
 
+    // Death: a dark, heavy scatter at the hero — the run bursts apart.
+    on(EVENT.PLAYER_DIED, () => {
+      const x = this._px(); const y = this._py();
+      this.burst(x, y, { count: 30, speed: 7, spread: Math.PI * 2, color: COLOR.RED, size: 0.18, life: 0.8, gravity: 16, drag: 1.2, speedJitter: 0.6 });
+      this.burst(x, y, { count: 14, speed: 3.5, spread: Math.PI * 2, color: COLOR.CRIMSON, size: 0.15, life: 0.7, gravity: 10, drag: 1.4 });
+    });
+
+    // Boss hurt: a white hit-spark at the skull so a landed blow is VISIBLE (not just heard).
+    on(EVENT.BOSS_HURT, (p) => {
+      const x = p?.x ?? this._px(); const y = p?.y ?? this._py();
+      this.burst(x, y, { count: 14, speed: 7.5, spread: Math.PI * 2, color: COLOR.WHITE, size: 0.14, life: 0.3, gravity: 0, drag: 3.0, speedJitter: 0.5 });
+      this.burst(x, y, { count: 8, speed: 4, spread: Math.PI * 2, color: COLOR.CRIMSON, size: 0.13, life: 0.4, gravity: 6, drag: 1.6 });
+    });
+
     // Boss shockwave: an expanding crimson ring at the wave's origin.
     on(EVENT.BOSS_SHOCKWAVE, (p) => {
       const x = p?.x ?? 0;

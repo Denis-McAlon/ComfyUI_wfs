@@ -72,9 +72,12 @@ export class AudioEngine {
     on(EVENT.PLAYER_HURT, (p) => this._hurt(p));
     on(EVENT.PLAYER_ATTACK, () => this._swipe());
     on(EVENT.PLAYER_GROW, () => this._grow());
+    on(EVENT.PLAYER_DIED, () => this._death());
     on(EVENT.PICKUP_COLLECTED, (p) => this._pickup(p));
     on(EVENT.ENEMY_KILLED, () => this._crunch());
     on(EVENT.BOSS_SHOCKWAVE, () => this._boom());
+    on(EVENT.BOSS_VINYL, () => this._vinylDrop());
+    on(EVENT.BOSS_VULNERABLE, (p) => { if (p?.on) this._expose(); });
     on(EVENT.BOSS_HURT, () => this._zap());
     on(EVENT.BOSS_PHASE, () => this._riser());
     on(EVENT.BOSS_DEFEATED, () => this._defeatSweep());
@@ -269,6 +272,29 @@ export class AudioEngine {
       const f = root * Math.pow(2, semi / 12);
       this._tone({ type: 'triangle', f0: f, t0: t0 + i * gap, dur: 0.12, peak: 0.18, attack: 0.003 });
     });
+  }
+
+  /** Death: a heavy thud under a mournful descending tone — the run ends with weight. */
+  _death() {
+    if (!this.ctx) return;
+    const t = this._t;
+    this._tone({ type: 'sine', f0: 220, f1: 52, t0: t, dur: 0.7, peak: 0.42, attack: 0.005 });
+    this._tone({ type: 'sawtooth', f0: 330, f1: 62, t0: t, dur: 0.8, peak: 0.22, attack: 0.01, detune: -8 });
+    this._noise({ t0: t, dur: 0.26, peak: 0.3, type: 'lowpass', f0: 700, f1: 120, q: 0.8 });
+  }
+
+  /** Falling vinyl: a short spinning whoosh so an incoming record is AUDIBLE (fair). */
+  _vinylDrop() {
+    if (!this.ctx) return;
+    this._noise({ t0: this._t, dur: 0.28, peak: 0.13, type: 'bandpass', f0: 1700, f1: 520, q: 3.2 });
+  }
+
+  /** Boss exposed: a bright rising chime — the "hit me NOW" tell that opens the window. */
+  _expose() {
+    if (!this.ctx) return;
+    const t = this._t;
+    this._tone({ type: 'triangle', f0: 520, f1: 1040, t0: t, dur: 0.22, peak: 0.18, attack: 0.004 });
+    this._tone({ type: 'sine', f0: 784, f1: 1568, t0: t, dur: 0.18, peak: 0.10, attack: 0.004 });
   }
 
   /** Enemy killed: a short gritty crunch — collapsing noise plus a downward blip. */
