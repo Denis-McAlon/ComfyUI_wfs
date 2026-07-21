@@ -9,12 +9,14 @@ import { LAYER } from '../config/Constants.js';
 // is therefore SYNCHRONOUS — GameplayScene.enter() can call it inline.
 import level01 from './levels/level_01_backroom.json';
 import level02 from './levels/level_02_maindeck.json';
+import level03 from './levels/level_03_lafosse.json';
 import bossArena from './levels/boss_arena.json';
 
 /** Registry of every shippable level, keyed by the id PlayState/BossState pass. */
 const LEVELS = {
   level_01_backroom: level01,
   level_02_maindeck: level02,
+  level_03_lafosse: level03,
   boss_arena: bossArena,
 };
 
@@ -100,6 +102,7 @@ export class Level {
 
     // Return EXACTLY the shape GameplayScene consumes; arrays pass straight through.
     return {
+      name: data.name ?? null,        // human-readable level title (for HUD/debug)
       spawn: data.spawn || { x: 0, y: 2 },
       bossArenaX: data.bossArenaX ?? null,
       next: data.next ?? null,        // next level id, or 'boss', or null (→ boss)

@@ -2,7 +2,7 @@
   "name": "Le Main Deck",
   "spawn": { "x": 2, "y": 2 },
   "bossArenaX": 120,
-  "next": "boss",
+  "next": "level_03_lafosse",
   "width": 132,
   "height": 14,
   "platforms": [
