@@ -83,6 +83,21 @@ export class InputManager {
     if (a) this._rawKeys.delete(a);
   }
 
+  /**
+   * On-screen touch controls inject actions through the SAME digital path as the
+   * keyboard: a press latches its down-edge (so a tap shorter than a frame still
+   * fires, and the jump buffer stamps correctly) and joins the held set; a release
+   * leaves it. This is why a thumb on the JUMP button feels identical to Space.
+   */
+  touchDown(action) {
+    if (!action) return;
+    if (!this._rawKeys.has(action)) this._pressLatch.add(action);
+    this._rawKeys.add(action);
+  }
+  touchUp(action) {
+    if (action) this._rawKeys.delete(action);
+  }
+
   /** Called once at the top of each render frame: merge sources, latch edges. */
   beginFrame() {
     // Merge keyboard + gamepad into the current held set.

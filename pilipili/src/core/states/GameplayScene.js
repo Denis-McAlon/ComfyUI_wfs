@@ -2,6 +2,7 @@ import { Player } from '../../entities/Player.js';
 import { buildHeroView } from '../../config/Characters.js';
 import { Level } from '../../world/Level.js';
 import { HUD } from '../../ui/HUD.js';
+import { TouchControls } from '../../ui/TouchControls.js';
 import { IceCube } from '../../entities/enemies/IceCube.js';
 import { DrunkPatron } from '../../entities/enemies/DrunkPatron.js';
 import { BrokenGlass } from '../../entities/hazards/BrokenGlass.js';
@@ -79,6 +80,8 @@ export class GameplayScene {
     this.hud = new HUD(ctx);
     this.hud.setHealth(this.player.health, 5);
     this.particles = new ParticleSystem(ctx);
+    // On-screen thumb pad (self-disables on desktop). Lives only for this scene.
+    this.touch = new TouchControls(ctx);
 
     // Wire interaction events.
     this._offs.push(ctx.bus.on(EVENT.PLAYER_ATTACK, (hit) => this._resolveMelee(hit)));
@@ -96,6 +99,7 @@ export class GameplayScene {
     this.player?.destroy?.();
     this.level?.unload?.();
     this.hud?.destroy?.();
+    this.touch?.destroy?.();
     this.particles?.destroy?.();
     this.ctx.player = null;
   }
