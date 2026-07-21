@@ -1,0 +1,61 @@
+{
+  "name": "La Fosse",
+  "index": 3,
+  "spawn": { "x": 2, "y": 2 },
+  "bossArenaX": 118,
+  "next": "boss",
+  "width": 132,
+  "height": 14,
+  "platforms": [
+    { "x": 8, "y": -1, "w": 20, "h": 2 },
+    { "x": 16, "y": 2.2, "w": 3.0, "h": 0.6 },
+    { "x": 30.5, "y": -1, "w": 23, "h": 2 },
+    { "x": 54, "y": -1, "w": 20, "h": 2 },
+    { "x": 52, "y": 2.3, "w": 2.8, "h": 0.5 },
+    { "x": 52, "y": 4.4, "w": 3.0, "h": 0.5, "oneWay": true },
+    { "x": 75, "y": -1, "w": 18, "h": 2 },
+    { "x": 76, "y": 2.2, "w": 2.8, "h": 0.5 },
+    { "x": 94, "y": -1, "w": 16, "h": 2 },
+    { "x": 116, "y": -1, "w": 26, "h": 2 }
+  ],
+  "enemies": [
+    { "type": "drunk", "x": 12, "y": 1, "range": 3 },
+    { "type": "ice", "x": 28, "y": 1, "dir": 1, "range": 4 },
+    { "type": "drunk", "x": 36, "y": 1, "range": 3 },
+    { "type": "ice", "x": 52, "y": 1, "dir": -1, "range": 5 },
+    { "type": "drunk", "x": 58, "y": 1, "range": 4 },
+    { "type": "ice", "x": 72, "y": 1, "dir": 1, "range": 4 },
+    { "type": "drunk", "x": 79, "y": 1, "range": 3 },
+    { "type": "ice", "x": 90, "y": 1, "dir": -1, "range": 5 },
+    { "type": "drunk", "x": 96, "y": 1, "range": 4 },
+    { "type": "ice", "x": 110, "y": 1, "dir": 1, "range": 4 }
+  ],
+  "pickups": [
+    { "kind": "cocktail", "x": 5, "y": 1 },
+    { "kind": "cocktail", "x": 14, "y": 1 },
+    { "kind": "vinyl", "x": 16, "y": 3.3 },
+    { "kind": "cocktail", "x": 24, "y": 1 },
+    { "kind": "cocktail", "x": 39, "y": 1 },
+    { "kind": "cocktail", "x": 48, "y": 1 },
+    { "kind": "vinyl", "x": 52, "y": 5.5 },
+    { "kind": "cocktail", "x": 61, "y": 1 },
+    { "kind": "cocktail", "x": 69, "y": 1 },
+    { "kind": "vinyl", "x": 76, "y": 3.3 },
+    { "kind": "cocktail", "x": 82, "y": 1 },
+    { "kind": "cocktail", "x": 88, "y": 1 },
+    { "kind": "cocktail", "x": 95, "y": 1 },
+    { "kind": "cocktail", "x": 106, "y": 1 },
+    { "kind": "cocktail", "x": 113, "y": 1 },
+    { "kind": "cocktail", "x": 121, "y": 1 }
+  ],
+  "hazards": [
+    { "x": 34, "y": 0, "w": 3.5 },
+    { "x": 56, "y": 0, "w": 3.5 },
+    { "x": 76, "y": 0, "w": 3 },
+    { "x": 92, "y": 0, "w": 4 },
+    { "x": 99, "y": 0, "w": 3 }
+  ],
+  "crates": [
+    { "x": 48, "y": 0.6, "loot": ["vinyl", "vinyl"] }
+  ]
+}

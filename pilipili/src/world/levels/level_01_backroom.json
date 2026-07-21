@@ -1,0 +1,56 @@
+{
+  "name": "Le Backroom",
+  "index": 1,
+  "spawn": { "x": 2, "y": 2 },
+  "bossArenaX": 112,
+  "next": "level_02_maindeck",
+  "width": 122,
+  "height": 14,
+  "platforms": [
+    { "x": 8, "y": -1, "w": 22, "h": 2 },
+    { "x": 11, "y": 1.4, "w": 2.4, "h": 0.6 },
+    { "x": 21, "y": -3, "w": 6, "h": 2 },
+    { "x": 31, "y": -1, "w": 12, "h": 2 },
+    { "x": 45, "y": -1, "w": 12, "h": 2 },
+    { "x": 59, "y": -1, "w": 14, "h": 2 },
+    { "x": 59, "y": 2.6, "w": 6, "h": 0.5, "oneWay": true },
+    { "x": 68, "y": -3, "w": 6, "h": 2 },
+    { "x": 76, "y": -1, "w": 12, "h": 2 },
+    { "x": 73, "y": 2.6, "w": 4, "h": 0.5, "oneWay": true },
+    { "x": 85.5, "y": -1, "w": 3, "h": 2 },
+    { "x": 85.5, "y": 2.4, "w": 2.4, "h": 0.6 },
+    { "x": 88.5, "y": 4.2, "w": 2.4, "h": 0.5, "oneWay": true },
+    { "x": 95, "y": -1, "w": 12, "h": 2 },
+    { "x": 110, "y": -1, "w": 16, "h": 2 }
+  ],
+  "enemies": [
+    { "type": "ice", "x": 32, "y": 1, "dir": -1, "range": 5 },
+    { "type": "drunk", "x": 45, "y": 1, "range": 4 },
+    { "type": "ice", "x": 78, "y": 1, "dir": 1, "range": 4 },
+    { "type": "drunk", "x": 96, "y": 1, "range": 4 }
+  ],
+  "pickups": [
+    { "kind": "cocktail", "x": 6, "y": 1 },
+    { "kind": "cocktail", "x": 11, "y": 2.7 },
+    { "kind": "cocktail", "x": 16, "y": 1 },
+    { "kind": "cocktail", "x": 28, "y": 1 },
+    { "kind": "cocktail", "x": 35, "y": 1 },
+    { "kind": "cocktail", "x": 43, "y": 1 },
+    { "kind": "cocktail", "x": 49, "y": 1 },
+    { "kind": "cocktail", "x": 54, "y": 1 },
+    { "kind": "vinyl", "x": 59, "y": 3.9 },
+    { "kind": "cocktail", "x": 64, "y": 1 },
+    { "kind": "cocktail", "x": 72, "y": 1 },
+    { "kind": "cocktail", "x": 73, "y": 3.7 },
+    { "kind": "cocktail", "x": 80, "y": 1 },
+    { "kind": "vinyl", "x": 88.5, "y": 5.4 },
+    { "kind": "cocktail", "x": 94, "y": 1 },
+    { "kind": "cocktail", "x": 99, "y": 1 },
+    { "kind": "cocktail", "x": 106, "y": 1 },
+    { "kind": "cocktail", "x": 110, "y": 1 }
+  ],
+  "hazards": [
+    { "x": 59, "y": 0, "w": 5 },
+    { "x": 78, "y": 0, "w": 3 }
+  ]
+}

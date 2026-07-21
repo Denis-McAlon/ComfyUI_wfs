@@ -1,0 +1,29 @@
+{
+  "name": "pilipili-platformer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Le PiliPili — a saturated neon-crimson 2.5D club platformer (Three.js + Rapier2D).",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "analyze": "node tools/level-analyze.mjs",
+    "measure:jump": "node tools/jump-measure.mjs",
+    "measure:growth": "node tools/growth-measure.mjs",
+    "measure:boss": "node tools/boss-measure.mjs",
+    "measure:hazard": "node tools/hazard-measure.mjs",
+    "measure:drunk": "node tools/drunk-measure.mjs",
+    "measure:camera": "node tools/camera-measure.mjs",
+    "measure:pickup": "node tools/pickup-measure.mjs",
+    "measure:juice": "node tools/juice-measure.mjs"
+  },
+  "dependencies": {
+    "@dimforge/rapier2d-compat": "^0.14.0",
+    "postprocessing": "^6.36.3",
+    "three": "^0.171.0"
+  },
+  "devDependencies": {
+    "vite": "^6.0.7"
+  }
+}
