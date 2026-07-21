@@ -199,7 +199,11 @@ export const GLASS = {
 
 /** COLLECTIBLES — the little arc + magnet that make pickups feel good. */
 export const PICKUP = {
-  MAGNET_RADIUS: 2.4,        // units at which items home toward a grown player
+  MAGNET_RADIUS: 2.4,        // base units at which items home toward the player
+  /** The magnet WIDENS as the hero grows — the loot-vacuum payoff of the growth
+   *  loop. Radius = MAGNET_RADIUS · lerp(1, this, weightT), so a max giant pulls
+   *  from ~2.2× as far (≈5.3u). Verified with tools/pickup-measure.mjs. */
+  MAGNET_RADIUS_AT_HEAVY: 2.2,
   MAGNET_ACCEL: 40.0,
   BOB_AMPLITUDE: 0.12,
   BOB_FREQ: 2.0,

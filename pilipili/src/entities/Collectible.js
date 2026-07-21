@@ -1,7 +1,7 @@
 import { Group, Mesh, CylinderGeometry, ConeGeometry, MeshStandardMaterial, Color } from 'three';
 import { Entity } from './Entity.js';
 import { makeGlowMaterial } from '../render/shaders/NeonMaterial.js';
-import { PICKUP, GROWTH } from '../config/Constants.js';
+import { PICKUP, GROWTH, lerp } from '../config/Constants.js';
 
 /**
  * Collectible — a floating cocktail or vinyl that feeds the growth engine. It
@@ -91,7 +91,9 @@ export class Collectible extends Entity {
       const dx = player.x - this.x;
       const dy = player.y - this.y;
       const dist = Math.hypot(dx, dy);
-      if (dist < PICKUP.MAGNET_RADIUS) {
+      // The vacuum widens with the hero's weight — a giant pulls loot from farther.
+      const radius = PICKUP.MAGNET_RADIUS * lerp(1, PICKUP.MAGNET_RADIUS_AT_HEAVY, player.weightT ?? 0);
+      if (dist < radius) {
         magnetized = true;
         // Accelerate toward the player and integrate — a homing vacuum.
         const inv = dist > 1e-4 ? 1 / dist : 0;
