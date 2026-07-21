@@ -69,12 +69,15 @@ pilipili/
    │  ├─ Clock.js            # fixed-timestep accumulator + hitstop + timescale
    │  ├─ StateMachine.js     # generic FSM (game flow AND entity states)
    │  ├─ EventBus.js         # synchronous pub/sub — the decoupling seam
+   │  ├─ SaveSystem.js       # localStorage: best tier, fastest clear, wins, volume
    │  └─ states/
    │     ├─ BootState.js
+   │     ├─ TitleState.js    # neon front door + save-backed best-run stats
    │     ├─ CharacterSelectState.js
    │     ├─ GameplayScene.js # ★ interaction hub (contact/melee/pickup/hazard resolution)
-   │     ├─ PlayState.js     # thin: level 1, no boss
-   │     └─ BossState.js     # thin: arena + boss + BeatClock + projectile spawners
+   │     ├─ PlayState.js     # thin: levels 1–3, chained via `next`
+   │     ├─ BossState.js     # thin: arena + boss + BeatClock + projectile spawners
+   │     └─ EndState.js      # victory / game-over, records the run to the save
    ├─ input/InputManager.js  # keyboard+gamepad → buffered ACTIONS (jump-buffer lives here)
    ├─ physics/
    │  ├─ PhysicsWorld.js     # Rapier wrapper: layers, factories, shape/ray queries
@@ -100,7 +103,7 @@ pilipili/
    ├─ world/
    │  ├─ Level.js            # JSON → colliders + neon meshes; returns spawn/entity data
    │  └─ levels/*.json
-   └─ ui/{HUD,CharacterSelectUI}.js
+   └─ ui/{HUD,CharacterSelectUI,TitleScreen,EndScreen,PauseMenu,TouchControls,SceneTransition,LevelBanner}.js
 ```
 
 ★ = load-bearing; ★★ = the centerpiece.
@@ -111,9 +114,10 @@ pilipili/
 
 - **`Game`** owns the cross-cutting systems and the flow FSM. It exposes a single
   `ctx` object to every state; states never `new` a system themselves.
-- **States** (`BootState`, `CharacterSelectState`, `PlayState`, `BossState`) own
-  a *screen*. `PlayState`/`BossState` are thin subclasses of `GameplayScene`,
-  which holds all gameplay-interaction logic in one place.
+- **States** (`BootState`, `TitleState`, `CharacterSelectState`, `PlayState`,
+  `BossState`, `EndState`) own a *screen*. `PlayState`/`BossState` are thin
+  subclasses of `GameplayScene`, which holds all gameplay-interaction logic in one
+  place. Flow: `Boot → Title → Select → Play×3 → Boss → End → Select`.
 - **Entities** know their own behaviour and their **view**, and nothing else.
   They emit intent on the bus (`PLAYER_JUMP`, `BOSS_SHOCKWAVE`, …). They do **not**
   import the renderer, audio, or each other.
