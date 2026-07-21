@@ -1,5 +1,6 @@
 {
   "name": "La Fosse",
+  "index": 3,
   "spawn": { "x": 2, "y": 2 },
   "bossArenaX": 118,
   "next": "boss",

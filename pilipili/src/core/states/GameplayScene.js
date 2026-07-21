@@ -3,6 +3,7 @@ import { buildHeroView } from '../../config/Characters.js';
 import { Level } from '../../world/Level.js';
 import { HUD } from '../../ui/HUD.js';
 import { TouchControls } from '../../ui/TouchControls.js';
+import { LevelBanner } from '../../ui/LevelBanner.js';
 import { IceCube } from '../../entities/enemies/IceCube.js';
 import { DrunkPatron } from '../../entities/enemies/DrunkPatron.js';
 import { BrokenGlass } from '../../entities/hazards/BrokenGlass.js';
@@ -83,6 +84,8 @@ export class GameplayScene {
     this.particles = new ParticleSystem(ctx);
     // On-screen thumb pad (self-disables on desktop). Lives only for this scene.
     this.touch = new TouchControls(ctx);
+    // A transient title drop announcing the level (self-destructs after its beat).
+    this.banner = new LevelBanner(ctx, { name: this.data.name, index: this.data.index });
 
     // Wire interaction events.
     this._offs.push(ctx.bus.on(EVENT.PLAYER_ATTACK, (hit) => this._resolveMelee(hit)));
@@ -101,6 +104,7 @@ export class GameplayScene {
     this.level?.unload?.();
     this.hud?.destroy?.();
     this.touch?.destroy?.();
+    this.banner?.destroy?.();
     this.particles?.destroy?.();
     this.ctx.player = null;
   }

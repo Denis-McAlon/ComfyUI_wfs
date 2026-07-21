@@ -1,5 +1,6 @@
 {
   "name": "Le Backroom",
+  "index": 1,
   "spawn": { "x": 2, "y": 2 },
   "bossArenaX": 112,
   "next": "level_02_maindeck",

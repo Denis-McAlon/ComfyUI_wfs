@@ -103,6 +103,7 @@ export class Level {
     // Return EXACTLY the shape GameplayScene consumes; arrays pass straight through.
     return {
       name: data.name ?? null,        // human-readable level title (for HUD/debug)
+      index: data.index ?? null,      // 1-based level number (for the intro banner)
       spawn: data.spawn || { x: 0, y: 2 },
       bossArenaX: data.bossArenaX ?? null,
       next: data.next ?? null,        // next level id, or 'boss', or null (→ boss)

@@ -1,5 +1,6 @@
 {
   "name": "Le Main Deck",
+  "index": 2,
   "spawn": { "x": 2, "y": 2 },
   "bossArenaX": 120,
   "next": "level_03_lafosse",
