@@ -114,6 +114,11 @@ export class AudioEngine {
     ctx?.resume?.().catch?.(() => {});
   }
 
+  /** Suspend all audio (called when the game pauses). No-op if silent/uncreated. */
+  suspend() {
+    this.ctx?.suspend?.().catch?.(() => {});
+  }
+
   /** Build the AudioContext + master chain the first time we truly need it. */
   _ensureContext() {
     if (this.ctx || !this._supported) return this.ctx;

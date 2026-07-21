@@ -1,5 +1,6 @@
-import { SIM, EVENT } from '../config/Constants.js';
+import { SIM, EVENT, ACTIONS } from '../config/Constants.js';
 import { EventBus } from './EventBus.js';
+import { PauseMenu } from '../ui/PauseMenu.js';
 import { Clock } from './Clock.js';
 import { StateMachine } from './StateMachine.js';
 import { InputManager } from '../input/InputManager.js';
@@ -54,6 +55,8 @@ export class Game {
     this.fsm = new StateMachine({}, { bus: this.bus, context: this.ctx });
     this._frame = this._frame.bind(this);
     this._running = false;
+    this.paused = false;
+    this._pauseUI = null;
 
     // A single, cheaply-wired reaction to the global hitstop event.
     this.bus.on(EVENT.HITSTOP, ({ seconds }) => this.clock.hitstop(seconds));
@@ -87,29 +90,71 @@ export class Game {
   _frame(nowMs) {
     if (!this._running) return;
 
+    // Sample input FIRST so the pause toggle is caught even while paused.
+    this.input.beginFrame();
+    if (this.input.pressed(ACTIONS.PAUSE) && this._canPause()) this._togglePause();
+
+    // While paused, clock.timeScale is 0, so advance() yields 0 steps with no
+    // backlog and no reset trickery — sim time simply stands still, cleanly.
     const { steps, alpha, frameDt } = this.clock.advance(nowMs);
 
-    // 1) Sample input ONCE per frame; buffers are edge-latched here.
-    this.input.beginFrame();
-    this.fsm.handleInput(this.input);
+    if (!this.paused) {
+      this.fsm.handleInput(this.input);
 
-    // 2) Fixed simulation — deterministic, frame-rate independent.
-    for (let i = 0; i < steps; i++) {
-      this.fsm.fixedUpdate(SIM.FIXED_DT);
-      this.physics.step();                 // world integrates dynamic bodies
-      this.input.endFixedStep();           // decay coyote/buffer counters (in frames)
+      // Fixed simulation — deterministic, frame-rate independent.
+      for (let i = 0; i < steps; i++) {
+        this.fsm.fixedUpdate(SIM.FIXED_DT);
+        this.physics.step();               // world integrates dynamic bodies
+        this.input.endFixedStep();         // decay coyote/buffer counters (in frames)
+      }
+
+      // Variable-rate render. ORDER MATTERS:
+      //    a) render-only animation (particles, ui tweens, boss procedural motion)
+      //    b) interpolate every entity's view toward its sim transform
+      //    c) draw is below — camera follow, lighting tick, composer pass, once
+      //       all views are already in their final position for this frame.
+      this.fsm.update(frameDt);
+      this.fsm.render(alpha);
     }
 
-    // 3) Variable-rate render. ORDER MATTERS:
-    //    a) render-only animation (particles, ui tweens, boss procedural motion)
-    //    b) interpolate every entity's view toward its sim transform
-    //    c) draw LAST — camera follow, lighting tick, and the composer pass, once
-    //       all views are already in their final position for this frame.
-    this.fsm.update(frameDt);
-    this.fsm.render(alpha);
-    this.renderer.render(this.clock.elapsed, alpha, frameDt);
+    // Draw every frame; while paused pass frameDt 0 so the frame is fully frozen
+    // (no camera drift, no neon flicker) under the overlay.
+    this.renderer.render(this.clock.elapsed, alpha, this.paused ? 0 : frameDt);
 
     this.input.endFrame();
     requestAnimationFrame(this._frame);
+  }
+
+  /** Pausing is only meaningful in a gameplay scene, not on menus. */
+  _canPause() {
+    return this.fsm.currentName === 'play' || this.fsm.currentName === 'boss';
+  }
+
+  _togglePause() {
+    this.paused = !this.paused;
+    this.clock.timeScale = this.paused ? 0 : 1;   // freeze / thaw simulation time
+    if (this.paused) {
+      if (!this._pauseUI) {
+        this._pauseUI = new PauseMenu(this.ctx, {
+          onResume: () => this._togglePause(),
+          onRestart: () => { this._togglePause(); this._restart(); },
+          onQuit: () => { this._togglePause(); this.fsm.change('select'); },
+          onVolume: (v) => this.audio.setVolume?.(v),
+        });
+      }
+      this._pauseUI.show();
+      this.audio.suspend?.();               // silence while paused
+    } else {
+      this._pauseUI?.hide();
+      this.audio.resume?.();
+    }
+  }
+
+  /** Restart the current gameplay scene from its spawn. */
+  _restart() {
+    const st = this.fsm.current;
+    const character = st?.character ?? this.selectedCharacter;
+    if (this.fsm.currentName === 'boss') this.fsm.change('boss', { character });
+    else this.fsm.change('play', { character, levelId: st?.levelId });
   }
 }

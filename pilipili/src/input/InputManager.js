@@ -41,6 +41,7 @@ export class InputManager {
     this._pressed = new Set();    // went down THIS frame
     this._released = new Set();   // went up THIS frame
     this._rawKeys = new Set();    // raw keyboard actions from events
+    this._pressLatch = new Set(); // down-edges seen since the last sample (sub-frame taps)
 
     this._fixedStep = 0;                 // monotonically increasing fixed-step id
     this._bufferStamp = new Map();       // action → fixedStep when last pressed
@@ -59,7 +60,7 @@ export class InputManager {
     window.addEventListener('gamepadconnected', this._onPadConnect);
     window.addEventListener('gamepaddisconnected', this._onPadDisconnect);
     // Clear stuck keys if focus is lost (alt-tab mid-jump would otherwise stick).
-    window.addEventListener('blur', () => { this._rawKeys.clear(); });
+    window.addEventListener('blur', () => { this._rawKeys.clear(); this._pressLatch.clear(); });
   }
 
   detach() {
@@ -71,7 +72,11 @@ export class InputManager {
 
   _onKeyDown(e) {
     const a = KEYBOARD[e.code];
-    if (a) { this._rawKeys.add(a); if (a === ACTIONS.JUMP || a === ACTIONS.PAUSE) e.preventDefault(); }
+    if (a) {
+      if (!e.repeat) this._pressLatch.add(a); // latch the down-edge so a tap shorter than a frame still fires
+      this._rawKeys.add(a);
+      if (a === ACTIONS.JUMP || a === ACTIONS.PAUSE) e.preventDefault();
+    }
   }
   _onKeyUp(e) {
     const a = KEYBOARD[e.code];
@@ -100,6 +105,11 @@ export class InputManager {
     this._released.clear();
     for (const a of this._held) if (!this._prevHeld.has(a)) this._pressed.add(a);
     for (const a of this._prevHeld) if (!this._held.has(a)) this._released.add(a);
+    // Fold in sub-frame taps: a key pressed AND released between two samples never
+    // enters `_held`, so the held-edge above would miss it. The keydown handler
+    // latched it — honour it here so a fast tap (or a slow frame) never eats input.
+    for (const a of this._pressLatch) this._pressed.add(a);
+    this._pressLatch.clear();
     for (const a of this._pressed) this._bufferStamp.set(a, this._fixedStep);
 
     this._prevHeld = new Set(this._held);
