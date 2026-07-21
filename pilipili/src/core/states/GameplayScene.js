@@ -8,7 +8,7 @@ import { DrunkPatron } from '../../entities/enemies/DrunkPatron.js';
 import { BrokenGlass } from '../../entities/hazards/BrokenGlass.js';
 import { Collectible } from '../../entities/Collectible.js';
 import { ParticleSystem } from '../../fx/ParticleSystem.js';
-import { GROWTH, GLASS, ICE, BOSS, EVENT } from '../../config/Constants.js';
+import { GROWTH, GLASS, ICE, BOSS, PLAYER, EVENT } from '../../config/Constants.js';
 
 /**
  * GameplayScene — the workhorse behind both the platforming level and the boss
@@ -41,7 +41,7 @@ export class GameplayScene {
     this.hazards = [];
     this.player = null;
     this.boss = null;
-    this.lives = 3;
+    this.lives = PLAYER.LIVES ?? 3;
     this._offs = [];
     this._glassTick = 0;
     this._deadTimer = 0;
@@ -79,6 +79,7 @@ export class GameplayScene {
     // HUD + particles (particles self-wire to bus events; scene just ticks them).
     this.hud = new HUD(ctx);
     this.hud.setHealth(this.player.health, 5);
+    this.hud.setLives?.(this.lives, PLAYER.LIVES);
     this.particles = new ParticleSystem(ctx);
     // On-screen thumb pad (self-disables on desktop). Lives only for this scene.
     this.touch = new TouchControls(ctx);
@@ -124,6 +125,7 @@ export class GameplayScene {
       else this.ctx.goto('play', { character: this.character, levelId: next });
     }
     this.hud.setHealth(this.player.health, 5);
+    this.hud.setLives?.(this.lives, PLAYER.LIVES);
     this.hud.setGrowth?.(this.player.charge, this.player.tier, GROWTH.CHARGE_MAX);
     if (this.boss) {
       this.hud.showBoss?.(true);

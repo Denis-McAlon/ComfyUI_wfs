@@ -156,6 +156,8 @@ export const PLAYER = {
   /** Invulnerability window after taking a hit (s). */
   IFRAMES: 0.9,
   MAX_HEALTH: 5,
+  /** Retries before a run ends. Carries across levels (not refilled per level). */
+  LIVES: 3,
 };
 
 /** ICE CUBES — sliding enemies that paint zero-friction zones onto the floor. */

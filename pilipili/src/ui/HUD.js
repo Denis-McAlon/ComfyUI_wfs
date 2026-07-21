@@ -40,8 +40,10 @@ export class HUD {
     this._hp = null; this._hpMax = null; this._filled = null;
     this._charge = null; this._tier = null;
     this._bossHp = null; this._bossShown = false;
+    this._lives = null; this._livesMax = null;
 
     this.hearts = [];
+    this.livePips = [];
     this._build();
   }
 
@@ -61,6 +63,7 @@ export class HUD {
         <div class="pili-hud__boss-track"><div class="pili-hud__boss-fill" data-boss-fill></div></div>
       </div>
       <div class="pili-hud__corner">
+        <div class="pili-hud__lives" data-lives></div>
         <div class="pili-hud__hearts" data-hearts></div>
         <div class="pili-hud__growth">
           <div class="pili-hud__growth-head">
@@ -76,6 +79,7 @@ export class HUD {
     this._applyPaletteVars();
 
     // Cache element references.
+    this.elLives = this.root.querySelector('[data-lives]');
     this.elHearts = this.root.querySelector('[data-hearts]');
     this.elTier = this.root.querySelector('[data-tier]');
     this.elGrowthFill = this.root.querySelector('[data-growth-fill]');
@@ -125,6 +129,20 @@ export class HUD {
     }
   }
 
+  /**
+   * Remaining lives as a row of skull pips. Distinct from hearts: hearts are the
+   * current life's health, skulls are the retries left. Change-gated on the count.
+   */
+  setLives(n, max) {
+    if (this._livesMax == null) { this._livesMax = Math.max(1, max ?? n ?? 1); this._buildLives(this._livesMax); }
+    const lit = clamp(n ?? 0, 0, this._livesMax);
+    if (lit === this._lives) return;
+    this._lives = lit;
+    for (let i = 0; i < this.livePips.length; i++) {
+      this.livePips[i].classList.toggle('is-on', i < lit);
+    }
+  }
+
   /** Growth meter (0..1 of the charge range) plus the current tier readout. */
   setGrowth(charge, tier, max) {
     const m = max || 1;
@@ -171,6 +189,19 @@ export class HUD {
     }
   }
 
+  _buildLives(max) {
+    this.livePips.length = 0;
+    if (!this.elLives) return;
+    this.elLives.textContent = '';
+    for (let i = 0; i < max; i++) {
+      const s = document.createElement('span');
+      s.className = 'pili-hud__life';
+      s.textContent = '☠';
+      this.elLives.appendChild(s);
+      this.livePips.push(s);
+    }
+  }
+
   _css() {
     // Fallback-first custom properties; a palette cssVars() map may override them.
     return `
@@ -185,6 +216,14 @@ export class HUD {
       .pili-hud__corner {
         position: absolute; top: 18px; left: 20px;
         display: flex; flex-direction: column; gap: 12px;
+      }
+      .pili-hud__lives { display: flex; gap: 5px; font-size: 15px; line-height: 1; margin-bottom: 1px; }
+      .pili-hud__life {
+        color: #2c0512; transition: color .12s ease, text-shadow .12s ease;
+      }
+      .pili-hud__life.is-on {
+        color: var(--pili-magenta);
+        text-shadow: 0 0 8px var(--pili-magenta), 0 0 16px var(--pili-crimson);
       }
       .pili-hud__hearts { display: flex; gap: 6px; font-size: 26px; line-height: 1; }
       .pili-hud__heart {
@@ -239,5 +278,6 @@ export class HUD {
     this.root?.parentNode?.removeChild(this.root);
     this.root = null;
     this.hearts.length = 0;
+    this.livePips.length = 0;
   }
 }
