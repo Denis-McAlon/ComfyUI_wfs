@@ -2,6 +2,7 @@ import { SIM, EVENT, ACTIONS } from '../config/Constants.js';
 import { EventBus } from './EventBus.js';
 import { SaveSystem } from './SaveSystem.js';
 import { PauseMenu } from '../ui/PauseMenu.js';
+import { SceneTransition } from '../ui/SceneTransition.js';
 import { Clock } from './Clock.js';
 import { StateMachine } from './StateMachine.js';
 import { InputManager } from '../input/InputManager.js';
@@ -64,13 +65,17 @@ export class Game {
     this._running = false;
     this.paused = false;
     this._pauseUI = null;
+    this._transition = null;
+    this._onVisibility = this._onVisibility.bind(this);
 
     // A single, cheaply-wired reaction to the global hitstop event.
     this.bus.on(EVENT.HITSTOP, ({ seconds }) => this.clock.hitstop(seconds));
 
-    // Start the run timer when a fresh run begins (select → first level).
+    // On every screen change: start the run timer at select → first level, and
+    // play the crimson wipe so the new scene materialises instead of hard-cutting.
     this.bus.on(EVENT.STATE_CHANGE, ({ from, to }) => {
       if (from === 'select' && to === 'play') this._runStartElapsed = this.clock.elapsed;
+      this._transition?.play(to);
     });
   }
 
@@ -81,6 +86,11 @@ export class Game {
     await this.audio.init();
     this.audio.setVolume?.(this.save.get('volume')); // restore saved volume
     this.input.attach(this.canvas);
+
+    // Cosmetic wipe overlay (created before the first state so boot fades in too).
+    this._transition = new SceneTransition();
+    // Auto-pause when the tab is hidden, so you don't return to a dead hero.
+    if (typeof document !== 'undefined') document.addEventListener('visibilitychange', this._onVisibility);
 
     this.fsm
       .add('boot', new BootState(this.ctx))
@@ -143,6 +153,13 @@ export class Game {
   /** Pausing is only meaningful in a gameplay scene, not on menus. */
   _canPause() {
     return this.fsm.currentName === 'play' || this.fsm.currentName === 'boss';
+  }
+
+  /** Tab hidden (alt-tab, minimise, phone lock) during play → freeze into the menu. */
+  _onVisibility() {
+    if (typeof document !== 'undefined' && document.hidden && this._canPause() && !this.paused) {
+      this._togglePause();
+    }
   }
 
   _togglePause() {
