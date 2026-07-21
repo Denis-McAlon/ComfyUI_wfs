@@ -1,5 +1,5 @@
 import { PALETTE, cssVars } from '../config/Palette.js';
-import { PLAYER, clamp } from '../config/Constants.js';
+import { PLAYER, EVENT, clamp } from '../config/Constants.js';
 
 /**
  * HUD.js — the in-play heads-up display.
@@ -57,7 +57,7 @@ export class HUD {
     this.root.innerHTML = `
       <style>${this._css()}</style>
       <div class="pili-hud__boss" data-boss hidden>
-        <div class="pili-hud__boss-label">DJ SKULL</div>
+        <div class="pili-hud__boss-label">DJ SKULL <span class="pili-hud__boss-phase" data-boss-phase>· PHASE 1/3</span></div>
         <div class="pili-hud__boss-track"><div class="pili-hud__boss-fill" data-boss-fill></div></div>
       </div>
       <div class="pili-hud__corner">
@@ -81,6 +81,12 @@ export class HUD {
     this.elGrowthFill = this.root.querySelector('[data-growth-fill]');
     this.elBoss = this.root.querySelector('[data-boss]');
     this.elBossFill = this.root.querySelector('[data-boss-fill]');
+    this.elBossPhase = this.root.querySelector('[data-boss-phase]');
+
+    // The boss announces phase changes on the bus; reflect them in the label.
+    this._offBossPhase = this.ctx?.bus?.on?.(EVENT.BOSS_PHASE, ({ phase } = {}) => {
+      if (this.elBossPhase && phase) this.elBossPhase.textContent = `· PHASE ${phase}/3`;
+    });
 
     // Seed the health row at the base max so the first frame has hearts to toggle.
     this.setHealth(PLAYER?.MAX_HEALTH ?? 5, PLAYER?.MAX_HEALTH ?? 5);
@@ -139,6 +145,7 @@ export class HUD {
     if (want === this._bossShown) return;
     this._bossShown = want;
     if (this.elBoss) this.elBoss.hidden = !want;
+    if (want && this.elBossPhase) this.elBossPhase.textContent = '· PHASE 1/3'; // fresh fight
   }
 
   /** Boss health as a right-to-left depleting bar. Change-gated on the fraction. */
@@ -228,6 +235,7 @@ export class HUD {
   }
 
   destroy() {
+    this._offBossPhase?.();
     this.root?.parentNode?.removeChild(this.root);
     this.root = null;
     this.hearts.length = 0;
