@@ -13,7 +13,8 @@
  *
  * Run from project root:  node tools/level-analyze.mjs
  */
-import level from '../src/world/levels/level_01_backroom.json' with { type: 'json' };
+const LEVEL_ID = process.argv[2] || 'level_01_backroom';
+const level = (await import(new URL(`../src/world/levels/${LEVEL_ID}.json`, import.meta.url), { with: { type: 'json' } })).default;
 import { PhysicsWorld } from '../src/physics/PhysicsWorld.js';
 import { Player } from '../src/entities/Player.js';
 import { SIM, PLAYER, ACTIONS } from '../src/config/Constants.js';

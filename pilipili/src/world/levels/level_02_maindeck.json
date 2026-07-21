@@ -1,0 +1,55 @@
+{
+  "name": "Le Main Deck",
+  "spawn": { "x": 2, "y": 2 },
+  "bossArenaX": 120,
+  "next": "boss",
+  "width": 132,
+  "height": 14,
+  "platforms": [
+    { "x": 10, "y": -1, "w": 24, "h": 2 },
+    { "x": 16, "y": 2.4, "w": 2.4, "h": 0.6 },
+    { "x": 30, "y": -1, "w": 14, "h": 2 },
+    { "x": 45, "y": -1, "w": 12, "h": 2 },
+    { "x": 48, "y": 2.6, "w": 4, "h": 0.5, "oneWay": true },
+    { "x": 59, "y": -1, "w": 12, "h": 2 },
+    { "x": 74, "y": -1, "w": 14, "h": 2 },
+    { "x": 78, "y": 2.2, "w": 2.6, "h": 0.6 },
+    { "x": 81, "y": 4.0, "w": 2.4, "h": 0.5, "oneWay": true },
+    { "x": 93, "y": -1, "w": 18, "h": 2 },
+    { "x": 116, "y": -1, "w": 24, "h": 2 }
+  ],
+  "enemies": [
+    { "type": "ice", "x": 14, "y": 1, "dir": 1, "range": 4 },
+    { "type": "drunk", "x": 32, "y": 1, "range": 3 },
+    { "type": "ice", "x": 46, "y": 1, "dir": -1, "range": 4 },
+    { "type": "drunk", "x": 59, "y": 1, "range": 4 },
+    { "type": "ice", "x": 74, "y": 1, "dir": 1, "range": 3 },
+    { "type": "ice", "x": 89, "y": 1, "dir": -1, "range": 4 },
+    { "type": "drunk", "x": 95, "y": 1, "range": 4 }
+  ],
+  "pickups": [
+    { "kind": "cocktail", "x": 6, "y": 1 },
+    { "kind": "vinyl", "x": 16, "y": 3.5 },
+    { "kind": "cocktail", "x": 21, "y": 1 },
+    { "kind": "cocktail", "x": 27, "y": 1 },
+    { "kind": "cocktail", "x": 35, "y": 1 },
+    { "kind": "cocktail", "x": 42, "y": 1 },
+    { "kind": "vinyl", "x": 48, "y": 3.9 },
+    { "kind": "cocktail", "x": 51, "y": 1 },
+    { "kind": "cocktail", "x": 57, "y": 1 },
+    { "kind": "cocktail", "x": 63, "y": 1 },
+    { "kind": "cocktail", "x": 70, "y": 1 },
+    { "kind": "vinyl", "x": 81, "y": 5.1 },
+    { "kind": "cocktail", "x": 86, "y": 1 },
+    { "kind": "cocktail", "x": 91, "y": 1 },
+    { "kind": "cocktail", "x": 98, "y": 1 },
+    { "kind": "cocktail", "x": 108, "y": 1 },
+    { "kind": "cocktail", "x": 114, "y": 1 },
+    { "kind": "cocktail", "x": 122, "y": 1 }
+  ],
+  "hazards": [
+    { "x": 30, "y": 0, "w": 4 },
+    { "x": 78, "y": 0, "w": 3 },
+    { "x": 97, "y": 0, "w": 3 }
+  ]
+}

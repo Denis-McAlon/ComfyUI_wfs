@@ -2,6 +2,7 @@
   "name": "Le Backroom",
   "spawn": { "x": 2, "y": 2 },
   "bossArenaX": 112,
+  "next": "level_02_maindeck",
   "width": 122,
   "height": 14,
   "platforms": [

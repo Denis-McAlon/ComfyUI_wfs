@@ -8,11 +8,13 @@ import { LAYER } from '../config/Constants.js';
 // at build time (zero runtime fetch, works offline / in an itch.io zip). `load()`
 // is therefore SYNCHRONOUS — GameplayScene.enter() can call it inline.
 import level01 from './levels/level_01_backroom.json';
+import level02 from './levels/level_02_maindeck.json';
 import bossArena from './levels/boss_arena.json';
 
 /** Registry of every shippable level, keyed by the id PlayState/BossState pass. */
 const LEVELS = {
   level_01_backroom: level01,
+  level_02_maindeck: level02,
   boss_arena: bossArena,
 };
 
@@ -100,6 +102,7 @@ export class Level {
     return {
       spawn: data.spawn || { x: 0, y: 2 },
       bossArenaX: data.bossArenaX ?? null,
+      next: data.next ?? null,        // next level id, or 'boss', or null (→ boss)
       enemies: data.enemies || [],
       pickups: data.pickups || [],
       hazards: data.hazards || [],

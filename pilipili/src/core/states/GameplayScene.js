@@ -51,6 +51,7 @@ export class GameplayScene {
   enter(payload) {
     const ctx = this.ctx;
     this.character = payload?.character || ctx.game.selectedCharacter;
+    if (payload?.levelId) this.levelId = payload.levelId; // allow chaining to level N
 
     // Build the level (static geometry + neon meshes) and read spawn data.
     this.level = new Level(ctx);
@@ -112,9 +113,11 @@ export class GameplayScene {
     this._resolveContacts();
     this._cull();
 
-    // Reach the arena → drop into the boss fight.
+    // Reach the level exit → advance to the next level, or drop into the boss.
     if (!this.isBossScene && this.data.bossArenaX != null && this.player.x >= this.data.bossArenaX) {
-      this.ctx.goto('boss', { character: this.character });
+      const next = this.data.next ?? 'boss';
+      if (next === 'boss') this.ctx.goto('boss', { character: this.character });
+      else this.ctx.goto('play', { character: this.character, levelId: next });
     }
     this.hud.setHealth(this.player.health, 5);
     this.hud.setGrowth?.(this.player.charge, this.player.tier, GROWTH.CHARGE_MAX);

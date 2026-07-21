@@ -107,10 +107,13 @@ a change:
 | `npm run measure:drunk` | stumble rate, lunge distance, telegraph, hitbox, patrol coverage | cheap un-telegraphed lunges |
 | `npm run analyze` | **level solvability** for base AND giant, pickup reach, teaching order, density | soft-locks, unreachable rewards |
 
-`npm run analyze` verified `level_01_backroom` is fully solvable for both the base
-hero and a max-grown giant (15/15 platforms, 18/18 pickups, boss reachable),
-teaches each mechanic solo before combining them, and ramps hazard density in a
-clean tension arch. Run it whenever you edit a level's geometry.
+`npm run analyze` (optionally `npm run analyze -- <levelId>`) proves a level fully
+solvable for both the base hero and a max-grown giant, checks pickup reach,
+teaching order and hazard density. Both shipping levels pass: `level_01_backroom`
+(15 platforms, teaches each mechanic solo then combines) and `level_02_maindeck`
+(11 platforms, denser, combo-led for a player who has mastered the mechanics).
+Levels chain via a `next` field (`level_01 → level_02 → boss`). Run the analyzer
+whenever you edit or add a level's geometry.
 
 ---
 
