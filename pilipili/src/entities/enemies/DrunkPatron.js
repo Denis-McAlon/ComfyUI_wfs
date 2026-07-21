@@ -51,6 +51,7 @@ export class DrunkPatron extends Entity {
     // and decay away, layered on top of the steady wobble-walk.
     this._transientVx = 0;
     this._stumbleT = 0;        // seconds of "currently lunging" left
+    this._windupT = 0;         // seconds of "coiling before a lunge" left (telegraph)
 
     // ── View: a dark silhouette with a crimson neon rim ─────────────────────
     this.view = new Group();
@@ -83,12 +84,21 @@ export class DrunkPatron extends Entity {
     // Two summed sines → an erratic, never-quite-repeating sway.
     const wobble = Math.sin(this._t * DRUNK.SWAY_FREQ_A) + 0.5 * Math.sin(this._t * DRUNK.SWAY_FREQ_B);
     // A steady walk whose speed pulses with the wobble (can briefly stall / back-step).
-    const walkVx = this.dir * DRUNK.BASE_SPEED * (0.55 + 0.45 * wobble);
+    let walkVx = this.dir * DRUNK.BASE_SPEED * (0.55 + 0.45 * wobble);
 
-    // Random stumble: a sudden forward lunge that also widens the hurtbox.
-    if (this._stumbleT <= 0 && Math.random() < DRUNK.STUMBLE_CHANCE) {
-      this._stumbleT = DRUNK.STUMBLE_DURATION;
-      this._transientVx += DRUNK.STUMBLE_IMPULSE * this.facing;
+    // Random stumble — but TELEGRAPHED. On the random trigger the drunk first
+    // COILS (a brief hesitation), and only when the coil expires does the lunge
+    // fire. That coil is the tell that makes a fast dart fair to dodge.
+    if (this._windupT <= 0 && this._stumbleT <= 0 && Math.random() < DRUNK.STUMBLE_CHANCE) {
+      this._windupT = DRUNK.STUMBLE_WINDUP;
+    }
+    if (this._windupT > 0) {
+      this._windupT -= dt;
+      walkVx *= 0.15;                       // nearly halt while coiling — the visible tell
+      if (this._windupT <= 0) {             // coil released → the lunge fires
+        this._stumbleT = DRUNK.STUMBLE_DURATION;
+        this._transientVx += DRUNK.STUMBLE_IMPULSE * this.facing;
+      }
     }
     if (this._stumbleT > 0) this._stumbleT -= dt;
 
@@ -102,7 +112,12 @@ export class DrunkPatron extends Entity {
 
     // Drunken lean, folded onto the render angle (cosmetic only).
     this.angle = LEAN_MAX * (0.7 * Math.sin(this._t * DRUNK.SWAY_FREQ_A) + 0.3 * Math.sin(this._t * DRUNK.SWAY_FREQ_B));
+    // Coil tell: lean back (away from the lunge) while winding up, so the pounce reads.
+    if (this._windupT > 0) this.angle -= 0.35 * this.facing;
   }
+
+  /** True while coiling for a lunge — the telegraph window (for FX / debug). */
+  get isWindingUp() { return this._windupT > 0; }
 
   /** Hurtbox: stretches forward while lunging — the "stumbling hitbox". */
   aabb() {

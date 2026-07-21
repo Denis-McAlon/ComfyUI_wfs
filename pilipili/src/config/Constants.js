@@ -182,6 +182,10 @@ export const DRUNK = {
   STUMBLE_CHANCE: 0.010,
   STUMBLE_IMPULSE: 5.0,
   STUMBLE_DURATION: 0.35,
+  /** Telegraph: the drunk COILS (a visible hesitation, walk nearly halts, lean
+   *  back) for this long before the lunge fires — so a ~7u/s dart is readable,
+   *  not a cheap instant grab. Verified with tools/drunk-measure.mjs. */
+  STUMBLE_WINDUP: 0.18,
   CONTACT_DAMAGE: 1,
   KNOCKBACK: 7.0,
 };
