@@ -1,5 +1,6 @@
 import { SIM, EVENT, ACTIONS } from '../config/Constants.js';
 import { EventBus } from './EventBus.js';
+import { SaveSystem } from './SaveSystem.js';
 import { PauseMenu } from '../ui/PauseMenu.js';
 import { Clock } from './Clock.js';
 import { StateMachine } from './StateMachine.js';
@@ -33,9 +34,12 @@ export class Game {
     this.physics = new PhysicsWorld();
     this.renderer = new Renderer(canvas, this.bus);
     this.audio = new AudioEngine(this.bus);
+    this.save = new SaveSystem();
 
     /** Chosen hero id ('male' | 'female'), set on the select screen. */
     this.selectedCharacter = 'male';
+    /** clock.elapsed at which the current run started (select → play). */
+    this._runStartElapsed = 0;
 
     /** Shared context handed to every state. The state contract IS this object. */
     this.ctx = {
@@ -46,6 +50,7 @@ export class Game {
       physics: this.physics,
       renderer: this.renderer,
       audio: this.audio,
+      save: this.save,
       get scene() { return this.renderer.scene; },
       get camera() { return this.renderer.camera; },
       get cameraRig() { return this.renderer.cameraRig; },
@@ -61,6 +66,11 @@ export class Game {
 
     // A single, cheaply-wired reaction to the global hitstop event.
     this.bus.on(EVENT.HITSTOP, ({ seconds }) => this.clock.hitstop(seconds));
+
+    // Start the run timer when a fresh run begins (select → first level).
+    this.bus.on(EVENT.STATE_CHANGE, ({ from, to }) => {
+      if (from === 'select' && to === 'play') this._runStartElapsed = this.clock.elapsed;
+    });
   }
 
   async init() {
@@ -68,6 +78,7 @@ export class Game {
     await this.physics.init(SIM.WORLD_GRAVITY);
     await this.renderer.init();
     await this.audio.init();
+    this.audio.setVolume?.(this.save.get('volume')); // restore saved volume
     this.input.attach(this.canvas);
 
     this.fsm
@@ -141,7 +152,7 @@ export class Game {
           onResume: () => this._togglePause(),
           onRestart: () => { this._togglePause(); this._restart(); },
           onQuit: () => { this._togglePause(); this.fsm.change('select'); },
-          onVolume: (v) => this.audio.setVolume?.(v),
+          onVolume: (v) => { this.audio.setVolume?.(v); this.save.set('volume', v); },
         });
       }
       this._pauseUI.show();
@@ -158,5 +169,10 @@ export class Game {
     const character = st?.character ?? this.selectedCharacter;
     if (this.fsm.currentName === 'boss') this.fsm.change('boss', { character });
     else this.fsm.change('play', { character, levelId: st?.levelId });
+  }
+
+  /** Elapsed (unpaused) sim time of the current run, in ms. Used by the end screen. */
+  runTimeMs() {
+    return Math.max(0, (this.clock.elapsed - this._runStartElapsed) * 1000);
   }
 }

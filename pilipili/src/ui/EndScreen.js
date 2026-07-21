@@ -1,11 +1,13 @@
+import { formatTime } from '../core/SaveSystem.js';
+
 /**
  * EndScreen.js — the victory / game-over overlay.
  *
  * A DOM overlay shown by EndState after the boss falls (win) or the last life is
  * lost (lose). It themes itself to the outcome (searing white-gold for a win,
- * deep crimson for a loss), shows a flavour line and the max growth tier reached,
- * and offers one button back to character select. Dumb + self-contained, like the
- * other UI overlays; it calls back and never touches gameplay.
+ * deep crimson for a loss), shows a flavour line, the run's time and growth tier
+ * with any new records, and offers one button back to character select. Dumb +
+ * self-contained, like the other UI overlays; it calls back, never touches gameplay.
  */
 const COPY = {
   win: {
@@ -21,7 +23,7 @@ const COPY = {
 };
 
 export class EndScreen {
-  constructor(ctx, { outcome = 'lose', tier = 0, onContinue } = {}) {
+  constructor(ctx, { outcome = 'lose', tier = 0, timeMs = 0, records = {}, best = {}, onContinue } = {}) {
     this.ctx = ctx;
     this.onContinue = onContinue;
     const c = COPY[outcome] || COPY.lose;
@@ -46,10 +48,17 @@ export class EndScreen {
     line.style.cssText = 'max-width:520px; font:500 15px/1.6 system-ui,sans-serif; color:#ffb9c4;';
     this.root.appendChild(line);
 
-    const stat = document.createElement('div');
-    stat.textContent = `Taille max atteinte  ·  Tier ${tier}`;
-    stat.style.cssText = 'margin-top:6px; font:600 13px/1 system-ui,sans-serif; letter-spacing:0.2em; color:#ff9fb0;';
-    this.root.appendChild(stat);
+    // Stats block: run time (wins only) + growth tier, each with a best + record badge.
+    const stats = document.createElement('div');
+    stats.style.cssText = 'display:flex; flex-direction:column; gap:7px; margin-top:6px; font:600 13px/1.1 system-ui,sans-serif; letter-spacing:0.16em; color:#ff9fb0;';
+    const badge = (on) => on ? `  <span style="color:${c.accent};text-shadow:0 0 12px ${c.glow}">NOUVEAU RECORD !</span>` : '';
+    if (outcome === 'win') {
+      stats.innerHTML += `<div>TEMPS  ${formatTime(timeMs)}${badge(records.newBestTime)}</div>`;
+      stats.innerHTML += `<div style="color:#7a5b64">Meilleur temps  ${formatTime(best.timeMs)}</div>`;
+    }
+    stats.innerHTML += `<div>TAILLE MAX  ·  Tier ${tier}${badge(records.newBestTier)}</div>`;
+    stats.innerHTML += `<div style="color:#7a5b64">Meilleur tier  ${best.tier ?? 0}</div>`;
+    this.root.appendChild(stats);
 
     this.btn = document.createElement('button');
     this.btn.textContent = c.button;
