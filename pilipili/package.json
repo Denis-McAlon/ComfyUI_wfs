@@ -13,7 +13,8 @@
     "measure:growth": "node tools/growth-measure.mjs",
     "measure:boss": "node tools/boss-measure.mjs",
     "measure:hazard": "node tools/hazard-measure.mjs",
-    "measure:drunk": "node tools/drunk-measure.mjs"
+    "measure:drunk": "node tools/drunk-measure.mjs",
+    "measure:camera": "node tools/camera-measure.mjs"
   },
   "dependencies": {
     "@dimforge/rapier2d-compat": "^0.14.0",

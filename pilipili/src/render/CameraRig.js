@@ -24,8 +24,9 @@ export class CameraRig {
     this.camera.position.set(0, 3, CAMERA.DOLLY_Z);
 
     this.target = null;           // Entity to follow (the player)
-    this._pos = new Vector3(0, 3, CAMERA.DOLLY_Z);
-    this._look = 0;               // smoothed look-ahead offset
+    this._center = new Vector3(0, 3, 0); // deadzone-tracked follow point (RAW target)
+    this._pos = new Vector3(0, 3, CAMERA.DOLLY_Z); // final desired pos = center + look-ahead
+    this._look = 0;               // smoothed look-ahead offset (ADDITIVE, outside deadzone)
     this.trauma = 0;
     this._viewHeight = CAMERA.VIEW_HEIGHT;
 
@@ -54,19 +55,27 @@ export class CameraRig {
     this._viewHeight = lerp(CAMERA.VIEW_HEIGHT, CAMERA.VIEW_HEIGHT_AT_HEAVY, heavyT);
     const dolly = this._dollyFor(this._viewHeight);
 
-    // Look-ahead in the facing direction, eased.
-    const facing = this.target.facing ?? 1;
-    const desiredLook = facing * CAMERA.LOOKAHEAD;
+    const k = clamp01(CAMERA.FOLLOW_LERP * 60 * frameDt);
+
+    // 1) DEADZONE BOX on the RAW target. The target roams freely inside the box
+    //    (idle micro-moves, landing bobs) without budging the camera; only when
+    //    it crosses an edge does the centre ease toward it. This is the real
+    //    anti-seasickness deadzone — it must NOT see the look-ahead, or the lead
+    //    would pin the target to the edge and eat all the slack.
+    const rawTx = this.target.x;
+    const rawTy = this.target.y + this._viewHeight * 0.12; // frame the hero low-centre
+    const dx = rawTx - this._center.x;
+    const dy = rawTy - this._center.y;
+    if (Math.abs(dx) > CAMERA.DEADZONE_X) this._center.x += (dx - Math.sign(dx) * CAMERA.DEADZONE_X) * k;
+    if (Math.abs(dy) > CAMERA.DEADZONE_Y) this._center.y += (dy - Math.sign(dy) * CAMERA.DEADZONE_Y) * k;
+
+    // 2) Look-ahead: an ADDITIVE lead in the facing direction, eased.
+    const desiredLook = (this.target.facing ?? 1) * CAMERA.LOOKAHEAD;
     this._look = lerp(this._look, desiredLook, clamp01(CAMERA.LOOKAHEAD_LERP * 60 * frameDt));
 
-    // Deadzone follow on the target position.
-    const tx = this.target.x + this._look;
-    const ty = this.target.y + this._viewHeight * 0.12; // bias slightly upward
-    const dx = tx - this._pos.x;
-    const dy = ty - this._pos.y;
-    const k = clamp01(CAMERA.FOLLOW_LERP * 60 * frameDt);
-    if (Math.abs(dx) > CAMERA.DEADZONE_X) this._pos.x += (dx - Math.sign(dx) * CAMERA.DEADZONE_X) * k;
-    if (Math.abs(dy) > CAMERA.DEADZONE_Y) this._pos.y += (dy - Math.sign(dy) * CAMERA.DEADZONE_Y) * k;
+    // 3) Compose: the camera sits at the deadzone centre plus the lead.
+    this._pos.x = this._center.x + this._look;
+    this._pos.y = this._center.y;
     this._pos.z += (dolly - this._pos.z) * k;
 
     // Trauma shake: quadratic falloff, decaying. Random is fine here (render-only).
@@ -80,8 +89,7 @@ export class CameraRig {
     }
 
     this.camera.position.set(this._pos.x + sx, this._pos.y + sy, this._pos.z);
-    this.camera.rotation.z = sr;
     this.camera.lookAt(this._pos.x + sx * 0.5, this._pos.y + sy * 0.5, 0);
-    this.camera.rotation.z += sr; // re-apply roll after lookAt reset
+    this.camera.rotation.z = sr; // apply shake roll after lookAt (which levels z to ~0)
   }
 }

@@ -252,7 +252,10 @@ export const CAMERA = {
   FOLLOW_LERP: 0.12,         // position smoothing per frame (0..1)
   LOOKAHEAD: 2.6,            // units the camera leads the player's facing/velocity
   LOOKAHEAD_LERP: 0.06,
-  DEADZONE_X: 0.8,
+  /** Deadzone box (on the RAW target, see CameraRig). Y is generous so ordinary
+   *  jumps don't bob the camera; X is small so it absorbs idle jitter without
+   *  eating much of the look-ahead lead (effective running lead ≈ LOOKAHEAD−DEADZONE_X). */
+  DEADZONE_X: 0.4,
   DEADZONE_Y: 1.6,
   /** Perspective camera dolly distance for the 2.5D depth read. */
   DOLLY_Z: 16.0,
