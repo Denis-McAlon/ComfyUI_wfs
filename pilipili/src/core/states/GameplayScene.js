@@ -126,16 +126,18 @@ export class GameplayScene {
 
   _applyFloor() {
     const feet = this.player.motor.feetY;
-    let mult = 1;
+    // Two DIFFERENT surface levers: ice reduces traction (accel/decel → skid);
+    // glass caps top speed (→ sticky wade). Conflating them made glass slippery.
+    let traction = 1, speed = 1;
     for (const e of this.entities) {
-      if (!e.alive) continue;
-      if (e.iceZone && e.slickAt?.(this.player.x)) mult = Math.min(mult, ICE.PLAYER_TRACTION_ON_ICE);
+      if (e.alive && e.iceZone && e.slickAt?.(this.player.x)) traction = Math.min(traction, ICE.PLAYER_TRACTION_ON_ICE);
     }
     let onGlass = false;
     for (const g of this.hazards) {
-      if (g.alive && g.contains?.(this.player.x, feet)) { onGlass = true; mult = Math.min(mult, g.slowMult ?? GLASS.SLOW_MULT); }
+      if (g.alive && g.contains?.(this.player.x, feet)) { onGlass = true; speed = Math.min(speed, g.slowMult ?? GLASS.SLOW_MULT); }
     }
-    this.player.tractionMultiplier = mult;
+    this.player.tractionMultiplier = traction;
+    this.player.speedMultiplier = speed;
 
     // Glass damage-over-time on a fixed cadence.
     if (onGlass) {

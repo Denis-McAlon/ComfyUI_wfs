@@ -77,8 +77,12 @@ export class Player extends Entity {
     this._colliderScale = GROWTH.SCALE_MIN;
     this.tier = 0;
 
-    // Surface interaction, set each step by PlayState (1 = normal, →0 = ice).
+    // Surface interaction, set each step by the scene from the floor under the feet:
+    //  tractionMultiplier → scales accel/decel  (ICE: →0.12, makes you SKID/slide)
+    //  speedMultiplier    → caps top speed      (GLASS: →0.7, makes you WADE/slow)
+    // They are different feels on purpose: ice is slippery, glass is sticky.
     this.tractionMultiplier = 1;
+    this.speedMultiplier = 1;
 
     // Cosmetic squash-and-stretch (render-space, non-uniform).
     this.squashX = 1; this.squashY = 1;
@@ -281,7 +285,7 @@ export class Player extends Entity {
       this.vx = moveToward(this.vx, 0, decel * dt);
       if (Math.abs(this.vx) < MOVE.STOP_EPSILON) this.vx = 0;
     } else {
-      const target = clamp(wantX, -1, 1) * st.maxSpeed;
+      const target = clamp(wantX, -1, 1) * st.maxSpeed * (grounded ? this.speedMultiplier : 1);
       const opposing = Math.sign(target) !== Math.sign(this.vx) && Math.abs(this.vx) > 0.05;
       // A hard direction-flip gets accel PLUS a turn-assist decel so the pivot
       // is crisp instead of mushy — the difference between "responsive" and "ok".

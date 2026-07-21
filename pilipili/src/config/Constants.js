@@ -164,8 +164,11 @@ export const ICE = {
   FRICTION_ZONE_LIFETIME: 1.4, // s a melted trail keeps the floor slick
   ZONE_FRICTION: 0.02,       // near-frictionless while active
   BASE_FRICTION: 0.85,       // normal club floor
-  /** On the ice, player accel/decel are multiplied by this — the skid. */
-  PLAYER_TRACTION_ON_ICE: 0.12,
+  /** On the ice, player accel/decel are multiplied by this — the skid. Tuned with
+   *  tools/hazard-measure.mjs: 0.16 keeps a base slide of ~2u (clearly slippery)
+   *  while a giant's momentum-×-ice slide stays ~3.9u — dramatic but still landable
+   *  on a ~4u platform, instead of the 5.2u death-slide 0.12 produced. */
+  PLAYER_TRACTION_ON_ICE: 0.16,
 };
 
 /** DRUNK PATRONS — erratic sine-wave wanderers with stumbling hitboxes. */
