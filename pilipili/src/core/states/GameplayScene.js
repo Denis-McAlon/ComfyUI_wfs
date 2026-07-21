@@ -7,6 +7,7 @@ import { LevelBanner } from '../../ui/LevelBanner.js';
 import { IceCube } from '../../entities/enemies/IceCube.js';
 import { DrunkPatron } from '../../entities/enemies/DrunkPatron.js';
 import { BrokenGlass } from '../../entities/hazards/BrokenGlass.js';
+import { LootCrate } from '../../entities/hazards/LootCrate.js';
 import { Collectible } from '../../entities/Collectible.js';
 import { ParticleSystem } from '../../fx/ParticleSystem.js';
 import { GROWTH, GLASS, ICE, BOSS, PLAYER, EVENT } from '../../config/Constants.js';
@@ -76,6 +77,8 @@ export class GameplayScene {
       const g = new BrokenGlass(ctx, h);
       this.hazards.push(g); this.entities.push(g);
     }
+    // Loot crates: growth-gated reward caches (only a grown hero cracks them).
+    for (const c of this.data.crates || []) this.entities.push(new LootCrate(ctx, c));
 
     // HUD + particles (particles self-wire to bus events; scene just ticks them).
     this.hud = new HUD(ctx);
@@ -196,7 +199,10 @@ export class GameplayScene {
     for (const e of this.entities) {
       if (e.alive && e.harmable && e.aabb && overlap(box, e.aabb())) {
         const killed = e.onPlayerHit?.({ damage: hit.damage, knockback: hit.knockback, facing: hit.facing });
-        if (killed) this.ctx.bus.emit(EVENT.ENEMY_KILLED, { type: e.type, x: e.x, y: e.y });
+        if (killed) {
+          this.ctx.bus.emit(EVENT.ENEMY_KILLED, { type: e.type, x: e.x, y: e.y });
+          if (e.loot?.length) this._spawnLoot(e.x, e.y, e.loot); // crate burst → pickups
+        }
       }
     }
     if (this.boss?.alive && this.boss.harmable && overlap(box, this.boss.aabb())) {
@@ -212,6 +218,15 @@ export class GameplayScene {
       return;
     }
     this.player.respawn(this.data.spawn.x, this.data.spawn.y);
+  }
+
+  /** Scatter a smashed crate's loot as collectible pickups the player can vacuum. */
+  _spawnLoot(x, y, loot) {
+    const n = loot.length;
+    for (let i = 0; i < n; i++) {
+      const spread = (i - (n - 1) / 2) * 0.9;
+      this.entities.push(new Collectible(this.ctx, { x: x + spread, y: y + 0.5, kind: loot[i] }));
+    }
   }
 
   _cull() {

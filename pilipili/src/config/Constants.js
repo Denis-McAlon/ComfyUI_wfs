@@ -213,6 +213,21 @@ export const PICKUP = {
 };
 
 /**
+ * LOOT CRATE — a reinforced case of the good stuff (vinyls). The twist that makes
+ * GROWTH a *decision*, not just a feel change: a crate only cracks to a hit hard
+ * enough — and melee damage is 2 + tier, so MIN_DAMAGE 4 means you must have grown
+ * to tier ≥ 2 to bust it. Small heroes bounce off (a clang); grown heroes get paid.
+ * It is NON-SOLID (never blocks the path) so it can't soft-lock a small player —
+ * the reward is simply out of reach until you're big enough to earn it.
+ */
+export const CRATE = {
+  HP: 6,
+  MIN_DAMAGE: 4,             // needs melee ≥ 4  ⇒  player tier ≥ 2 (dmg = 2 + tier)
+  HALF_W: 0.55,
+  HALF_H: 0.6,
+};
+
+/**
  * BOSS — the DJ Skull Booth. A rhythm-locked, multi-stage fight. Timings are in
  * BEATS (see BeatClock) so every telegraph lands on the music.
  */

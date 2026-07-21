@@ -110,6 +110,7 @@ export class Level {
       enemies: data.enemies || [],
       pickups: data.pickups || [],
       hazards: data.hazards || [],
+      crates: data.crates || [],
       width: data.width ?? 100,
       height: data.height ?? 20,
     };
