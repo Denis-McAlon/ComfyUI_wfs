@@ -37,6 +37,11 @@ Requires Node 18+ and a WebGL2 browser.
 *Tap jump = hop, hold = full jump. The jump honours coyote-time and input
 buffering — it's meant to feel like it reads your mind.*
 
+**Touch / mobile.** On a phone or tablet an on-screen pad appears automatically —
+a left move cluster and big **Jump** / **Frappe** buttons, driven through the same
+input path as the keyboard (so coyote-time and the jump buffer feel identical under
+a thumb). Force it on desktop with `?touch=1`.
+
 **Tuning the jump (P0).** Press **F1** in-game for a live readout — state,
 velocity, and the last jump's *measured* apex & air-time (measured in the fixed
 sim, so it's identical on any display refresh rate). For headless numbers, run
@@ -69,7 +74,15 @@ to test the giant form instantly.
   lighting rig with flicker + strobe; pooled particles; trauma-shake camera with
   look-ahead and size-zoom.
 - **Procedural audio** (no asset files) + deterministic **BeatClock**.
-- Character select (male/female heroes), HUD, JSON-driven levels.
+- **Full game shell**: neon title card (with save-backed best-run stats + control
+  legend) → character select (male/female heroes) → **three chained levels**
+  (Le Backroom → Le Main Deck → La Fosse) → boss → victory / game-over, each stage
+  announced by a level-intro banner and joined by crimson scene-wipe transitions.
+- **HUD**: health hearts, remaining-lives skulls, growth meter + tier, boss bar
+  with a live phase readout.
+- **Meta / robustness**: pause menu (freeze / restart / quit + volume), auto-pause
+  when the tab is hidden, `localStorage` save (best tier, fastest clear, wins) with
+  graceful degradation, and on-screen touch controls.
 
 ---
 
@@ -105,15 +118,20 @@ a change:
 | `npm run measure:boss` | attack↔expose cycle, vulnerability windows, TTK & phases by tier | an unwinnable or trivial boss |
 | `npm run measure:hazard` | ice skid + glass wade by size, detection unit-checks, DoT | slippery-vs-sticky mix-ups, death-slides |
 | `npm run measure:drunk` | stumble rate, lunge distance, telegraph, hitbox, patrol coverage | cheap un-telegraphed lunges |
+| `npm run measure:camera` | follow lag, look-ahead, deadzone, trauma-shake decay, size-zoom | jittery / motion-sick camera |
+| `npm run measure:pickup` | magnet radius & vacuum reliability by size | uncollectable / erratic pickups |
+| `npm run measure:juice` | hitstop, squash-&-stretch, audio-cue coverage matrix | mute moments, no game-feel on impact |
 | `npm run analyze` | **level solvability** for base AND giant, pickup reach, teaching order, density | soft-locks, unreachable rewards |
 
 `npm run analyze` (optionally `npm run analyze -- <levelId>`) proves a level fully
 solvable for both the base hero and a max-grown giant, checks pickup reach,
-teaching order and hazard density. Both shipping levels pass: `level_01_backroom`
-(15 platforms, teaches each mechanic solo then combines) and `level_02_maindeck`
-(11 platforms, denser, combo-led for a player who has mastered the mechanics).
-Levels chain via a `next` field (`level_01 → level_02 → boss`). Run the analyzer
-whenever you edit or add a level's geometry.
+teaching order and hazard density. All three shipping levels pass:
+`level_01_backroom` (teaches each mechanic solo then combines), `level_02_maindeck`
+(denser, combo-led) and `level_03_lafosse` (the pre-boss gauntlet — highest hazard
+density, a one-way climb for a high-value vinyl, every gap authored against the
+*measured* giant envelope so it stays beatable at full size). Levels chain via a
+`next` field (`level_01 → level_02 → level_03 → boss`). Run the analyzer whenever
+you edit or add a level's geometry.
 
 ---
 
