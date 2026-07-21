@@ -91,6 +91,29 @@ time-to-apex; gravity and launch velocity fall out.
 
 ---
 
+## Measurement benches — tune on data, not vibes
+
+The whole simulation layer is Three.js-free, so every feel system can be driven
+headless at an exact 1/60 step and *measured*. Each pass below was tuned against
+its bench and then verified in a real headless browser. Re-run any of them after
+a change:
+
+| Command | Measures | Guards against |
+| --- | --- | --- |
+| `npm run measure:jump` | apex, time-to-apex, coyote/buffer windows, tap↔hold range, run reach | floaty/off-by-one jump |
+| `npm run measure:growth` | top speed, accel time, stop/turn slide, apex & reach by size | growth that doesn't grow / bad inertia |
+| `npm run measure:boss` | attack↔expose cycle, vulnerability windows, TTK & phases by tier | an unwinnable or trivial boss |
+| `npm run measure:hazard` | ice skid + glass wade by size, detection unit-checks, DoT | slippery-vs-sticky mix-ups, death-slides |
+| `npm run measure:drunk` | stumble rate, lunge distance, telegraph, hitbox, patrol coverage | cheap un-telegraphed lunges |
+| `npm run analyze` | **level solvability** for base AND giant, pickup reach, teaching order, density | soft-locks, unreachable rewards |
+
+`npm run analyze` verified `level_01_backroom` is fully solvable for both the base
+hero and a max-grown giant (15/15 platforms, 18/18 pickups, boss reachable),
+teaches each mechanic solo before combining them, and ramps hazard density in a
+clean tension arch. Run it whenever you edit a level's geometry.
+
+---
+
 ## Swapping in real art
 
 The scaffold ships **procedural** meshes so it runs with zero assets. Production

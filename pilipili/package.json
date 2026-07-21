@@ -7,7 +7,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --host"
+    "preview": "vite preview --host",
+    "analyze": "node tools/level-analyze.mjs",
+    "measure:jump": "node tools/jump-measure.mjs",
+    "measure:growth": "node tools/growth-measure.mjs",
+    "measure:boss": "node tools/boss-measure.mjs",
+    "measure:hazard": "node tools/hazard-measure.mjs",
+    "measure:drunk": "node tools/drunk-measure.mjs"
   },
   "dependencies": {
     "@dimforge/rapier2d-compat": "^0.14.0",
